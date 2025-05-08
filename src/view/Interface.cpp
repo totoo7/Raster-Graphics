@@ -18,7 +18,11 @@ void Interface::run(std::istream& in, std::ostream& out) {
             delete cmd;
             cmd = nullptr;
         }
-        cmd = CommandFactory::create(args);
+        try {
+            cmd = CommandFactory::create(args, &session_manager);
+        } catch (...) {
+            //! TODO APPROPRIATE HANDLE
+        }
         out << cmd->execute();
         //!
     } while (dynamic_cast<ExitCommand*>(cmd) == nullptr);

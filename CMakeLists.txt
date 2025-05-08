@@ -7,7 +7,11 @@ set(sources
     src/services/commands/Command.cpp
     src/services/commands/HelpCommand.cpp
     src/services/commands/ExitCommand.cpp
+    src/services/commands/LoadCommand.cpp
+    src/services/commands/ListCommand.cpp
     src/controllers/CommandFactory.cpp
+    src/controllers/Session.cpp
+    src/controllers/SessionManager.cpp
 )
 
 add_executable(Raster-Graphics ${sources})

@@ -7,6 +7,7 @@ class Command {
     public:
         virtual std::string execute() = 0;
         static size_t args_count();
+        virtual ~Command() = default;
     private:
         static const size_t args = 0;
 };

@@ -2,9 +2,8 @@
 #define INTERFACE_HPP
 
 #include <iostream>
-#include "ExitCommand.hpp"
-#include "HelpCommand.hpp"
 #include "CommandFactory.hpp"
+#include "SessionManager.hpp"
 
 class Interface {
     public:
@@ -16,7 +15,7 @@ class Interface {
         Interface& operator=(const Interface& rhs) = delete;
     private:
         Command* cmd;
-        
+        SessionManager session_manager;
 };
 
 #endif
