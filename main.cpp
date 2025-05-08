@@ -1,5 +1,5 @@
-#include <iostream>
+#include "Interface.hpp"
 
 int main(int, char**){
-    std::cout << "Hello, from Raster-Graphics!\n";
+    Interface::get_instance().run();
 }
