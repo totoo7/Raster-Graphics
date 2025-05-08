@@ -11,11 +11,18 @@ void Interface::run(std::istream& in, std::ostream& out) {
     do {
         //! FOR TESTING PURPOSES 
         std::string input;
-        std::cin >> input;
+        in >> input;
         std::vector<std::string> args;
         args.push_back(input);
+        if (cmd) {
+            delete cmd;
+            cmd = nullptr;
+        }
         cmd = CommandFactory::create(args);
-        std::cout << cmd->execute();
+        out << cmd->execute();
         //!
     } while (dynamic_cast<ExitCommand*>(cmd) == nullptr);
+    
+    delete cmd;
+    cmd = nullptr;
 }
