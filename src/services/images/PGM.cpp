@@ -30,7 +30,9 @@ void PGM::monochrome() {
 }
 
 void PGM::negative() {
-    //TODO
+    for (size_t i = 0; i < height; ++i)
+		for (size_t j = 0; j < width; ++j)
+			pixels[i][j] = max_val - pixels[i][j];
 }
 
 void PGM::rotate(const std::string& direction) {
@@ -40,6 +42,3 @@ void PGM::rotate(const std::string& direction) {
 void PGM::flip(const std::string& direction) {
     //TODO
 }
-
-
-

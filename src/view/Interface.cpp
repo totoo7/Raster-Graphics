@@ -12,17 +12,20 @@ void Interface::run(std::istream& in, std::ostream& out) {
         //! FOR TESTING PURPOSES 
         std::string input;
         in >> input;
+        std::string filename;
+        in >> filename;
         std::vector<std::string> args;
         args.push_back(input);
+        args.push_back(filename);
         if (cmd) {
             delete cmd;
             cmd = nullptr;
         }
-        try {
-            cmd = CommandFactory::create(args, &session_manager);
-        } catch (...) {
-            //! TODO APPROPRIATE HANDLE
+        cmd = CommandFactory::create(args, &session_manager);
+        if (!cmd) {
+            out << "Unknown command.";
         }
+        //! TODO APPROPRIATE HANDLE
         out << cmd->execute();
         //!
     } while (dynamic_cast<ExitCommand*>(cmd) == nullptr);
