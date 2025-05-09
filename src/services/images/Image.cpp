@@ -5,9 +5,8 @@ Image::Image() : width(0), height(0), format(Format::ASCII) {}
 
 Image::Image(const std::string& filename) : filename(filename) {
     std::ifstream file(filename, std::ios::binary);
-    if (!file.is_open()) {
-        throw std::runtime_error("Cannot open file: " + filename);
-    }
+    if (!file) throw std::runtime_error("Cannot open file: " + filename);
+    
 
     parse_header(file);
     file.close();

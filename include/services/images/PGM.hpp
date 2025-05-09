@@ -16,6 +16,7 @@ class PGM : public Image {
         ~PGM() = default;
     private:
         std::vector<std::vector<unsigned int>> pixels;
+        size_t max_val;
 };
 
 #endif
