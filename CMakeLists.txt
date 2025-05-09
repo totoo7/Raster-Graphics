@@ -9,6 +9,8 @@ set(sources
     src/services/commands/ExitCommand.cpp
     src/services/commands/LoadCommand.cpp
     src/services/commands/ListCommand.cpp
+    src/services/images/Image.cpp
+    src/services/images/PGM.cpp
     src/controllers/CommandFactory.cpp
     src/controllers/Session.cpp
     src/controllers/SessionManager.cpp
@@ -21,6 +23,7 @@ list(APPEND includePath
     "include/controllers"
     "include/services"
     "include/services/commands"
+    "include/services/images"
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${includePath})
