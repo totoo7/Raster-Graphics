@@ -5,5 +5,5 @@ size_t ExitCommand::args_count() {
 }
 
 std::string ExitCommand::execute() {
-    return "Exiting...";
+    return "Exiting...\n";
 }

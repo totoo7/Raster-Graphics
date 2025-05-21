@@ -7,6 +7,8 @@
 #include "HelpCommand.hpp"
 #include "LoadCommand.hpp"
 #include "ListCommand.hpp"
+#include "NegativeCommand.hpp"
+#include "SaveCommand.hpp"
 
 class CommandFactory {
     public:

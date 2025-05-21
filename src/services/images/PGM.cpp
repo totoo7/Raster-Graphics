@@ -42,3 +42,16 @@ void PGM::rotate(const std::string& direction) {
 void PGM::flip(const std::string& direction) {
     //TODO
 }
+
+void PGM::write_file(std::ofstream& ofs) {
+    ofs << "P2\n";
+    ofs << width << " " << height << "\n";
+    ofs << max_val << "\n";
+    for (size_t i = 0; i < height; ++i) {
+        for (size_t j = 0; j < width; ++j) {
+            ofs << pixels[i][j] << ' ';
+        }
+        ofs << '\n'; 
+    }
+    ofs.close();
+}

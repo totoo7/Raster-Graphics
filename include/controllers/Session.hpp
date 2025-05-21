@@ -8,6 +8,7 @@ class Session {
         Session();
         const int get_id() const;
         void add_image(Image* image);
+        void save();
         ~Session() = default;
     public:
         static int current_id;

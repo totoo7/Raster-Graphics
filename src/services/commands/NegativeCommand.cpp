@@ -8,6 +8,8 @@ size_t NegativeCommand::args_count() {
 
 std::string NegativeCommand::execute() {
 	
-    session->images[0]->negative();
-	return "Negative was successful";
+	for (size_t i = 0; i < session->images.size(); i++) {
+		session->images[i]->negative();
+	}
+	return "Negative was successful.\n";
 }

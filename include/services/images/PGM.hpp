@@ -7,12 +7,13 @@ class PGM : public Image {
     public:
         PGM() = default;
         PGM(const std::string& filename);
-        virtual void grayscale() override;
-        virtual void monochrome() override;
-        virtual void negative() override;
-        virtual void rotate(const std::string& direction) override;
-        virtual void flip(const std::string& direction) override;
-        virtual Image* clone() const override;
+        void grayscale() override;
+        void monochrome() override;
+        void negative() override;
+        void rotate(const std::string& direction) override;
+        void flip(const std::string& direction) override;
+        void write_file(std::ofstream& ofs) override;
+        Image* clone() const override;
         ~PGM() = default;
     private:
         std::vector<std::vector<unsigned int>> pixels;

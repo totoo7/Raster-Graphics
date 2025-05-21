@@ -7,6 +7,6 @@ size_t ListCommand::args_count() {
 }
 
 std::string ListCommand::execute() {
-    return std::to_string(session->get_id());
+    return std::to_string(session->get_id() + '\n');
 }
 

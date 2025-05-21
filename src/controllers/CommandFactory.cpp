@@ -10,6 +10,10 @@ Command* CommandFactory::create(std::vector<std::string> args, SessionManager* s
         return new LoadCommand(session_manager, args[1]);
     } else if (cmd == "list") {
         return new ListCommand(session_manager->get_active());
+    } else if (cmd == "negative") {
+        return new NegativeCommand(session_manager->get_active());
+    } else if (cmd == "save") {
+        return new SaveCommand(session_manager->get_active());
     }
     return nullptr;
 }
