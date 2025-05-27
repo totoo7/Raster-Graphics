@@ -22,7 +22,7 @@ void Interface::run(std::istream& in, std::ostream& out) {
 
         cmd = CommandFactory::create(args, &session_manager);
         if (!cmd) {
-            std::cout << "Unknown command.";
+            std::cout << "Unknown command.\n";
             continue;
         }
         

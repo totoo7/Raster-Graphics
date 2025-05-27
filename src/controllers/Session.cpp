@@ -10,8 +10,9 @@ void Session::add_image(Image* image) {
 
 void Session::save() {
     for (size_t i = 0; i < images.size(); i++) {
-        std::ofstream file(images[i]->get_filename());
-        images[i]->write_file(file);
+        std::ofstream ofs(images[i]->get_filename());
+        images[i]->write_file(ofs);
+        ofs.close();
     }
 }
 

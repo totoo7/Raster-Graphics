@@ -53,5 +53,4 @@ void PGM::write_file(std::ofstream& ofs) {
         }
         ofs << '\n'; 
     }
-    ofs.close();
 }

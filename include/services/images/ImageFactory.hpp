@@ -6,10 +6,11 @@
 
 class ImageFactory {
     public:
+        static Image* create_image(std::string filename);
+    private:
         ImageFactory() = delete;
         ImageFactory(const ImageFactory& rhs) = delete;
         ImageFactory& operator=(const ImageFactory& rhs) = delete;
-        static Image* create_image(std::string filename);
 };
 
 #endif

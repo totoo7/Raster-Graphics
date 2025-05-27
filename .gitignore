@@ -33,3 +33,4 @@ build
 *.out
 *.app
 .vscode/settings.json
+Raster-Graphics

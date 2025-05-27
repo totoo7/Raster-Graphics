@@ -31,3 +31,5 @@ list(APPEND includePath
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${includePath})
 
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR})
+
