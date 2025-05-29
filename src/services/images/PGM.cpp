@@ -29,7 +29,12 @@ void PGM::grayscale() {
 }
 
 void PGM::monochrome() {
-    //TODO
+    for (size_t i = 0; i < height; ++i) {
+		for (size_t j = 0; j < width; ++j) {
+			if (pixels[i][j] < max_val / 2) pixels[i][j] = 0;
+            else pixels[i][j] = max_val;
+        }
+    }
 }
 
 void PGM::negative() {
