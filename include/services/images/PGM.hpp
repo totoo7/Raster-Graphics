@@ -3,6 +3,8 @@
 
 #include "Image.hpp"
 #include <vector>
+#include <cstdint>
+
 class PGM : public Image {
     public:
         PGM() = default;
@@ -16,8 +18,8 @@ class PGM : public Image {
         Image* clone() const override;
         ~PGM() = default;
     private:
-        std::vector<std::vector<unsigned int>> pixels;
-        size_t max_val;
+        std::vector<std::vector<uint8_t>> pixels;
+        uint8_t max_val;
 };
 
 #endif

@@ -1,20 +1,19 @@
 #include "Image.hpp"
 #include <iostream>
-
+#include "Utilites.hpp"
 Image::Image() : width(0), height(0), format(Format::ASCII) {}
 
 Image::Image(const std::string& filename) : filename(filename) {
-    std::ifstream file(filename, std::ios::binary);
-    if (!file) throw std::runtime_error("Cannot open file: " + filename);
-    
-
-    parse_header(file);
-    file.close();
+    std::ifstream ifs(filename, std::ios::binary);
+    if (!ifs) throw std::runtime_error("Cannot open file: " + filename);
+    parse_header(ifs);
+    ifs.close();
 }
 
-void Image::parse_header(std::ifstream& file) {
+void Image::parse_header(std::ifstream& ifs) {
     std::string magic_number;
-    file >> magic_number;
+    UTILITIES::skip_comments(ifs);
+    ifs >> magic_number;
 
     if (magic_number == "P1") {
         format = Format::ASCII;
@@ -37,6 +36,6 @@ void Image::parse_header(std::ifstream& file) {
     } else {
         throw std::invalid_argument("Uknown netpbm file type.");
     }
-
-    file >> width >> height;
+    UTILITIES::skip_comments(ifs);
+    ifs >> width >> height;
 }

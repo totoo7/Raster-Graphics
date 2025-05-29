@@ -1,17 +1,20 @@
 #include "PGM.hpp"
 #include <iostream>
+#include "Utilites.hpp"
 
 PGM::PGM(const std::string& filename) : Image(filename) {
     std::ifstream ifs(filename);
     if (!ifs) throw std::runtime_error("Cannot open file: " + filename);
-    std::string line;
-    std::getline(ifs, line);
-    std::getline(ifs, line);
-    ifs >> max_val;
-    pixels.resize(width, std::vector<unsigned int>(height));
-    for (size_t i = 0; i < width; i++) {
-        for (size_t j = 0; j < height; j++) {
-            ifs >> pixels[i][j];
+    UTILITIES::skip_comments(ifs, 2);
+    unsigned temp;
+    ifs >> temp;
+    max_val = temp;
+    pixels.resize(height, std::vector<uint8_t>(width));
+    UTILITIES::skip_comments(ifs);
+    for (size_t i = 0; i < height; i++) {
+        for (size_t j = 0; j < width; j++) {
+            ifs >> temp;
+            pixels[i][j] = temp;
         }
     }
     ifs.close();
@@ -46,10 +49,10 @@ void PGM::flip(const std::string& direction) {
 void PGM::write_file(std::ofstream& ofs) {
     ofs << "P2\n";
     ofs << width << " " << height << "\n";
-    ofs << max_val << "\n";
+    ofs << static_cast<unsigned>(max_val) << "\n";
     for (size_t i = 0; i < height; ++i) {
         for (size_t j = 0; j < width; ++j) {
-            ofs << pixels[i][j] << ' ';
+            ofs << static_cast<unsigned>(pixels[i][j]) << ' ';
         }
         ofs << '\n'; 
     }
