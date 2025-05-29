@@ -9,7 +9,7 @@ Interface& Interface::get_instance() {
 
 void Interface::run(std::istream& in, std::ostream& out) {
     std::string line;
-    std::cout << " <-- Welcome to Raster-Graphics -->\n";
+    std::cout << " <-- Welcome to Raster-Graphics --> \n";
     do {
         std::getline(in, line);
         if (line.empty()) continue;

@@ -9,7 +9,7 @@ class Session {
         const int get_id() const;
         void add_image(Image* image);
         void save();
-        ~Session() = default;
+        ~Session();
     public:
         static int current_id;
         std::vector<Image*> images;

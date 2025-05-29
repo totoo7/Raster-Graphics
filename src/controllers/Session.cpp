@@ -19,3 +19,9 @@ void Session::save() {
 const int Session::get_id() const {
     return id;
 }
+
+Session::~Session() {
+    for (Image* img : images) {
+        delete img;
+    }
+}
