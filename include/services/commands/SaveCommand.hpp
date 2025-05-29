@@ -7,7 +7,7 @@
 class SaveCommand : public Command {
 public:
 	SaveCommand(Session* const session);
-	static size_t args_count();
+	static size_t args_count() { return args; };
 	std::string execute() override;
 private:
 	Session* const session;

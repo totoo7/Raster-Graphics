@@ -6,7 +6,7 @@
 class ExitCommand : public Command {
     public:
         std::string execute() override;
-        static size_t args_count();
+        static size_t args_count() { return args; };
     private:
         static const size_t args = 0;
 };

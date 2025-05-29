@@ -10,6 +10,7 @@ set(sources
     src/services/commands/LoadCommand.cpp
     src/services/commands/ListCommand.cpp
     src/services/commands/NegativeCommand.cpp
+    src/services/commands/MonochromeCommand.cpp
     src/services/commands/SaveCommand.cpp
     src/services/commands/FlipCommand.cpp
     src/services/commands/RotateCommand.cpp

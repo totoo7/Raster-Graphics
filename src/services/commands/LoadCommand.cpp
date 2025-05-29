@@ -5,10 +5,6 @@
 LoadCommand::LoadCommand(SessionManager* const session_manager, std::vector<std::string> args) : 
     session_manager(session_manager), files(args) {}
 
-size_t LoadCommand::args_count() {
-	return args;
-}
-
 std::string LoadCommand::execute() {
 	std::vector<Image*> loaded_images;
 

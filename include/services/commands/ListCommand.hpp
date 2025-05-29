@@ -7,7 +7,7 @@
 class ListCommand : public Command {
     public:
         ListCommand(Session* const session);
-        static size_t args_count();
+        static size_t args_count() { return args; };
         std::string execute() override;
     private:
         Session* const session;

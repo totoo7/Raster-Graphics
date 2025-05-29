@@ -1,12 +1,12 @@
-#ifndef NEGATIVE_COMMAND
-#define NEGATIVE_COMMAND
+#ifndef MONOCHROME_COMMAND
+#define MONOCHROME_COMMAND
 
 #include "Command.hpp"
 #include "Session.hpp"
 
-class NegativeCommand : public Command {
+class MonochromeCommand : public Command {
 public:
-	NegativeCommand(Session* const session);
+	MonochromeCommand(Session* const session);
 	static size_t args_count() { return args; };
 	std::string execute() override;
 private:

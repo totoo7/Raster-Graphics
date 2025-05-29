@@ -8,6 +8,7 @@
 #include "LoadCommand.hpp"
 #include "ListCommand.hpp"
 #include "NegativeCommand.hpp"
+#include "MonochromeCommand.hpp"
 #include "SaveCommand.hpp"
 #include "RotateCommand.hpp"
 #include "FlipCommand.hpp"
