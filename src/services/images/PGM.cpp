@@ -25,7 +25,7 @@ Image* PGM::clone() const {
 }
 
 void PGM::grayscale() {
-    //TODO
+    return;
 }
 
 void PGM::monochrome() {
@@ -39,11 +39,21 @@ void PGM::negative() {
 }
 
 void PGM::rotate(const std::string& direction) {
-    //TODO
+    if (direction == "left") {
+        UTILITIES::transpose_matrix(pixels);
+        UTILITIES::reverse_rows(pixels);
+    } else if (direction == "right") {
+        UTILITIES::transpose_matrix(pixels);
+        UTILITIES::reverse_cols(pixels);
+    }
 }
 
 void PGM::flip(const std::string& direction) {
-    //TODO
+    if (direction == "top") {
+        UTILITIES::reverse_rows(pixels);
+    } else if (direction == "left") {
+        UTILITIES::reverse_cols(pixels);
+    }
 }
 
 void PGM::write_file(std::ofstream& ofs) {

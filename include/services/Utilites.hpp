@@ -31,6 +31,36 @@ namespace UTILITIES {
             std::getline(is, line);
         }
     }
+
+    template<typename T>
+    inline void transpose_matrix(std::vector<std::vector<T>>& array) {
+        size_t rows = array.size();
+        size_t cols = array[0].size();
+        std::vector<std::vector<T>> transposed(cols, std::vector<T>(rows));
+        for (size_t i = 0; i < rows; ++i) {
+            for (size_t j = 0; j < cols; ++j) {
+                transposed[j][i] = array[i][j];
+            }
+        }
+        array = std::move(transposed);
+    }
+
+    template<typename T>
+    inline void reverse_rows(std::vector<std::vector<T>>& array) {
+        for (size_t i = 0; i < array.size() / 2; ++i) {
+            std::swap(array[i], array[array.size() - i - 1]);
+        }
+    }
+
+    template<typename T>
+    inline void reverse_cols(std::vector<std::vector<T>>& array) {
+        for (size_t i = 0; i < array.size(); ++i) {
+            for (size_t j = 0; j < array[i].size() / 2; ++j) {
+                std::swap(array[i][j], array[i][array[i].size() - j - 1]);
+            }
+        } 
+    }
+
 };
 
 #endif
