@@ -6,12 +6,12 @@
 
 class LoadCommand : public Command {
     public:
-        LoadCommand(SessionManager* const session_manager, const std::string& filename);
+        LoadCommand(SessionManager* const session_manager, std::vector<std::string> args);
         static size_t args_count();
         std::string execute() override;
     private:
         SessionManager* const session_manager;
-        std::string filename;
+        std::vector<std::string> files;
         static const size_t args = 0;
 };
 

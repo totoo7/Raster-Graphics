@@ -7,7 +7,7 @@ Command* CommandFactory::create(std::vector<std::string> args, SessionManager* s
     } else if (cmd == "exit") {
         return new ExitCommand();
     } else if (cmd == "load") {
-        return new LoadCommand(session_manager, args[1]);
+        return new LoadCommand(session_manager, args);
     } else if (cmd == "list") {
         return new ListCommand(session_manager->get_active());
     } else if (cmd == "negative") {

@@ -2,26 +2,35 @@
 #include <iostream>
 #include "ImageFactory.hpp"
 
-LoadCommand::LoadCommand(SessionManager* const session_manager, const std::string& filename) : 
-    session_manager(session_manager), filename(filename) {}
+LoadCommand::LoadCommand(SessionManager* const session_manager, std::vector<std::string> args) : 
+    session_manager(session_manager), files(args) {}
 
 size_t LoadCommand::args_count() {
 	return args;
 }
 
 std::string LoadCommand::execute() {
-	std::ifstream ifs(filename);
+	std::vector<Image*> loaded_images;
 
-	if (!ifs) throw std::invalid_argument("File \"" + filename + "\" didn't open correctly");
+    for (size_t i = 1; i < files.size(); ++i) {
+        std::ifstream ifs(files[i]);
+        if (!ifs)
+            throw std::invalid_argument("File \"" + files[i] + "\" didn't open correctly");
+        ifs.close();
 
-	Image* image = ImageFactory::create_image(filename);
+        Image* image = ImageFactory::create_image(files[i]);
+        if (!image)
+            throw std::runtime_error("Image creation failed for \"" + files[i] + "\"");
 
-	if (!image)
-		throw std::runtime_error("Image creation failed");
+        loaded_images.push_back(image);
+    }
 
-	session_manager->add(Session());
-	session_manager->get_active()->add_image(image);
+    session_manager->add(Session());
+    Session* session = session_manager->get_active();
 
-	ifs.close();
-	return "Created session " + std::to_string(session_manager->get_active()->get_id()) + " successfully.\n"; 
+    for (Image* img : loaded_images) {
+        session->add_image(img);
+    }
+
+    return "Session with ID: " + std::to_string(session->get_id()) + " started.\n";
 }
