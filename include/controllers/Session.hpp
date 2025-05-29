@@ -8,6 +8,8 @@ class Session {
         Session();
         const int get_id() const;
         void add_image(Image* image);
+        void rotate(const std::string& direction);
+        void flip(const std::string& direction);
         void save();
         ~Session();
     public:

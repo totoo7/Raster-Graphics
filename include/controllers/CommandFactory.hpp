@@ -9,6 +9,8 @@
 #include "ListCommand.hpp"
 #include "NegativeCommand.hpp"
 #include "SaveCommand.hpp"
+#include "RotateCommand.hpp"
+#include "FlipCommand.hpp"
 
 class CommandFactory {
     public:

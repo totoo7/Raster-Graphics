@@ -16,6 +16,18 @@ void Session::save() {
     }
 }
 
+void Session::rotate(const std::string& direction) {
+    for (size_t i = 0; i < images.size(); i++) {
+        images[i]->rotate(direction);
+    }
+}
+
+void Session::flip(const std::string& direction) {
+    for (size_t i = 0; i < images.size(); i++) {
+        images[i]->flip(direction);
+    }
+}
+
 const int Session::get_id() const {
     return id;
 }

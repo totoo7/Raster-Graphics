@@ -11,6 +11,8 @@ set(sources
     src/services/commands/ListCommand.cpp
     src/services/commands/NegativeCommand.cpp
     src/services/commands/SaveCommand.cpp
+    src/services/commands/FlipCommand.cpp
+    src/services/commands/RotateCommand.cpp
     src/services/images/Image.cpp
     src/services/images/PGM.cpp
     src/services/images/ImageFactory.cpp

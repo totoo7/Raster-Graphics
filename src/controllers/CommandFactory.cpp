@@ -12,7 +12,12 @@ Command* CommandFactory::create(std::vector<std::string> args, SessionManager* s
         return new ListCommand(session_manager->get_active());
     } else if (cmd == "negative") {
         return new NegativeCommand(session_manager->get_active());
-    } else if (cmd == "save") {
+    } else if (cmd == "rotate") {
+        return new RotateCommand(session_manager->get_active(), args[1]);
+    } else if (cmd == "flip") {
+        return new FlipCommand(session_manager->get_active(), args[1]);
+    }
+    else if (cmd == "save") {
         return new SaveCommand(session_manager->get_active());
     }
     return nullptr;
