@@ -7,28 +7,30 @@ Interface& Interface::get_instance() {
     return interface;
 }
 
-void Interface::run(std::istream& in, std::ostream& out) {
+void Interface::run() {
     std::string line;
     std::cout << " <-- Welcome to Raster-Graphics --> \n";
     do {
-        std::getline(in, line);
+        std::getline(std::cin, line);
         if (line.empty()) continue;
 
         std::vector<std::string> args = UTILITIES::split(line);
+        std::string command = args[0];
+        args.erase(args.begin());
 
         if (cmd) {
             delete cmd;
             cmd = nullptr;
         }
 
-        cmd = CommandFactory::create(args, &session_manager);
+        cmd = CommandFactory::create(command, args, &session_manager);
         if (!cmd) {
             std::cout << "Unknown command.\n";
             continue;
         }
         
         try {
-            out << cmd->execute();
+            std::cout << cmd->execute();
         } catch (const std::exception& e) {
             std::cout << "Error: " << e.what() << std::endl;
         } 

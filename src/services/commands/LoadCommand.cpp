@@ -2,13 +2,13 @@
 #include <iostream>
 #include "ImageFactory.hpp"
 
-LoadCommand::LoadCommand(SessionManager* const session_manager, std::vector<std::string> args) : 
+LoadCommand::LoadCommand(SessionManager* const session_manager, const std::vector<std::string>& args) : 
     session_manager(session_manager), files(args) {}
 
 std::string LoadCommand::execute() {
 	std::vector<Image*> loaded_images;
 
-    for (size_t i = 1; i < files.size(); ++i) {
+    for (size_t i = 0; i < files.size(); ++i) {
         std::ifstream ifs(files[i]);
         if (!ifs)
             throw std::invalid_argument("File \"" + files[i] + "\" didn't open correctly");

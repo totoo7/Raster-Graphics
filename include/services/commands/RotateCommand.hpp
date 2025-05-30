@@ -6,7 +6,7 @@
 
 class RotateCommand : public Command {
 public:
-	RotateCommand(Session* const session, std::string_view direction);
+	RotateCommand(Session* const session, const std::string& direction);
 	static size_t get_args() { return args; };
 	std::string execute() override;
 private:

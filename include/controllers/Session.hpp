@@ -13,6 +13,7 @@ class Session {
         void rotate(const std::string& direction);
         void flip(const std::string& direction);
         void save();
+        void saveAs(const std::vector<std::string>& files);
         ~Session();
     public:
         static int current_id;

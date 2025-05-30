@@ -10,6 +10,7 @@
 #include "NegativeCommand.hpp"
 #include "MonochromeCommand.hpp"
 #include "SaveCommand.hpp"
+#include "SaveAsCommand.hpp"
 #include "RotateCommand.hpp"
 #include "FlipCommand.hpp"
 #include "SwitchCommand.hpp"
@@ -17,7 +18,7 @@
 
 class CommandFactory {
     public:
-        static Command* create(std::vector<std::string> args, SessionManager* session_manager);
+        static Command* create(const std::string& cmd, const std::vector<std::string>& args, SessionManager* session_manager);
     private:
         CommandFactory() = delete;
         CommandFactory(const CommandFactory& rhs) = delete;

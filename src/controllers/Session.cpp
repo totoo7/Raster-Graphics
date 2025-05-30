@@ -1,4 +1,5 @@
 #include "Session.hpp"
+#include <ctime>
 
 int Session::current_id = 0;
 
@@ -28,8 +29,32 @@ void Session::add_image(Image* image) {
 }
 
 void Session::save() {
+    std::time_t now = std::time(nullptr);
+    std::tm* local_time = std::localtime(&now);
+
+    char timestamp[16];
+    std::strftime(timestamp, sizeof(timestamp), "%d-%H-%M", local_time);
+
     for (size_t i = 0; i < images.size(); i++) {
-        std::ofstream ofs(images[i]->get_filename());
+        std::string original = images[i]->get_filename();
+
+        size_t dot_pos = original.find_last_of('.');
+        std::string base = (dot_pos != std::string::npos) ? original.substr(0, dot_pos) : original;
+        std::string ext = (dot_pos != std::string::npos) ? original.substr(dot_pos) : "";
+
+        std::string new_filename = base + "_" + timestamp + ext;
+
+        std::ofstream ofs(new_filename);
+        if (!ofs) throw std::runtime_error("Save failed failed for \"" + new_filename + "\"");
+        
+        images[i]->write_file(ofs);
+        ofs.close();
+    }
+}
+void Session::saveAs(const std::vector<std::string>& files) {
+    for(size_t i = 0; i < files.size(); i++) {
+        std::ofstream ofs(files[i]);
+        if (!ofs) throw std::runtime_error("Save failed for \"" + files[i] + "\"");
         images[i]->write_file(ofs);
         ofs.close();
     }

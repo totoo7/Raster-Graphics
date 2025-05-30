@@ -1,6 +1,6 @@
 #include "FlipCommand.hpp"
 
-FlipCommand::FlipCommand(Session* const session, std::string_view direction)
+FlipCommand::FlipCommand(Session* const session, const std::string& direction)
 	: session(session), direction(direction) {
 }
 

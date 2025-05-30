@@ -14,6 +14,7 @@ set(sources
     src/services/commands/NegativeCommand.cpp
     src/services/commands/MonochromeCommand.cpp
     src/services/commands/SaveCommand.cpp
+    src/services/commands/SaveAsCommand.cpp
     src/services/commands/FlipCommand.cpp
     src/services/commands/RotateCommand.cpp
     src/services/images/Image.cpp

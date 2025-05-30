@@ -6,7 +6,7 @@
 
 class LoadCommand : public Command {
     public:
-        LoadCommand(SessionManager* const session_manager, std::vector<std::string> args);
+        LoadCommand(SessionManager* const session_manager, const std::vector<std::string>& args);
         static size_t args_count() { return args; };
         std::string execute() override;
     private:
