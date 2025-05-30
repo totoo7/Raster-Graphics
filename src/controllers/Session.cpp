@@ -4,6 +4,25 @@ int Session::current_id = 0;
 
 Session::Session() : id(Session::current_id++) {}
 
+Session::Session(const Session& rhs) {
+    for (size_t i = 0; i < rhs.images.size(); i++) {
+        images.push_back(rhs.images[i]->clone());
+    }
+    id = rhs.id;
+}
+
+Session& Session::operator=(const Session& rhs) {
+    if (this == &rhs) return *this;
+    for (Image* img : images) {
+        delete img;
+    }
+    images.clear();
+    for(size_t i = 0; i < rhs.images.size(); i++) {
+        images.push_back(rhs.images[i]->clone());
+    }
+    return*this;
+}
+
 void Session::add_image(Image* image) {
     images.push_back(image);
 }

@@ -10,6 +10,7 @@ void SessionManager::change(const int id) {
     for (size_t i = 0; i < sessions.size(); i++) {
         if (sessions[i].get_id() == id) {
             active_session = &sessions[i];
+            return;
         }
     }
 }

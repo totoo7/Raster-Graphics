@@ -8,6 +8,8 @@ set(sources
     src/services/commands/HelpCommand.cpp
     src/services/commands/ExitCommand.cpp
     src/services/commands/LoadCommand.cpp
+    src/services/commands/SwitchCommand.cpp
+    src/services/commands/AddCommand.cpp
     src/services/commands/ListCommand.cpp
     src/services/commands/NegativeCommand.cpp
     src/services/commands/MonochromeCommand.cpp

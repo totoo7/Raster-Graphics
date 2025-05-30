@@ -12,6 +12,8 @@
 #include "SaveCommand.hpp"
 #include "RotateCommand.hpp"
 #include "FlipCommand.hpp"
+#include "SwitchCommand.hpp"
+#include "AddCommand.hpp"
 
 class CommandFactory {
     public:

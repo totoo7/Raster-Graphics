@@ -20,6 +20,10 @@ Command* CommandFactory::create(std::vector<std::string> args, SessionManager* s
         return new FlipCommand(session_manager->get_active(), args[1]);
     } else if (cmd == "save") {
         return new SaveCommand(session_manager->get_active());
+    } else if (cmd == "switch") {
+        return new SwitchCommand(session_manager, std::stoi(args[1]));
+    } else if (cmd == "add") {
+        return new AddCommand(session_manager->get_active(), args[1]);
     }
 
     return nullptr;

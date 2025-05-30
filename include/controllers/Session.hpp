@@ -6,6 +6,8 @@
 class Session {
     public:
         Session();
+        Session(const Session& rhs);
+        Session& operator=(const Session& rhs);
         const int get_id() const;
         void add_image(Image* image);
         void rotate(const std::string& direction);
