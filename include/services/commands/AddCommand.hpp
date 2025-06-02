@@ -9,6 +9,7 @@ class AddCommand : public Command {
         AddCommand(Session* const session, const std::string& val);
         static size_t args_count() { return args; };
         std::string execute() override;
+        bool is_undoable() const override { return false; };
     private:
         Session* const session;
         std::string file;

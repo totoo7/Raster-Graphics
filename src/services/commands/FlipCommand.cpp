@@ -8,3 +8,7 @@ std::string FlipCommand::execute() {
 	session->flip(direction);
 	return "Flip was successful.\n";
 }
+
+void FlipCommand::undo() {
+	session->flip(direction);
+}

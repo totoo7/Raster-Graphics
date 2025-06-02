@@ -9,6 +9,7 @@ class SwitchCommand : public Command {
         SwitchCommand(SessionManager* const session_manager, size_t id);
         static size_t args_count() { return args; };
         std::string execute() override;
+        bool is_undoable() const override { return false; };
     private:
         SessionManager* const session_manager;
         size_t id;

@@ -66,6 +66,11 @@ void Session::rotate(const std::string& direction) {
     }
 }
 
+void Session::monochrome() {
+    for (size_t i = 0; i < images.size(); i++)
+        images[i]->monochrome();
+}
+
 void Session::flip(const std::string& direction) {
     for (size_t i = 0; i < images.size(); i++) {
         images[i]->flip(direction);
@@ -76,8 +81,18 @@ const int Session::get_id() const {
     return id;
 }
 
+void Session::undo() {
+    Command* cmd = history.back();
+    history.pop_back();
+    cmd->undo();
+    delete cmd;
+}
+
 Session::~Session() {
     for (Image* img : images) {
         delete img;
+    }
+    for (Command* cmd : history) {
+        delete cmd;
     }
 }

@@ -31,8 +31,11 @@ void Interface::run() {
         
         try {
             std::cout << cmd->execute();
+            if (cmd->is_undoable()) Interface::get_instance().session_manager.get_active()->history.push_back(cmd->clone()); //!
         } catch (const std::exception& e) {
             std::cout << "Error: " << e.what() << std::endl;
+            delete cmd;
+            cmd = nullptr;
         } 
     } while (dynamic_cast<ExitCommand*>(cmd) == nullptr);
     

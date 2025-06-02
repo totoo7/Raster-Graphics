@@ -8,3 +8,7 @@ std::string RotateCommand::execute() {
 	session->rotate(direction);
 	return "Rotate was successful.\n";
 }
+
+void RotateCommand::undo() {
+	
+}

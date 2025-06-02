@@ -3,6 +3,8 @@
 
 #include <vector>
 #include "Image.hpp"
+#include "Command.hpp"
+
 class Session {
     public:
         Session();
@@ -12,12 +14,15 @@ class Session {
         void add_image(Image* image);
         void rotate(const std::string& direction);
         void flip(const std::string& direction);
+        void monochrome();
         void save();
         void saveAs(const std::vector<std::string>& files);
+        void undo();
         ~Session();
     public:
-        static int current_id;
         std::vector<Image*> images;
+        std::vector<Command*> history;
+        static int current_id;
     private:
         int id;
 };

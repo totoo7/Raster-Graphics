@@ -1,14 +1,15 @@
-#ifndef SAVE_COMMAND_HPP
-#define SAVE_COMMAND_HPP
+#ifndef UNDO_COMMAND_HPP
+#define UNDO_COMMAND_HPP
 
 #include "Command.hpp"
 #include "Session.hpp"
 
-class SaveCommand : public Command {
+class UndoCommand : public Command {
 public:
-	SaveCommand(Session* const session);
-	static size_t args_count() { return args; };
+	UndoCommand(Session* const session);
+	static size_t get_args() { return args; };
 	std::string execute() override;
+	void undo() override;
 	bool is_undoable() const override { return false; };
 private:
 	Session* const session;

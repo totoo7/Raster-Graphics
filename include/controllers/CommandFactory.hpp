@@ -15,6 +15,7 @@
 #include "FlipCommand.hpp"
 #include "SwitchCommand.hpp"
 #include "AddCommand.hpp"
+#include "UndoCommand.hpp"
 
 class CommandFactory {
     public:

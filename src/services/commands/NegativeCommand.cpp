@@ -9,3 +9,7 @@ std::string NegativeCommand::execute() {
 	}
 	return "Negative was successful.\n";
 }
+
+void NegativeCommand::undo() {
+	
+}

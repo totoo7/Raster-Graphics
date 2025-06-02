@@ -9,6 +9,9 @@ public:
 	RotateCommand(Session* const session, const std::string& direction);
 	static size_t get_args() { return args; };
 	std::string execute() override;
+	bool is_undoable() const override { return true; };
+	Command* clone() override { return new RotateCommand(*this); };
+	void undo() override;
 private:
 	Session* const session;
 	std::string direction;
