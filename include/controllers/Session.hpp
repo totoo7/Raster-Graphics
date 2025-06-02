@@ -15,9 +15,11 @@ class Session {
         void rotate(const std::string& direction);
         void flip(const std::string& direction);
         void monochrome();
+        void negative();
         void save();
         void saveAs(const std::vector<std::string>& files);
         void undo();
+        void redo();
         ~Session();
     public:
         std::vector<Image*> images;

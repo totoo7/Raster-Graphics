@@ -3,10 +3,12 @@
 
 #include "Command.hpp"
 #include "Session.hpp"
+#include "SnapshotCommand.hpp"
 
-class NegativeCommand : public Command {
+class NegativeCommand : public SnapshotCommand {
 public:
 	NegativeCommand(Session* const session);
+	NegativeCommand(const NegativeCommand& rhs);
 	static size_t args_count() { return args; };
 	std::string execute() override;
 	bool is_undoable() const override { return true; };

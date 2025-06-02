@@ -10,5 +10,7 @@ std::string RotateCommand::execute() {
 }
 
 void RotateCommand::undo() {
-	
+	for (size_t i = 0; i < 3; i++) {
+		session->rotate(direction);
+	}
 }

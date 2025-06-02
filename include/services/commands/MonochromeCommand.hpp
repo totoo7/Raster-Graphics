@@ -2,9 +2,10 @@
 #define MONOCHROME_COMMAND
 
 #include "Command.hpp"
+#include "SnapshotCommand.hpp"
 #include "Session.hpp"
 
-class MonochromeCommand : public Command {
+class MonochromeCommand : public SnapshotCommand {
 public:
 	MonochromeCommand(Session* const session);
 	MonochromeCommand(const MonochromeCommand& rhs);
@@ -13,10 +14,8 @@ public:
 	bool is_undoable() const override { return true; };
 	Command* clone() override { return new MonochromeCommand(*this); };
 	void undo() override;
-	~MonochromeCommand();
 private:
 	Session* const session;
-	std::vector<Image*> snapshots;
 	static const size_t args = 0;
 };
 

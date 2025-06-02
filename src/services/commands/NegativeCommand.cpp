@@ -2,14 +2,15 @@
 
 NegativeCommand::NegativeCommand(Session* const session) : session(session) {}
 
+NegativeCommand::NegativeCommand(const NegativeCommand& rhs) : 
+	session(rhs.session), SnapshotCommand(rhs) {}
+
 std::string NegativeCommand::execute() {
-	
-	for (size_t i = 0; i < session->images.size(); i++) {
-		session->images[i]->negative();
-	}
+	take_snapshot(session);
+	session->negative();
 	return "Negative was successful.\n";
 }
 
 void NegativeCommand::undo() {
-	
+	restore_snapshot(session);
 }
