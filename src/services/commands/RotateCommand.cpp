@@ -14,3 +14,7 @@ void RotateCommand::undo() {
 		session->rotate(direction);
 	}
 }
+
+void RotateCommand::redo() {
+	session->redo();
+}

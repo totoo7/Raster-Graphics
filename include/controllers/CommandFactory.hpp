@@ -16,6 +16,7 @@
 #include "SwitchCommand.hpp"
 #include "AddCommand.hpp"
 #include "UndoCommand.hpp"
+#include "RedoCommand.hpp"
 
 class CommandFactory {
     public:

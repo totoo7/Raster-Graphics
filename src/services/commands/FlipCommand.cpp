@@ -12,3 +12,7 @@ std::string FlipCommand::execute() {
 void FlipCommand::undo() {
 	session->flip(direction);
 }
+
+void FlipCommand::redo() {
+	session->redo();
+}

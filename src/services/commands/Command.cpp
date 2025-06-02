@@ -5,3 +5,5 @@ size_t Command::args_count() {
 }
 
 void Command::undo() {}
+
+void Command::redo() {}

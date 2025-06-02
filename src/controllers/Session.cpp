@@ -91,11 +91,16 @@ void Session::undo() {
     Command* cmd = history.back();
     history.pop_back();
     cmd->undo();
+    redos.push_back(cmd->clone());
     delete cmd;
 }
 
 void Session::redo() {
-    
+    Command* cmd = redos.back();
+    redos.pop_back();
+    cmd->execute();
+    history.push_back(cmd->clone());
+    delete cmd;
 }
 
 Session::~Session() {

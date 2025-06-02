@@ -12,6 +12,7 @@ public:
 	bool is_undoable() const override { return true; };
 	Command* clone() override { return new RotateCommand(*this); };
 	void undo() override;
+	void redo() override;
 private:
 	Session* const session;
 	std::string direction;

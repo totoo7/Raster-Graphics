@@ -14,3 +14,7 @@ std::string MonochromeCommand::execute() {
 void MonochromeCommand::undo() {
 	restore_snapshot(session);
 }
+
+void MonochromeCommand::redo() {
+	session->redo();
+}

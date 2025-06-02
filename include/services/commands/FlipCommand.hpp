@@ -9,9 +9,10 @@ public:
 	FlipCommand(Session* const session, const std::string& direction);
 	static size_t get_args() { return args; };
 	std::string execute() override;
-	void undo() override;
 	Command* clone() override { return new FlipCommand(*this); };
 	bool is_undoable() const override { return true; };
+	void undo() override;
+	void redo() override;
 private:
 	Session* const session;
 	std::string direction;

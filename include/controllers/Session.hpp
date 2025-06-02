@@ -24,6 +24,7 @@ class Session {
     public:
         std::vector<Image*> images;
         std::vector<Command*> history;
+        std::vector<Command*> redos;
         static int current_id;
     private:
         int id;

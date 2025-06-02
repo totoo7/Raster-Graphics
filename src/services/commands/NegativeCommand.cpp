@@ -14,3 +14,7 @@ std::string NegativeCommand::execute() {
 void NegativeCommand::undo() {
 	restore_snapshot(session);
 }
+
+void NegativeCommand::redo() {
+	session->redo();
+}

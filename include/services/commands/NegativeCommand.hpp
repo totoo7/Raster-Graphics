@@ -14,6 +14,7 @@ public:
 	bool is_undoable() const override { return true; };
 	Command* clone() override { return new NegativeCommand(*this); };
 	void undo() override;
+	void redo() override;
 private:
 	Session* const session;
 	static const size_t args = 0;
