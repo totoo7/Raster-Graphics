@@ -18,6 +18,7 @@ set(sources
     src/services/commands/SaveAsCommand.cpp
     src/services/commands/FlipCommand.cpp
     src/services/commands/RotateCommand.cpp
+    src/services/commands/PasteCommand.cpp
     src/services/commands/UndoCommand.cpp
     src/services/commands/RedoCommand.cpp
     src/services/images/Image.cpp

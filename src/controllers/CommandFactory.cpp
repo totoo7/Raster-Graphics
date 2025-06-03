@@ -29,6 +29,8 @@ Command* CommandFactory::create(const std::string& cmd, const std::vector<std::s
         return new UndoCommand(session_manager->get_active());
     } else if (cmd == "redo") {
         return new RedoCommand(session_manager->get_active());
+    } else if (cmd == "paste") {
+        return new PasteCommand(session_manager->get_active(), args);
     }
 
     return nullptr;

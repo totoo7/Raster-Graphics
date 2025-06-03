@@ -61,6 +61,32 @@ namespace UTILITIES {
         } 
     }
 
+    template<typename T>
+    inline std::vector<std::vector<T>> paste_pixels(const std::vector<std::vector<T>>& dest,
+    const std::vector<std::vector<T>>& src,
+    size_t pos_y,
+    size_t pos_x) {
+
+        size_t new_height = std::max(dest.size(), pos_y + src.size());
+        size_t new_width  = std::max(dest.empty() ? 0 : dest[0].size(), pos_x + src[0].size());
+
+        std::vector<std::vector<T>> result(new_height, std::vector<T>(new_width));
+
+        for (size_t i = 0; i < dest.size(); ++i) {
+            for (size_t j = 0; j < dest[i].size(); ++j) {
+                result[i][j] = dest[i][j];
+            }
+        }
+
+        for (size_t i = 0; i < src.size(); ++i) {
+            for (size_t j = 0; j < src[i].size(); ++j) {
+                result[pos_y + i][pos_x + j] = src[i][j];
+            }
+        }
+
+        return result;
+    }
+
 };
 
 #endif

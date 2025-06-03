@@ -39,3 +39,7 @@ void Image::parse_header(std::ifstream& ifs) {
     UTILITIES::skip_comments(ifs);
     ifs >> width >> height;
 }
+
+void Image::set_filename(const std::string& filename) {
+    this->filename = filename;
+}

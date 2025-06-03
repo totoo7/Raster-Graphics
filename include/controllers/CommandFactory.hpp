@@ -13,6 +13,7 @@
 #include "SaveAsCommand.hpp"
 #include "RotateCommand.hpp"
 #include "FlipCommand.hpp"
+#include "PasteCommand.hpp"
 #include "SwitchCommand.hpp"
 #include "AddCommand.hpp"
 #include "UndoCommand.hpp"

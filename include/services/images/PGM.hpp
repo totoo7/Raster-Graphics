@@ -9,11 +9,13 @@ class PGM : public Image {
     public:
         PGM() = default;
         PGM(const std::string& filename);
+        PGM(const PGM& rhs);
         void grayscale() override;
         void monochrome() override;
         void negative() override;
         void rotate(const std::string& direction) override;
         void flip(const std::string& direction) override;
+        Image* paste_into(Image* img_dest, size_t pos_x, size_t pos_y) override;
         void write_file(std::ofstream& ofs) override;
         Image* clone() const override;
         ~PGM() = default;
