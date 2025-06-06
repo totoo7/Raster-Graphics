@@ -10,6 +10,7 @@ class LoadCommand : public Command {
         static size_t args_count() { return args; };
         std::string execute() override;
         bool is_undoable() const override { return false; };
+        bool needs_session() const override { return false; };
     private:
         SessionManager* const session_manager;
         std::vector<std::string> files;

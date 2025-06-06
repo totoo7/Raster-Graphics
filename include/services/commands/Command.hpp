@@ -7,6 +7,7 @@ class Command {
     public:
         virtual std::string execute() = 0;
         virtual bool is_undoable() const = 0;
+        virtual bool needs_session() const { return true; };
         virtual void undo();
         virtual void redo();
         virtual Command* clone() { return nullptr; };

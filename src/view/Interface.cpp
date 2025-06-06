@@ -23,13 +23,15 @@ void Interface::run() {
             cmd = nullptr;
         }
 
-        cmd = CommandFactory::create(command, args, &session_manager);
-        if (!cmd) {
-            std::cout << "Unknown command.\n";
-            continue;
-        }
-        
         try {
+            cmd = CommandFactory::create(command, args, &session_manager);
+            if (!cmd) {
+                std::cout << "Error: Unknown command.\n";
+                continue;
+            }
+            if (cmd->needs_session() && session_manager.get_active() == nullptr)
+                throw std::runtime_error("This command needs active session.");
+
             std::cout << cmd->execute();
             if (cmd->is_undoable()) {
                 Interface::get_instance().session_manager.get_active()->history.push_back(cmd->clone()); //!

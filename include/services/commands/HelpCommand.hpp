@@ -8,6 +8,7 @@ class HelpCommand : public Command {
         std::string execute() override;
         static size_t args_count() { return args; };
         bool is_undoable() const override { return false; };
+        bool needs_session() const override { return false; };
     private:
         static const size_t args = 0;
 };
