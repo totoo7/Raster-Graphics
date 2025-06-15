@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Utilites.hpp"
 
-PGM::PGM(const std::string& filename) : Image(filename) {
+PGM::PGM(const std::string& filename) : ImageBase(filename) {
     std::ifstream ifs(filename);
     if (!ifs) throw std::runtime_error("Cannot open file: " + filename);
     UTILITIES::skip_comments(ifs, 2);
@@ -20,7 +20,9 @@ PGM::PGM(const std::string& filename) : Image(filename) {
     ifs.close();
 }
 
-PGM::PGM(const PGM& rhs) : pixels(rhs.pixels), max_val(rhs.max_val) {}
+PGM::PGM(const PGM& rhs) : max_val(rhs.max_val) {
+    pixels = rhs.pixels;
+}
 
 Image* PGM::clone() const {
     return new PGM(*this);
@@ -45,27 +47,9 @@ void PGM::negative() {
 			pixels[i][j] = max_val - pixels[i][j];
 }
 
-void PGM::rotate(const std::string& direction) {
-    if (direction == "left") {
-        UTILITIES::transpose_matrix(pixels);
-        UTILITIES::reverse_rows(pixels);
-    } else if (direction == "right") {
-        UTILITIES::transpose_matrix(pixels);
-        UTILITIES::reverse_cols(pixels);
-    }
-}
-
-void PGM::flip(const std::string& direction) {
-    if (direction == "top") {
-        UTILITIES::reverse_rows(pixels);
-    } else if (direction == "left") {
-        UTILITIES::reverse_cols(pixels);
-    }
-}
-
 Image* PGM::paste_into(Image* img_dest, size_t pos_x, size_t pos_y) {
     PGM* res = static_cast<PGM*>(img_dest->clone());
-    res->pixels = UTILITIES::paste_pixels<uint8_t>(res->pixels, this->pixels, pos_x, pos_y);
+    res->pixels = paste_pixels(res->pixels, this->pixels, pos_x, pos_y);
     res->width = res->pixels[0].size();
     res->height = res->pixels.size();
     return res;
