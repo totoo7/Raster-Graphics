@@ -23,6 +23,7 @@ set(sources
     src/services/commands/RedoCommand.cpp
     src/services/images/Image.cpp
     src/services/images/PGM.cpp
+    src/services/images/PBM.cpp
     src/services/images/ImageFactory.cpp
     src/controllers/CommandFactory.cpp
     src/controllers/Session.cpp
