@@ -4,27 +4,95 @@
 #include "Image.hpp"
 #include <vector>
 
+/**
+ * @class ImageBase
+ * @brief A templated abstract class that implements common image functionality.
+ * @tparam T Type used to represent pixel values.
+ */
 template<typename T>
 class ImageBase : public Image {
     public:
+        /**
+         * @brief Default constructor.
+         */
         ImageBase();
+
+        /**
+         * @brief Constructs the image from a given filename.
+         * @param filename Name of the image file.
+         */
         ImageBase(const std::string& filename);
+
+        /**
+         * @brief Rotates the image 90 degrees in the specified direction.
+         * @param direction Either "left" or "right".
+         */
         void rotate(const std::string& direction) override;
+
+        /**
+         * @brief Flips the image in the specified direction.
+         * @param direction Either "top" or "left".
+         */
         void flip(const std::string& direction) override;
+
+        /**
+         * @brief Writes all pixel data to the output stream.
+         * @param ofs Output file stream.
+         */
         void write_pixels(std::ofstream& ofs) const;
+
+        /**
+         * @brief Reads all pixel data from the input stream.
+         * @param ifs Input file stream.
+         */
         void read_pixels(std::ifstream& ifs);
+
+        /**
+         * @brief Reads a single pixel value from the stream.
+         * @param is Input stream.
+         * @return The read pixel value.
+         */
         virtual T read_value(std::ifstream& is) const = 0;
+
+        /**
+         * @brief Virtual default destructor.
+         */
         ~ImageBase() = default;
     protected:
-        std::vector<std::vector<T>> paste_pixels(const std::vector<std::vector<T>>& dest, const std::vector<std::vector<T>>& src,
-            size_t pos_y, size_t pos_x);
+        /**
+         * @brief Pastes one pixel matrix into another at the specified position.
+         * @param dest The destination pixel matrix.
+         * @param src The source pixel matrix to paste.
+         * @param pos_y Y-position in destination to paste into.
+         * @param pos_x X-position in destination to paste into.
+         * @return A new pixel matrix with the source pasted into destination.
+         */
+        std::vector<std::vector<T>> paste_pixels(const std::vector<std::vector<T>>& dest,
+                                                 const std::vector<std::vector<T>>& src,
+                                                 size_t pos_y, size_t pos_x);
     private:
+        /**
+         * @brief Transposes the matrix (rows become columns and vice versa).
+         * @param array Matrix to transpose.
+         */
         void transpose_matrix(std::vector<std::vector<T>>& array);
+
+        /**
+         * @brief Reverses the order of rows in the matrix (vertical flip).
+         * @param array Matrix to reverse.
+         */
         void reverse_rows(std::vector<std::vector<T>>& array);
+
+        /**
+         * @brief Reverses the order of columns in each row of the matrix (horizontal flip).
+         * @param array Matrix to reverse.
+         */
         void reverse_cols(std::vector<std::vector<T>>& array);
     protected:
         std::vector<std::vector<T>> pixels;
 };
+
+// Inline function definitions follow:
 
 template<typename T>
 inline ImageBase<T>::ImageBase() : Image() {}
@@ -133,6 +201,5 @@ size_t pos_x) {
     
     return result;
 }
-
 
 #endif

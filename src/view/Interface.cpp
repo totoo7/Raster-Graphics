@@ -14,7 +14,7 @@ Interface& Interface::get_instance() {
 
 void Interface::run() {
     std::string line;
-    std::cout << " <-- Welcome to Raster-Graphics --> \n";
+    std::cout << " <-- Welcome to Raster-Graphics --> \n Use 'help' command to check all available commands.\n";
     do {
         std::getline(std::cin, line);
         if (line.empty()) continue;

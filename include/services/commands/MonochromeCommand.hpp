@@ -5,19 +5,59 @@
 #include "SnapshotCommand.hpp"
 #include "Session.hpp"
 
+/**
+ * @brief Command to apply monochrome effect on images within a session.
+ */
 class MonochromeCommand : public SnapshotCommand {
-public:
-	MonochromeCommand(Session* const session);
-	MonochromeCommand(const MonochromeCommand& rhs);
-	static size_t args_count() { return args; };
-	std::string execute() override;
-	bool is_undoable() const override { return true; };
-	Command* clone() override { return new MonochromeCommand(*this); };
-	void undo() override;
-	void redo() override;
-private:
-	Session* const session;
-	static const size_t args = 0;
+	public:
+		/**
+		 * @brief Constructs a MonochromeCommand for the given session.
+		 * @param session Pointer to the current session.
+		 */
+		MonochromeCommand(Session* const session);
+
+		/**
+		 * @brief Copy constructor.
+		 * @param rhs Reference to another MonochromeCommand.
+		 */
+		MonochromeCommand(const MonochromeCommand& rhs);
+
+		/**
+		 * @brief Returns the required number of arguments for this command.
+		 * @return Always returns 0.
+		 */
+		static size_t args_count() { return args; };
+
+		/**
+		 * @brief Executes the monochrome conversion.
+		 * @return Result message.
+		 */
+		std::string execute() override;
+
+		/**
+		 * @brief Indicates this command can be undone.
+		 * @return True.
+		 */
+		bool is_undoable() const override { return true; };
+
+		/**
+		 * @brief Creates a copy of this command.
+		 * @return Pointer to the cloned command.
+		 */
+		Command* clone() override { return new MonochromeCommand(*this); };
+
+		/**
+		 * @brief Undoes the monochrome operation.
+		 */
+		void undo() override;
+
+		/**
+		 * @brief Redoes the monochrome operation.
+		 */
+		void redo() override;
+	private:
+		Session* const session;
+		static const size_t args = 0;
 };
 
 #endif
