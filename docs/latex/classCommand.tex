@@ -1,0 +1,166 @@
+\doxysection{Command Class Reference}
+\hypertarget{classCommand}{}\label{classCommand}\index{Command@{Command}}
+
+
+Abstract base class representing a command in the system.  
+
+
+
+
+{\ttfamily \#include $<$Command.\+hpp$>$}
+
+
+
+Inheritance diagram for Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCommand__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{execute}} ()=0
+\begin{DoxyCompactList}\small\item\em Executes the command. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{is\+\_\+undoable}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks if the command supports undo. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{needs\+\_\+session}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the command operation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Redoes the command operation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
+\Hypertarget{classCommand_aa545a53d35818f9efb936daf3fa16c61}\label{classCommand_aa545a53d35818f9efb936daf3fa16c61} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class representing a command in the system. 
+
+Defines the interface for all commands, including execution, undo/redo, and cloning behavior. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}\label{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25} 
+\index{Command@{Command}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily size\+\_\+t Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the number of arguments required by the command. 
+
+\begin{DoxyReturn}{Returns}
+Number of arguments. 
+\end{DoxyReturn}
+\Hypertarget{classCommand_a7c3832161e07e30e4646cd48d51a88bc}\label{classCommand_a7c3832161e07e30e4646cd48d51a88bc} 
+\index{Command@{Command}!clone@{clone}}
+\index{clone@{clone}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} Command\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Clones the command. 
+
+\begin{DoxyReturn}{Returns}
+A new instance (copy) of the command, or nullptr if not supported. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classFlipCommand_af38760418149f0edb484abe2cb4e15c5}{Flip\+Command}}, \mbox{\hyperlink{classGrayscaleCommand_aeb88b0000b30d84e9d6599d16b571b9b}{Grayscale\+Command}}, \mbox{\hyperlink{classMonochromeCommand_a55aafe9b41c0e3c9b4c8915d14c0a9bf}{Monochrome\+Command}}, \mbox{\hyperlink{classNegativeCommand_ac20b487069fe9a01a417e3c26103fd08}{Negative\+Command}}, and \mbox{\hyperlink{classRotateCommand_a39ff90e3727f4d248da13110f6efb941}{Rotate\+Command}}.
+
+\Hypertarget{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}\label{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4} 
+\index{Command@{Command}!execute@{execute}}
+\index{execute@{execute}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual std\+::string Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Executes the command. 
+
+\begin{DoxyReturn}{Returns}
+A message indicating the result of execution. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAddCommand_a366a8ab2f36ffb5894f7fd407b90d51a}{Add\+Command}}, \mbox{\hyperlink{classExitCommand_a93455bdf4f141e84e4039a1b8fefeb0f}{Exit\+Command}}, \mbox{\hyperlink{classFlipCommand_a2218df5ed819ce4d04a7c470a275a8a7}{Flip\+Command}}, \mbox{\hyperlink{classGrayscaleCommand_a98288d34e35b955a3a043fdbd3415331}{Grayscale\+Command}}, \mbox{\hyperlink{classHelpCommand_ab9ec3fae11daf96d1c17dee4209def68}{Help\+Command}}, \mbox{\hyperlink{classListCommand_ae9a0ffbedd4b7ea488120d8e405f2296}{List\+Command}}, \mbox{\hyperlink{classLoadCommand_ad78ac632fb0da549e47463ead5de42ad}{Load\+Command}}, \mbox{\hyperlink{classMonochromeCommand_a4b2cdb1695098aab96e6c6107dad3d82}{Monochrome\+Command}}, \mbox{\hyperlink{classNegativeCommand_a33bc24c32ca2e28ee9fcebde51ba4a38}{Negative\+Command}}, \mbox{\hyperlink{classPasteCommand_a81bd64795099a6b5b084007cadb07fce}{Paste\+Command}}, \mbox{\hyperlink{classRedoCommand_ad9fe3599c2af963e429bc1b8cbaa70e0}{Redo\+Command}}, \mbox{\hyperlink{classRotateCommand_aececefaec2365410bc641ec57186c00a}{Rotate\+Command}}, \mbox{\hyperlink{classSaveAsCommand_a92e8368b54aa9030eda25c86642bdcd2}{Save\+As\+Command}}, \mbox{\hyperlink{classSaveCommand_ad7490942127c610320545e08e257677c}{Save\+Command}}, \mbox{\hyperlink{classSwitchCommand_a1dc100851a9aa73b1f2e3d4cdf76a20e}{Switch\+Command}}, and \mbox{\hyperlink{classUndoCommand_a6c07b4771921a9e0ee7608e7a0d8fefa}{Undo\+Command}}.
+
+\Hypertarget{classCommand_acc0bcb447fc24439ea43d995ad798f7b}\label{classCommand_acc0bcb447fc24439ea43d995ad798f7b} 
+\index{Command@{Command}!is\_undoable@{is\_undoable}}
+\index{is\_undoable@{is\_undoable}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{is\_undoable()}{is\_undoable()}}
+{\footnotesize\ttfamily virtual bool Command\+::is\+\_\+undoable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if the command supports undo. 
+
+\begin{DoxyReturn}{Returns}
+True if undoable, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAddCommand_adb344b755815d973a080d3a7a08fcf21}{Add\+Command}}, \mbox{\hyperlink{classExitCommand_a2767ec98d538a163ab57fcb18fd5c03d}{Exit\+Command}}, \mbox{\hyperlink{classFlipCommand_afe2636136d83216d0372f7a375df5714}{Flip\+Command}}, \mbox{\hyperlink{classGrayscaleCommand_a43f2cc6e7833c23e3939eb90a19eb539}{Grayscale\+Command}}, \mbox{\hyperlink{classHelpCommand_a672a4fd9152aeb2ebb1b8dfc2d9e9928}{Help\+Command}}, \mbox{\hyperlink{classListCommand_a053b3745181819d0f5c35726525658fa}{List\+Command}}, \mbox{\hyperlink{classLoadCommand_ab61c70eadf8b797827da6776876533a9}{Load\+Command}}, \mbox{\hyperlink{classMonochromeCommand_ae281fe1254ed1250a2126f1ca7247030}{Monochrome\+Command}}, \mbox{\hyperlink{classNegativeCommand_a82d06546e26651a152c458cd5b5a6ad4}{Negative\+Command}}, \mbox{\hyperlink{classPasteCommand_a6d18e779a7a83a7716576c30f87732aa}{Paste\+Command}}, \mbox{\hyperlink{classRedoCommand_a6c172320c2aa9a9fb248a8bfb9d3ab57}{Redo\+Command}}, \mbox{\hyperlink{classRotateCommand_aa35dfe0d9bacddf2d72eed6601fab405}{Rotate\+Command}}, \mbox{\hyperlink{classSaveAsCommand_a0afe3f4d6c2542590fa4bb1e21bdd4ce}{Save\+As\+Command}}, \mbox{\hyperlink{classSaveCommand_a6a37a8d266598abcab555106a7be59bb}{Save\+Command}}, \mbox{\hyperlink{classSwitchCommand_a6451a11c9665ca72dd73b85fec4b9ed5}{Switch\+Command}}, and \mbox{\hyperlink{classUndoCommand_a206d32bb811513e66f6478de244525a5}{Undo\+Command}}.
+
+\Hypertarget{classCommand_ae23b0750288217051b61408eb609a35d}\label{classCommand_ae23b0750288217051b61408eb609a35d} 
+\index{Command@{Command}!needs\_session@{needs\_session}}
+\index{needs\_session@{needs\_session}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{needs\_session()}{needs\_session()}}
+{\footnotesize\ttfamily virtual bool Command\+::needs\+\_\+session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the command requires an active session. 
+
+\begin{DoxyReturn}{Returns}
+True if a session is needed, false by default. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classExitCommand_a63efca51a8c7cf90a610a4e2c28158b1}{Exit\+Command}}, \mbox{\hyperlink{classHelpCommand_a3f3f7220736897ef1dd2f75b3e31ba73}{Help\+Command}}, and \mbox{\hyperlink{classLoadCommand_aac486174a979e09c2a29033e217cf047}{Load\+Command}}.
+
+\Hypertarget{classCommand_a4158ba14940104bd2146181bd72ec077}\label{classCommand_a4158ba14940104bd2146181bd72ec077} 
+\index{Command@{Command}!redo@{redo}}
+\index{redo@{redo}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily void Command\+::redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Redoes the command operation. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classFlipCommand_ad6849ba2f959f77a48a2426e294a34f9}{Flip\+Command}}, \mbox{\hyperlink{classGrayscaleCommand_a731eec5f12b2893e039e84516cac5e39}{Grayscale\+Command}}, \mbox{\hyperlink{classMonochromeCommand_a65f1f7860b7579bb82e09a08fd35c3e9}{Monochrome\+Command}}, \mbox{\hyperlink{classNegativeCommand_acde8ddcbf2b5765a2b99a4cbe3f6c4b3}{Negative\+Command}}, and \mbox{\hyperlink{classRotateCommand_a15699349e6a1ba9ddf726989298b565d}{Rotate\+Command}}.
+
+\Hypertarget{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}\label{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2} 
+\index{Command@{Command}!undo@{undo}}
+\index{undo@{undo}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void Command\+::undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Undoes the command operation. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classFlipCommand_aecff0f96935e97342b4fdc1c3ee08148}{Flip\+Command}}, \mbox{\hyperlink{classGrayscaleCommand_ae0bf08bdba8c08be93ef71a85d100001}{Grayscale\+Command}}, \mbox{\hyperlink{classMonochromeCommand_a9aa897febedd7d07aa2fe54310adfec6}{Monochrome\+Command}}, \mbox{\hyperlink{classNegativeCommand_ab72d5f864ac955debaf42a8bae2f556a}{Negative\+Command}}, \mbox{\hyperlink{classRotateCommand_a05e44cbd944acb4f9ce9ddbb6b142f50}{Rotate\+Command}}, and \mbox{\hyperlink{classUndoCommand_a103d4bef990d45f5a04c842fb792e30f}{Undo\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/Command.\+cpp\end{DoxyCompactItemize}

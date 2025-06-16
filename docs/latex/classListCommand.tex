@@ -1,0 +1,138 @@
+\doxysection{List\+Command Class Reference}
+\hypertarget{classListCommand}{}\label{classListCommand}\index{ListCommand@{ListCommand}}
+
+
+\doxylink{classCommand}{Command} that lists details about the active session and its images.  
+
+
+
+
+{\ttfamily \#include $<$List\+Command.\+hpp$>$}
+
+
+
+Inheritance diagram for List\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classListCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for List\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classListCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListCommand_a8d24f076a90d0dda0523aa6195fb0174}{List\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classListCommand}{List\+Command} with a pointer to the active session. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classListCommand_ae9a0ffbedd4b7ea488120d8e405f2296}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the command, returning information about the session. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classListCommand_a053b3745181819d0f5c35726525658fa}{is\+\_\+undoable}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates that this command cannot be undone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{needs\+\_\+session}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the command operation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Redoes the command operation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classListCommand_a14344523d0bbafb1888cf821daf8c071}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the expected number of arguments for this command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classCommand}{Command} that lists details about the active session and its images. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classListCommand_a8d24f076a90d0dda0523aa6195fb0174}\label{classListCommand_a8d24f076a90d0dda0523aa6195fb0174} 
+\index{ListCommand@{ListCommand}!ListCommand@{ListCommand}}
+\index{ListCommand@{ListCommand}!ListCommand@{ListCommand}}
+\doxysubsubsection{\texorpdfstring{ListCommand()}{ListCommand()}}
+{\footnotesize\ttfamily List\+Command\+::\+List\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const}]{session }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classListCommand}{List\+Command} with a pointer to the active session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Pointer to the active session. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classListCommand_a14344523d0bbafb1888cf821daf8c071}\label{classListCommand_a14344523d0bbafb1888cf821daf8c071} 
+\index{ListCommand@{ListCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!ListCommand@{ListCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily static size\+\_\+t List\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the expected number of arguments for this command. 
+
+\begin{DoxyReturn}{Returns}
+Argument count (always 0). 
+\end{DoxyReturn}
+\Hypertarget{classListCommand_ae9a0ffbedd4b7ea488120d8e405f2296}\label{classListCommand_ae9a0ffbedd4b7ea488120d8e405f2296} 
+\index{ListCommand@{ListCommand}!execute@{execute}}
+\index{execute@{execute}!ListCommand@{ListCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::string List\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the command, returning information about the session. 
+
+\begin{DoxyReturn}{Returns}
+A string with session details. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
+
+\Hypertarget{classListCommand_a053b3745181819d0f5c35726525658fa}\label{classListCommand_a053b3745181819d0f5c35726525658fa} 
+\index{ListCommand@{ListCommand}!is\_undoable@{is\_undoable}}
+\index{is\_undoable@{is\_undoable}!ListCommand@{ListCommand}}
+\doxysubsubsection{\texorpdfstring{is\_undoable()}{is\_undoable()}}
+{\footnotesize\ttfamily bool List\+Command\+::is\+\_\+undoable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates that this command cannot be undone. 
+
+\begin{DoxyReturn}{Returns}
+False. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/List\+Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/List\+Command.\+cpp\end{DoxyCompactItemize}

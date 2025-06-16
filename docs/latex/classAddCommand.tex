@@ -1,0 +1,140 @@
+\doxysection{Add\+Command Class Reference}
+\hypertarget{classAddCommand}{}\label{classAddCommand}\index{AddCommand@{AddCommand}}
+
+
+\doxylink{classCommand}{Command} to add a new image to the current session.  
+
+
+
+
+{\ttfamily \#include $<$Add\+Command.\+hpp$>$}
+
+
+
+Inheritance diagram for Add\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classAddCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Add\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classAddCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAddCommand_a2f3ceb2d8d3daf8f2fcb0880cc1f15b6}{Add\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session, const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classAddCommand}{Add\+Command} with a target session and image file name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAddCommand_a366a8ab2f36ffb5894f7fd407b90d51a}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the add command. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAddCommand_adb344b755815d973a080d3a7a08fcf21}{is\+\_\+undoable}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates whether the command supports undo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{needs\+\_\+session}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the command operation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Redoes the command operation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classAddCommand_abf11afe7a78672806cbc59c27094b536}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of arguments expected by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classCommand}{Command} to add a new image to the current session. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAddCommand_a2f3ceb2d8d3daf8f2fcb0880cc1f15b6}\label{classAddCommand_a2f3ceb2d8d3daf8f2fcb0880cc1f15b6} 
+\index{AddCommand@{AddCommand}!AddCommand@{AddCommand}}
+\index{AddCommand@{AddCommand}!AddCommand@{AddCommand}}
+\doxysubsubsection{\texorpdfstring{AddCommand()}{AddCommand()}}
+{\footnotesize\ttfamily Add\+Command\+::\+Add\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const}]{session,  }\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classAddCommand}{Add\+Command} with a target session and image file name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Pointer to the session to add the image to. \\
+\hline
+{\em val} & Path to the image file. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAddCommand_abf11afe7a78672806cbc59c27094b536}\label{classAddCommand_abf11afe7a78672806cbc59c27094b536} 
+\index{AddCommand@{AddCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!AddCommand@{AddCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily static size\+\_\+t Add\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the number of arguments expected by the command. 
+
+\begin{DoxyReturn}{Returns}
+Expected argument count. 
+\end{DoxyReturn}
+\Hypertarget{classAddCommand_a366a8ab2f36ffb5894f7fd407b90d51a}\label{classAddCommand_a366a8ab2f36ffb5894f7fd407b90d51a} 
+\index{AddCommand@{AddCommand}!execute@{execute}}
+\index{execute@{execute}!AddCommand@{AddCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::string Add\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the add command. 
+
+\begin{DoxyReturn}{Returns}
+Status message. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
+
+\Hypertarget{classAddCommand_adb344b755815d973a080d3a7a08fcf21}\label{classAddCommand_adb344b755815d973a080d3a7a08fcf21} 
+\index{AddCommand@{AddCommand}!is\_undoable@{is\_undoable}}
+\index{is\_undoable@{is\_undoable}!AddCommand@{AddCommand}}
+\doxysubsubsection{\texorpdfstring{is\_undoable()}{is\_undoable()}}
+{\footnotesize\ttfamily bool Add\+Command\+::is\+\_\+undoable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates whether the command supports undo. 
+
+\begin{DoxyReturn}{Returns}
+False, as this command is not undoable. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/Add\+Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/Add\+Command.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,28 @@
+\doxysection{Switch\+Command.\+hpp}
+\hypertarget{SwitchCommand_8hpp_source}{}\label{SwitchCommand_8hpp_source}\index{/home/totoo/Documents/Raster-\/Graphics/include/services/commands/SwitchCommand.hpp@{/home/totoo/Documents/Raster-\/Graphics/include/services/commands/SwitchCommand.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SWITCH\_COMMAND\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SWITCH\_COMMAND\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Command.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}SessionManager.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSwitchCommand}{SwitchCommand}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCommand}{Command}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSwitchCommand}{SwitchCommand}}(\mbox{\hyperlink{classSessionManager}{SessionManager}}*\ \textcolor{keyword}{const}\ session\_manager,\ \textcolor{keywordtype}{size\_t}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classSwitchCommand_ad9fa5c192f396ae19dde902cccedd824}{args\_count}}()\ \{\ \textcolor{keywordflow}{return}\ args;\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classSwitchCommand_a1dc100851a9aa73b1f2e3d4cdf76a20e}{execute}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSwitchCommand_a6451a11c9665ca72dd73b85fec4b9ed5}{is\_undoable}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSessionManager}{SessionManager}}*\ \textcolor{keyword}{const}\ session\_manager;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ id;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args\ =\ 0;}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

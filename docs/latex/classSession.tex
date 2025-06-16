@@ -1,0 +1,193 @@
+\doxysection{Session Class Reference}
+\hypertarget{classSession}{}\label{classSession}\index{Session@{Session}}
+
+
+Represents an editing session that can hold and manipulate multiple images.  
+
+
+
+
+{\ttfamily \#include $<$Session.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSession_ad92ef09b872c9227e38a6efdd4d8a837}\label{classSession_ad92ef09b872c9227e38a6efdd4d8a837} 
+{\bfseries Session} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classSession}{Session} and assigns it a unique ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSession_ae52a4029d06af24d544947a16f3bb780}{Session}} (const \mbox{\hyperlink{classSession}{Session}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSession}{Session}} \& \mbox{\hyperlink{classSession_a5f2322a401b8c4e15e28969efb88a3b4}{operator=}} (const \mbox{\hyperlink{classSession}{Session}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classSession_a25ce8b8b2ac132247d96c1f0139185f8}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ID of the session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSession_ae3913e2907348df1cb663c0c24b18eee}{add\+\_\+image}} (\mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}image)
+\begin{DoxyCompactList}\small\item\em Adds an image to the session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSession_ae3567e9c05000708c1818d56247af14a}{rotate}} (const std\+::string \&direction)
+\begin{DoxyCompactList}\small\item\em Rotates all images in the session in the specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSession_a0c9130f773184d3182f4708d5704f766}{flip}} (const std\+::string \&direction)
+\begin{DoxyCompactList}\small\item\em Flips all images in the session in the specified direction. \end{DoxyCompactList}\item 
+\Hypertarget{classSession_ac67a3368cb52723057ef983e398f2036}\label{classSession_ac67a3368cb52723057ef983e398f2036} 
+void {\bfseries monochrome} ()
+\begin{DoxyCompactList}\small\item\em Converts all images in the session to monochrome. \end{DoxyCompactList}\item 
+\Hypertarget{classSession_a5e1c7db6e205de1568decfed4a6b9835}\label{classSession_a5e1c7db6e205de1568decfed4a6b9835} 
+void {\bfseries negative} ()
+\begin{DoxyCompactList}\small\item\em Converts all images in the session to their negative form. \end{DoxyCompactList}\item 
+\Hypertarget{classSession_a8bcfe9cffe0521df615077f30ab8c01e}\label{classSession_a8bcfe9cffe0521df615077f30ab8c01e} 
+void {\bfseries grayscale} ()
+\begin{DoxyCompactList}\small\item\em Converts all images in the session to grayscale. \end{DoxyCompactList}\item 
+\Hypertarget{classSession_aec0dc9e097213458c68d32d7f09d8cfc}\label{classSession_aec0dc9e097213458c68d32d7f09d8cfc} 
+void {\bfseries save} ()
+\item 
+void \mbox{\hyperlink{classSession_a928d2e5602b9ebbce8dd4522ef920f7a}{save\+As}} (const std\+::vector$<$ std\+::string $>$ \&files)
+\begin{DoxyCompactList}\small\item\em Saves all images to specified filenames. \end{DoxyCompactList}\item 
+\Hypertarget{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}\label{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3} 
+void {\bfseries undo} ()
+\begin{DoxyCompactList}\small\item\em Undoes the last command applied to the session. \end{DoxyCompactList}\item 
+\Hypertarget{classSession_ab615c2ae32f73fa42496233146da6f19}\label{classSession_ab615c2ae32f73fa42496233146da6f19} 
+void {\bfseries redo} ()
+\begin{DoxyCompactList}\small\item\em Redoes the last undone command in the session. \end{DoxyCompactList}\item 
+\Hypertarget{classSession_a8753bb9dee966b7d39abc9b7237cd665}\label{classSession_a8753bb9dee966b7d39abc9b7237cd665} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Session} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Frees memory associated with images and commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSession_af48f022788b488ee01e66ffb60ee3b3a}\label{classSession_af48f022788b488ee01e66ffb60ee3b3a} 
+std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries images}
+\item 
+\Hypertarget{classSession_aa4ee9966341c51d2195e8bfa5a63798a}\label{classSession_aa4ee9966341c51d2195e8bfa5a63798a} 
+std\+::vector$<$ \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries history}
+\item 
+\Hypertarget{classSession_aa454ea7220c4fd370e0081793e93f3b5}\label{classSession_aa454ea7220c4fd370e0081793e93f3b5} 
+std\+::vector$<$ \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries redos}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSession_abab537a4fcc269fe916d1a7982dac3d4}\label{classSession_abab537a4fcc269fe916d1a7982dac3d4} 
+static int {\bfseries current\+\_\+id} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an editing session that can hold and manipulate multiple images. 
+
+Each \doxylink{classSession}{Session} has a unique ID and maintains a history of commands for undo/redo functionality. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSession_ae52a4029d06af24d544947a16f3bb780}\label{classSession_ae52a4029d06af24d544947a16f3bb780} 
+\index{Session@{Session}!Session@{Session}}
+\index{Session@{Session}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{Session()}{Session()}}
+{\footnotesize\ttfamily Session\+::\+Session (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSession}{Session}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \doxylink{classSession}{Session} to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSession_ae3913e2907348df1cb663c0c24b18eee}\label{classSession_ae3913e2907348df1cb663c0c24b18eee} 
+\index{Session@{Session}!add\_image@{add\_image}}
+\index{add\_image@{add\_image}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{add\_image()}{add\_image()}}
+{\footnotesize\ttfamily void Session\+::add\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}}]{image }\end{DoxyParamCaption})}
+
+
+
+Adds an image to the session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Pointer to the image to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSession_a0c9130f773184d3182f4708d5704f766}\label{classSession_a0c9130f773184d3182f4708d5704f766} 
+\index{Session@{Session}!flip@{flip}}
+\index{flip@{flip}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{flip()}{flip()}}
+{\footnotesize\ttfamily void Session\+::flip (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{direction }\end{DoxyParamCaption})}
+
+
+
+Flips all images in the session in the specified direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Either "{}horizontal"{} or "{}vertical"{}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSession_a25ce8b8b2ac132247d96c1f0139185f8}\label{classSession_a25ce8b8b2ac132247d96c1f0139185f8} 
+\index{Session@{Session}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily const int Session\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the ID of the session. 
+
+\begin{DoxyReturn}{Returns}
+The unique ID of the session. 
+\end{DoxyReturn}
+\Hypertarget{classSession_a5f2322a401b8c4e15e28969efb88a3b4}\label{classSession_a5f2322a401b8c4e15e28969efb88a3b4} 
+\index{Session@{Session}!operator=@{operator=}}
+\index{operator=@{operator=}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSession}{Session}} \& Session\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSession}{Session}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \doxylink{classSession}{Session} to copy from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this session. 
+\end{DoxyReturn}
+\Hypertarget{classSession_ae3567e9c05000708c1818d56247af14a}\label{classSession_ae3567e9c05000708c1818d56247af14a} 
+\index{Session@{Session}!rotate@{rotate}}
+\index{rotate@{rotate}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Session\+::rotate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{direction }\end{DoxyParamCaption})}
+
+
+
+Rotates all images in the session in the specified direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Either "{}left"{} or "{}right"{}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSession_a928d2e5602b9ebbce8dd4522ef920f7a}\label{classSession_a928d2e5602b9ebbce8dd4522ef920f7a} 
+\index{Session@{Session}!saveAs@{saveAs}}
+\index{saveAs@{saveAs}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{saveAs()}{saveAs()}}
+{\footnotesize\ttfamily void Session\+::save\+As (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{files }\end{DoxyParamCaption})}
+
+
+
+Saves all images to specified filenames. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em files} & A vector of output filenames. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/controllers/Session.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/controllers/Session.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,28 @@
+\doxysection{Session\+Manager.\+hpp}
+\hypertarget{SessionManager_8hpp_source}{}\label{SessionManager_8hpp_source}\index{/home/totoo/Documents/Raster-\/Graphics/include/controllers/SessionManager.hpp@{/home/totoo/Documents/Raster-\/Graphics/include/controllers/SessionManager.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SESSION\_MANAGER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SESSION\_MANAGER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Session.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSessionManager}{SessionManager}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{SessionManager}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession}{Session}}*\ \mbox{\hyperlink{classSessionManager_a0f0d11d6b03279ebf0e7c6182535f38e}{get\_active}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSessionManager_a80e0fe672b0e7ee1dacab9670e810981}{add}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classSession}{Session}}\&\ session);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSessionManager_af5c912d49293ecde558c3f9219d44e7d}{change}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSessionManager_aaa001d17557f897038ed33d1a36e82e1}{\string~SessionManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession}{Session}}*\ active\_session;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::vector<Session>\ sessions;}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,42 @@
+\doxysection{PGM.\+hpp}
+\hypertarget{PGM_8hpp_source}{}\label{PGM_8hpp_source}\index{/home/totoo/Documents/Raster-\/Graphics/include/services/images/PGM.hpp@{/home/totoo/Documents/Raster-\/Graphics/include/services/images/PGM.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PGM\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PGM\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ImageBase.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPGM}{PGM}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classImageBase}{ImageBase}}<uint8\_t>\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPGM_a2038c1dce9fd6b245e714275682b460b}{PGM}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPGM_a2038c1dce9fd6b245e714275682b460b}{PGM}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPGM_a2038c1dce9fd6b245e714275682b460b}{PGM}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPGM}{PGM}}\&\ rhs);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPGM_adc0a21c5950b9e93d637363d31a035ea}{grayscale}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPGM_a931e661d520986a2ce34dcba1f022b7a}{monochrome}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPGM_aea2063efae37af0d231df613611f05e8}{negative}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPGM_a2b4b166c9a7fd7bbd8020c24e4c26699}{write\_pixel}}(std::ofstream\&\ ofs,\ \textcolor{keywordtype}{size\_t}\ i,\ \textcolor{keywordtype}{size\_t}\ j)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classImage}{Image}}*\ \mbox{\hyperlink{classPGM_ae0f6fc3f018f8e2611a2cc93aa82f4c6}{paste\_into}}(\mbox{\hyperlink{classImage}{Image}}*\ img\_dest,\ \textcolor{keywordtype}{size\_t}\ pos\_x,\ \textcolor{keywordtype}{size\_t}\ pos\_y)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPGM_a7a09934338df5331abe210ba612d72c8}{write\_file}}(std::ofstream\&\ ofs)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classImage}{Image}}*\ \mbox{\hyperlink{classPGM_aeea047b7a5ea6e150ccc2918f76ddc20}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{classPGM_af7d6985dea3d9ce5a1c666e401a60172}{read\_value}}(std::ifstream\&\ is)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPGM_a13a8b868804eae6b54ba42a80dd639e2}{\string~PGM}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ uint8\_t\ max\_val;}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

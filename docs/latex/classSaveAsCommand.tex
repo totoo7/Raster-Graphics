@@ -1,0 +1,140 @@
+\doxysection{Save\+As\+Command Class Reference}
+\hypertarget{classSaveAsCommand}{}\label{classSaveAsCommand}\index{SaveAsCommand@{SaveAsCommand}}
+
+
+\doxylink{classCommand}{Command} to save session images to new specified file names.  
+
+
+
+
+{\ttfamily \#include $<$Save\+As\+Command.\+hpp$>$}
+
+
+
+Inheritance diagram for Save\+As\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{classSaveAsCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Save\+As\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{classSaveAsCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSaveAsCommand_a6c8ff65115cd1ca114de72ca3833aad2}{Save\+As\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session, const std\+::vector$<$ std\+::string $>$ \&files)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classSaveAsCommand}{Save\+As\+Command}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSaveAsCommand_a92e8368b54aa9030eda25c86642bdcd2}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the save-\/as operation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSaveAsCommand_a0afe3f4d6c2542590fa4bb1e21bdd4ce}{is\+\_\+undoable}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates this command is not undoable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{needs\+\_\+session}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the command operation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Redoes the command operation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classSaveAsCommand_a106c7130b5d44e0af4bbb91dae29d8a8}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of required arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classCommand}{Command} to save session images to new specified file names. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSaveAsCommand_a6c8ff65115cd1ca114de72ca3833aad2}\label{classSaveAsCommand_a6c8ff65115cd1ca114de72ca3833aad2} 
+\index{SaveAsCommand@{SaveAsCommand}!SaveAsCommand@{SaveAsCommand}}
+\index{SaveAsCommand@{SaveAsCommand}!SaveAsCommand@{SaveAsCommand}}
+\doxysubsubsection{\texorpdfstring{SaveAsCommand()}{SaveAsCommand()}}
+{\footnotesize\ttfamily Save\+As\+Command\+::\+Save\+As\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const}]{session,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{files }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classSaveAsCommand}{Save\+As\+Command}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Pointer to the current session. \\
+\hline
+{\em files} & Vector of filenames to save the images as. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSaveAsCommand_a106c7130b5d44e0af4bbb91dae29d8a8}\label{classSaveAsCommand_a106c7130b5d44e0af4bbb91dae29d8a8} 
+\index{SaveAsCommand@{SaveAsCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!SaveAsCommand@{SaveAsCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily static size\+\_\+t Save\+As\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the number of required arguments. 
+
+\begin{DoxyReturn}{Returns}
+Always returns 0. 
+\end{DoxyReturn}
+\Hypertarget{classSaveAsCommand_a92e8368b54aa9030eda25c86642bdcd2}\label{classSaveAsCommand_a92e8368b54aa9030eda25c86642bdcd2} 
+\index{SaveAsCommand@{SaveAsCommand}!execute@{execute}}
+\index{execute@{execute}!SaveAsCommand@{SaveAsCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::string Save\+As\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the save-\/as operation. 
+
+\begin{DoxyReturn}{Returns}
+Result message. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
+
+\Hypertarget{classSaveAsCommand_a0afe3f4d6c2542590fa4bb1e21bdd4ce}\label{classSaveAsCommand_a0afe3f4d6c2542590fa4bb1e21bdd4ce} 
+\index{SaveAsCommand@{SaveAsCommand}!is\_undoable@{is\_undoable}}
+\index{is\_undoable@{is\_undoable}!SaveAsCommand@{SaveAsCommand}}
+\doxysubsubsection{\texorpdfstring{is\_undoable()}{is\_undoable()}}
+{\footnotesize\ttfamily bool Save\+As\+Command\+::is\+\_\+undoable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates this command is not undoable. 
+
+\begin{DoxyReturn}{Returns}
+False. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/Save\+As\+Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/Save\+As\+Command.\+cpp\end{DoxyCompactItemize}

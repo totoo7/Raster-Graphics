@@ -1,0 +1,152 @@
+\doxysection{Undo\+Command Class Reference}
+\hypertarget{classUndoCommand}{}\label{classUndoCommand}\index{UndoCommand@{UndoCommand}}
+
+
+\doxylink{classCommand}{Command} to undo the last executed undoable command in a session.  
+
+
+
+
+{\ttfamily \#include $<$Undo\+Command.\+hpp$>$}
+
+
+
+Inheritance diagram for Undo\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classUndoCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Undo\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classUndoCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUndoCommand_aa6eced9f817724cad886961b8c95d3de}{Undo\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classUndoCommand}{Undo\+Command} for the given session. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classUndoCommand_a6c07b4771921a9e0ee7608e7a0d8fefa}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the undo operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUndoCommand_a103d4bef990d45f5a04c842fb792e30f}{undo}} () override
+\begin{DoxyCompactList}\small\item\em No-\/op for this command since it is not itself undoable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUndoCommand_a206d32bb811513e66f6478de244525a5}{is\+\_\+undoable}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates this command is not undoable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{needs\+\_\+session}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Redoes the command operation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classUndoCommand_a3c3a3cbb91b3f4473fdb4a0b8ce88d83}{get\+\_\+args}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of required arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classCommand}{Command} to undo the last executed undoable command in a session. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classUndoCommand_aa6eced9f817724cad886961b8c95d3de}\label{classUndoCommand_aa6eced9f817724cad886961b8c95d3de} 
+\index{UndoCommand@{UndoCommand}!UndoCommand@{UndoCommand}}
+\index{UndoCommand@{UndoCommand}!UndoCommand@{UndoCommand}}
+\doxysubsubsection{\texorpdfstring{UndoCommand()}{UndoCommand()}}
+{\footnotesize\ttfamily Undo\+Command\+::\+Undo\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const}]{session }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classUndoCommand}{Undo\+Command} for the given session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Pointer to the session on which to perform the undo. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classUndoCommand_a6c07b4771921a9e0ee7608e7a0d8fefa}\label{classUndoCommand_a6c07b4771921a9e0ee7608e7a0d8fefa} 
+\index{UndoCommand@{UndoCommand}!execute@{execute}}
+\index{execute@{execute}!UndoCommand@{UndoCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::string Undo\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the undo operation. 
+
+\begin{DoxyReturn}{Returns}
+Result message. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
+
+\Hypertarget{classUndoCommand_a3c3a3cbb91b3f4473fdb4a0b8ce88d83}\label{classUndoCommand_a3c3a3cbb91b3f4473fdb4a0b8ce88d83} 
+\index{UndoCommand@{UndoCommand}!get\_args@{get\_args}}
+\index{get\_args@{get\_args}!UndoCommand@{UndoCommand}}
+\doxysubsubsection{\texorpdfstring{get\_args()}{get\_args()}}
+{\footnotesize\ttfamily static size\+\_\+t Undo\+Command\+::get\+\_\+args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the number of required arguments. 
+
+\begin{DoxyReturn}{Returns}
+Always returns 0. 
+\end{DoxyReturn}
+\Hypertarget{classUndoCommand_a206d32bb811513e66f6478de244525a5}\label{classUndoCommand_a206d32bb811513e66f6478de244525a5} 
+\index{UndoCommand@{UndoCommand}!is\_undoable@{is\_undoable}}
+\index{is\_undoable@{is\_undoable}!UndoCommand@{UndoCommand}}
+\doxysubsubsection{\texorpdfstring{is\_undoable()}{is\_undoable()}}
+{\footnotesize\ttfamily bool Undo\+Command\+::is\+\_\+undoable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates this command is not undoable. 
+
+\begin{DoxyReturn}{Returns}
+False. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{Command}}.
+
+\Hypertarget{classUndoCommand_a103d4bef990d45f5a04c842fb792e30f}\label{classUndoCommand_a103d4bef990d45f5a04c842fb792e30f} 
+\index{UndoCommand@{UndoCommand}!undo@{undo}}
+\index{undo@{undo}!UndoCommand@{UndoCommand}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void Undo\+Command\+::undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+No-\/op for this command since it is not itself undoable. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/Undo\+Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/Undo\+Command.\+cpp\end{DoxyCompactItemize}

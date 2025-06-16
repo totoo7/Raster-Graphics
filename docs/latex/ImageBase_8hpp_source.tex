@@ -1,0 +1,155 @@
+\doxysection{Image\+Base.\+hpp}
+\hypertarget{ImageBase_8hpp_source}{}\label{ImageBase_8hpp_source}\index{/home/totoo/Documents/Raster-\/Graphics/include/services/images/ImageBase.hpp@{/home/totoo/Documents/Raster-\/Graphics/include/services/images/ImageBase.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ IMAGE\_BASE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ IMAGE\_BASE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Image.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classImageBase}{ImageBase}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classImage}{Image}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classImageBase_a0d0996266703e4c7bbedf96bc5c6313c}{ImageBase}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classImageBase_a2e63030cd531d0db4794d9a0986658bd}{ImageBase}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase_a725b5127ed1e9e7144486d3c1a348251}{rotate}}(\textcolor{keyword}{const}\ std::string\&\ direction)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase_a6faf9416e384d23751799e2ee4e74058}{flip}}(\textcolor{keyword}{const}\ std::string\&\ direction)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase_a0af78816fe2ae0780218f635547340ee}{write\_pixels}}(std::ofstream\&\ ofs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase_ae2dc6e396bc8652161bb91462109ead3}{read\_pixels}}(std::ifstream\&\ ifs);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ T\ \mbox{\hyperlink{classImageBase_af1c547dc6dfadc94021d1a5f02c47c7b}{read\_value}}(std::ifstream\&\ is)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classImageBase_aadde3fd256d933bb99e374765181b959}{\string~ImageBase}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::vector<std::vector<T>>\ \mbox{\hyperlink{classImageBase_af9da1259d556b721d16136618f0dd2ed}{paste\_pixels}}(\textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ dest,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ src,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos\_y,\ \textcolor{keywordtype}{size\_t}\ pos\_x);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ transpose\_matrix(std::vector<std::vector<T>>\&\ array);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ reverse\_rows(std::vector<std::vector<T>>\&\ array);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ reverse\_cols(std::vector<std::vector<T>>\&\ array);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::vector<std::vector<T>>\ pixels;}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{//\ Inline\ function\ definitions\ follow:}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00098\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classImageBase_a0d0996266703e4c7bbedf96bc5c6313c}{ImageBase<T>::ImageBase}}()\ :\ \mbox{\hyperlink{classImage}{Image}}()\ \{\}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00101\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classImageBase_a0d0996266703e4c7bbedf96bc5c6313c}{ImageBase<T>::ImageBase}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ :\ \mbox{\hyperlink{classImage}{Image}}(filename)\ \{\}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00104\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase_a0af78816fe2ae0780218f635547340ee}{ImageBase<T>::write\_pixels}}(std::ofstream\&\ ofs)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ height;\ ++i)\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ width;\ ++j)\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ write\_pixel(ofs,\ i,\ j);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ ofs\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ ofs\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00115\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase_ae2dc6e396bc8652161bb91462109ead3}{ImageBase<T>::read\_pixels}}(std::ifstream\&\ ifs)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ pixels.resize(height,\ std::vector<T>(width));}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ height;\ ++i)\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ width;\ ++j)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ pixels[i][j]\ =\ read\_value(ifs);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00125\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase}{ImageBase<T>::transpose\_matrix}}(std::vector<std::vector<T>>\&\ array)\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ rows\ =\ array.size();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ cols\ =\ array[0].size();}
+\DoxyCodeLine{00128\ \ \ \ \ std::vector<std::vector<T>>\ transposed(cols,\ std::vector<T>(rows));}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ rows;\ ++i)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ cols;\ ++j)\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ transposed[j][i]\ =\ array[i][j];}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ array\ =\ std::move(transposed);}
+\DoxyCodeLine{00135\ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00138\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase_a725b5127ed1e9e7144486d3c1a348251}{ImageBase<T>::rotate}}(\textcolor{keyword}{const}\ std::string\&\ direction)\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{if}\ (direction\ ==\ \textcolor{stringliteral}{"{}left"{}})\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ transpose\_matrix(pixels);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ reverse\_rows(pixels);}
+\DoxyCodeLine{00142\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (direction\ ==\ \textcolor{stringliteral}{"{}right"{}})\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ transpose\_matrix(pixels);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ reverse\_cols(pixels);}
+\DoxyCodeLine{00145\ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ this-\/>height\ =\ pixels.size();}
+\DoxyCodeLine{00147\ \ \ \ \ this-\/>width\ =\ pixels[0].size();}
+\DoxyCodeLine{00148\ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00151\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase_a6faf9416e384d23751799e2ee4e74058}{ImageBase<T>::flip}}(\textcolor{keyword}{const}\ std::string\&\ direction)\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{if}\ (direction\ ==\ \textcolor{stringliteral}{"{}top"{}})\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ reverse\_rows(pixels);}
+\DoxyCodeLine{00154\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (direction\ ==\ \textcolor{stringliteral}{"{}left"{}})\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ reverse\_cols(pixels);}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ this-\/>height\ =\ pixels.size();}
+\DoxyCodeLine{00158\ \ \ \ \ this-\/>width\ =\ pixels[0].size();}
+\DoxyCodeLine{00159\ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00162\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase}{ImageBase<T>::reverse\_rows}}(std::vector<std::vector<T>>\&\ array)\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ array.size()\ /\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ std::swap(array[i],\ array[array.size()\ -\/\ i\ -\/\ 1]);}
+\DoxyCodeLine{00165\ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00169\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImageBase}{ImageBase<T>::reverse\_cols}}(std::vector<std::vector<T>>\&\ array)\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ array.size();\ ++i)\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ array[i].size()\ /\ 2;\ ++j)\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ T\ temp\ =\ array[i][j];}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ array[i][j]\ =\ array[i][array[i].size()\ -\/\ j\ -\/\ 1];}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ array[i][array[i].size()\ -\/\ j\ -\/\ 1]\ =\ temp;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ \}\ }
+\DoxyCodeLine{00177\ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00180\ \textcolor{keyword}{inline}\ std::vector<std::vector<T>>\ \mbox{\hyperlink{classImageBase_af9da1259d556b721d16136618f0dd2ed}{ImageBase<T>::paste\_pixels}}(\textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ dest,}
+\DoxyCodeLine{00181\ \textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ src,}
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{size\_t}\ pos\_y,}
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{size\_t}\ pos\_x)\ \{}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_height\ =\ std::max(dest.size(),\ pos\_y\ +\ src.size());}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_width\ \ =\ std::max(dest.empty()\ ?\ 0\ :\ dest[0].size(),\ pos\_x\ +\ src[0].size());}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ std::vector<std::vector<T>>\ result(new\_height,\ std::vector<T>(new\_width));}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dest.size();\ ++i)\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ dest[i].size();\ ++j)\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ result[i][j]\ =\ dest[i][j];}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ src.size();\ ++i)\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ src[i].size();\ ++j)\ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ result[pos\_y\ +\ i][pos\_x\ +\ j]\ =\ src[i][j];}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \ \ \ \ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00203\ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

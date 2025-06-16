@@ -1,0 +1,95 @@
+\doxysection{Session\+Manager Class Reference}
+\hypertarget{classSessionManager}{}\label{classSessionManager}\index{SessionManager@{SessionManager}}
+
+
+Manages multiple editing sessions for image processing.  
+
+
+
+
+{\ttfamily \#include $<$Session\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{Session\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classSessionManager}{Session\+Manager}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSessionManager_a0f0d11d6b03279ebf0e7c6182535f38e}{get\+\_\+active}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the currently active session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSessionManager_a80e0fe672b0e7ee1dacab9670e810981}{add}} (const \mbox{\hyperlink{classSession}{Session}} \&session)
+\begin{DoxyCompactList}\small\item\em Adds a new session to the session manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSessionManager_af5c912d49293ecde558c3f9219d44e7d}{change}} (const int id)
+\begin{DoxyCompactList}\small\item\em Changes the active session to the one with the given ID. \end{DoxyCompactList}\item 
+\Hypertarget{classSessionManager_aaa001d17557f897038ed33d1a36e82e1}\label{classSessionManager_aaa001d17557f897038ed33d1a36e82e1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Session\+Manager} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages multiple editing sessions for image processing. 
+
+Responsible for keeping track of all sessions, switching between them, and accessing the currently active session. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}\label{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006} 
+\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
+\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{SessionManager()}{SessionManager()}}
+{\footnotesize\ttfamily Session\+Manager\+::\+Session\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classSessionManager}{Session\+Manager}. 
+
+Initializes the session manager with no active session. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSessionManager_a80e0fe672b0e7ee1dacab9670e810981}\label{classSessionManager_a80e0fe672b0e7ee1dacab9670e810981} 
+\index{SessionManager@{SessionManager}!add@{add}}
+\index{add@{add}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Session\+Manager\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSession}{Session}} \&}]{session }\end{DoxyParamCaption})}
+
+
+
+Adds a new session to the session manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & The \doxylink{classSession}{Session} to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSessionManager_af5c912d49293ecde558c3f9219d44e7d}\label{classSessionManager_af5c912d49293ecde558c3f9219d44e7d} 
+\index{SessionManager@{SessionManager}!change@{change}}
+\index{change@{change}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{change()}{change()}}
+{\footnotesize\ttfamily void Session\+Manager\+::change (\begin{DoxyParamCaption}\item[{const int}]{id }\end{DoxyParamCaption})}
+
+
+
+Changes the active session to the one with the given ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the session to switch to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSessionManager_a0f0d11d6b03279ebf0e7c6182535f38e}\label{classSessionManager_a0f0d11d6b03279ebf0e7c6182535f38e} 
+\index{SessionManager@{SessionManager}!get\_active@{get\_active}}
+\index{get\_active@{get\_active}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{get\_active()}{get\_active()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*} Session\+Manager\+::get\+\_\+active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a pointer to the currently active session. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the active \doxylink{classSession}{Session}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/controllers/Session\+Manager.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/controllers/Session\+Manager.\+cpp\end{DoxyCompactItemize}

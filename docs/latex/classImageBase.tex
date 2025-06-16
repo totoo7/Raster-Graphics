@@ -1,0 +1,274 @@
+\doxysection{Image\+Base\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classImageBase}{}\label{classImageBase}\index{ImageBase$<$ T $>$@{ImageBase$<$ T $>$}}
+
+
+A templated abstract class that implements common image functionality.  
+
+
+
+
+{\ttfamily \#include $<$Image\+Base.\+hpp$>$}
+
+
+
+Inheritance diagram for Image\+Base\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classImageBase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Image\+Base\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classImageBase__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classImageBase_a0d0996266703e4c7bbedf96bc5c6313c}\label{classImageBase_a0d0996266703e4c7bbedf96bc5c6313c} 
+{\bfseries Image\+Base} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImageBase_a2e63030cd531d0db4794d9a0986658bd}{Image\+Base}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructs the image from a given filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImageBase_a725b5127ed1e9e7144486d3c1a348251}{rotate}} (const std\+::string \&direction) override
+\begin{DoxyCompactList}\small\item\em Rotates the image 90 degrees in the specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImageBase_a6faf9416e384d23751799e2ee4e74058}{flip}} (const std\+::string \&direction) override
+\begin{DoxyCompactList}\small\item\em Flips the image in the specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImageBase_a0af78816fe2ae0780218f635547340ee}{write\+\_\+pixels}} (std\+::ofstream \&ofs) const
+\begin{DoxyCompactList}\small\item\em Writes all pixel data to the output stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImageBase_ae2dc6e396bc8652161bb91462109ead3}{read\+\_\+pixels}} (std\+::ifstream \&ifs)
+\begin{DoxyCompactList}\small\item\em Reads all pixel data from the input stream. \end{DoxyCompactList}\item 
+virtual T \mbox{\hyperlink{classImageBase_af1c547dc6dfadc94021d1a5f02c47c7b}{read\+\_\+value}} (std\+::ifstream \&is) const =0
+\begin{DoxyCompactList}\small\item\em Reads a single pixel value from the stream. \end{DoxyCompactList}\item 
+\Hypertarget{classImageBase_aadde3fd256d933bb99e374765181b959}\label{classImageBase_aadde3fd256d933bb99e374765181b959} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Image\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Image} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a81e88caba6ef6c0ed639bf1f25e9d441}{Image}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructs an image from a file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_af6d40be234c94a5d3d562c8475aedd6f}{grayscale}} ()=0
+\begin{DoxyCompactList}\small\item\em Converts the image to grayscale. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_a5c123189b0ed2d31e8a80e05696a8412}{monochrome}} ()=0
+\begin{DoxyCompactList}\small\item\em Converts the image to monochrome. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_aff53edc2799e9be84ebe3c565c4f0697}{negative}} ()=0
+\begin{DoxyCompactList}\small\item\em Inverts the colors of the image. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_af46a8f0f8bf5c5ca02a48550474b5ba3}{write\+\_\+file}} (std\+::ofstream \&ofs) const =0
+\begin{DoxyCompactList}\small\item\em Writes the image data to the provided output stream. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_af6164f58c07bd2a48ab0b91fe9006cae}{write\+\_\+pixel}} (std\+::ofstream \&ofs, size\+\_\+t i, size\+\_\+t j) const =0
+\begin{DoxyCompactList}\small\item\em Writes a single pixel to the output stream. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classImage_a9d29978ec53fa2f3e3e282b58a2b617c}{paste\+\_\+into}} (\mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}img\+\_\+dest, size\+\_\+t pos\+\_\+x, size\+\_\+t pos\+\_\+y)=0
+\begin{DoxyCompactList}\small\item\em Pastes this image into another image at the given position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classImage_a7096da2078bcfb53ba7f0bd1747dc150}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_ad2aa95097e6c23fe96a80767850e149f}{set\+\_\+filename}} (const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em Sets the filename of the image. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classImage_ae6f8969057892a39ea453cb5a825f123}{get\+\_\+filename}} () const
+\begin{DoxyCompactList}\small\item\em Gets the filename of the image. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classImage_a39e18142b0a77e422eec6522ba13fefd}{get\+\_\+width}} () const
+\begin{DoxyCompactList}\small\item\em Gets the width of the image. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classImage_a041f9799ce5bd0cbe84de81d390bc36a}{get\+\_\+height}} () const
+\begin{DoxyCompactList}\small\item\em Gets the height of the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} \mbox{\hyperlink{classImage_a528a54553453c2d6def8ae302bbbfd85}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Gets the type of the image. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Image} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classImageBase_af9da1259d556b721d16136618f0dd2ed}{paste\+\_\+pixels}} (const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&dest, const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&src, size\+\_\+t pos\+\_\+y, size\+\_\+t pos\+\_\+x)
+\begin{DoxyCompactList}\small\item\em Pastes one pixel matrix into another at the specified position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classImageBase_a1d79d2b23e629228e802462e2b53030e}\label{classImageBase_a1d79d2b23e629228e802462e2b53030e} 
+std\+::vector$<$ std\+::vector$<$ T $>$ $>$ {\bfseries pixels}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries filename}
+\item 
+size\+\_\+t {\bfseries width}
+\item 
+size\+\_\+t {\bfseries height}
+\item 
+\mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} {\bfseries type}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classImage_a97ec78f98a999ad234053ab07c958ef5}\label{classImage_a97ec78f98a999ad234053ab07c958ef5} 
+enum class \mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} \{ {\bfseries PPM}
+, {\bfseries PGM}
+, {\bfseries PBM}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for supported image formats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Image\+Base$<$ T $>$}
+A templated abstract class that implements common image functionality. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type used to represent pixel values. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classImageBase_a2e63030cd531d0db4794d9a0986658bd}\label{classImageBase_a2e63030cd531d0db4794d9a0986658bd} 
+\index{ImageBase$<$ T $>$@{ImageBase$<$ T $>$}!ImageBase@{ImageBase}}
+\index{ImageBase@{ImageBase}!ImageBase$<$ T $>$@{ImageBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ImageBase()}{ImageBase()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classImageBase}{Image\+Base}}$<$ T $>$\mbox{\hyperlink{classImageBase}{\+::\+Image\+Base}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs the image from a given filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the image file. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classImageBase_a6faf9416e384d23751799e2ee4e74058}\label{classImageBase_a6faf9416e384d23751799e2ee4e74058} 
+\index{ImageBase$<$ T $>$@{ImageBase$<$ T $>$}!flip@{flip}}
+\index{flip@{flip}!ImageBase$<$ T $>$@{ImageBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{flip()}{flip()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classImageBase}{Image\+Base}}$<$ T $>$\+::flip (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Flips the image in the specified direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Either "{}top"{} or "{}left"{}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classImage_ab34648fa4940cbb716afeb317d68c1d7}{Image}}.
+
+\Hypertarget{classImageBase_af9da1259d556b721d16136618f0dd2ed}\label{classImageBase_af9da1259d556b721d16136618f0dd2ed} 
+\index{ImageBase$<$ T $>$@{ImageBase$<$ T $>$}!paste\_pixels@{paste\_pixels}}
+\index{paste\_pixels@{paste\_pixels}!ImageBase$<$ T $>$@{ImageBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{paste\_pixels()}{paste\_pixels()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classImageBase}{Image\+Base}}$<$ T $>$\+::paste\+\_\+pixels (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{dest,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{src,  }\item[{size\+\_\+t}]{pos\+\_\+y,  }\item[{size\+\_\+t}]{pos\+\_\+x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Pastes one pixel matrix into another at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination pixel matrix. \\
+\hline
+{\em src} & The source pixel matrix to paste. \\
+\hline
+{\em pos\+\_\+y} & Y-\/position in destination to paste into. \\
+\hline
+{\em pos\+\_\+x} & X-\/position in destination to paste into. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new pixel matrix with the source pasted into destination. 
+\end{DoxyReturn}
+\Hypertarget{classImageBase_ae2dc6e396bc8652161bb91462109ead3}\label{classImageBase_ae2dc6e396bc8652161bb91462109ead3} 
+\index{ImageBase$<$ T $>$@{ImageBase$<$ T $>$}!read\_pixels@{read\_pixels}}
+\index{read\_pixels@{read\_pixels}!ImageBase$<$ T $>$@{ImageBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{read\_pixels()}{read\_pixels()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classImageBase}{Image\+Base}}$<$ T $>$\+::read\+\_\+pixels (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{ifs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads all pixel data from the input stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ifs} & Input file stream. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classImageBase_af1c547dc6dfadc94021d1a5f02c47c7b}\label{classImageBase_af1c547dc6dfadc94021d1a5f02c47c7b} 
+\index{ImageBase$<$ T $>$@{ImageBase$<$ T $>$}!read\_value@{read\_value}}
+\index{read\_value@{read\_value}!ImageBase$<$ T $>$@{ImageBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{read\_value()}{read\_value()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual T \mbox{\hyperlink{classImageBase}{Image\+Base}}$<$ T $>$\+::read\+\_\+value (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{is }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reads a single pixel value from the stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Input stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The read pixel value. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPBM_a02c5dab75d976bd7aac7dc5ca2b23588}{PBM}}, \mbox{\hyperlink{classPGM_af7d6985dea3d9ce5a1c666e401a60172}{PGM}}, and \mbox{\hyperlink{classPPM_acd90e647f71ead002d6d4e70f5da57b1}{PPM}}.
+
+\Hypertarget{classImageBase_a725b5127ed1e9e7144486d3c1a348251}\label{classImageBase_a725b5127ed1e9e7144486d3c1a348251} 
+\index{ImageBase$<$ T $>$@{ImageBase$<$ T $>$}!rotate@{rotate}}
+\index{rotate@{rotate}!ImageBase$<$ T $>$@{ImageBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classImageBase}{Image\+Base}}$<$ T $>$\+::rotate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rotates the image 90 degrees in the specified direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Either "{}left"{} or "{}right"{}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classImage_a253a3246bd1b2698c1e157973c1d483f}{Image}}.
+
+\Hypertarget{classImageBase_a0af78816fe2ae0780218f635547340ee}\label{classImageBase_a0af78816fe2ae0780218f635547340ee} 
+\index{ImageBase$<$ T $>$@{ImageBase$<$ T $>$}!write\_pixels@{write\_pixels}}
+\index{write\_pixels@{write\_pixels}!ImageBase$<$ T $>$@{ImageBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{write\_pixels()}{write\_pixels()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classImageBase}{Image\+Base}}$<$ T $>$\+::write\+\_\+pixels (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ofs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes all pixel data to the output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ofs} & Output file stream. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/images/Image\+Base.\+hpp\end{DoxyCompactItemize}

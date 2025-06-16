@@ -1,0 +1,345 @@
+\doxysection{Image Class Reference}
+\hypertarget{classImage}{}\label{classImage}\index{Image@{Image}}
+
+
+Abstract base class for image representations.  
+
+
+
+
+{\ttfamily \#include $<$Image.\+hpp$>$}
+
+
+
+Inheritance diagram for Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classImage_a97ec78f98a999ad234053ab07c958ef5}\label{classImage_a97ec78f98a999ad234053ab07c958ef5} 
+enum class \mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} \{ {\bfseries PPM}
+, {\bfseries PGM}
+, {\bfseries PBM}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for supported image formats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classImage_a58edd1c45b4faeb5f789b0d036d02313}\label{classImage_a58edd1c45b4faeb5f789b0d036d02313} 
+{\bfseries Image} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a81e88caba6ef6c0ed639bf1f25e9d441}{Image}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructs an image from a file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_af6d40be234c94a5d3d562c8475aedd6f}{grayscale}} ()=0
+\begin{DoxyCompactList}\small\item\em Converts the image to grayscale. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_a5c123189b0ed2d31e8a80e05696a8412}{monochrome}} ()=0
+\begin{DoxyCompactList}\small\item\em Converts the image to monochrome. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_aff53edc2799e9be84ebe3c565c4f0697}{negative}} ()=0
+\begin{DoxyCompactList}\small\item\em Inverts the colors of the image. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_a253a3246bd1b2698c1e157973c1d483f}{rotate}} (const std\+::string \&direction)=0
+\begin{DoxyCompactList}\small\item\em Rotates the image in the given direction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_ab34648fa4940cbb716afeb317d68c1d7}{flip}} (const std\+::string \&direction)=0
+\begin{DoxyCompactList}\small\item\em Flips the image in the given direction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_af46a8f0f8bf5c5ca02a48550474b5ba3}{write\+\_\+file}} (std\+::ofstream \&ofs) const =0
+\begin{DoxyCompactList}\small\item\em Writes the image data to the provided output stream. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classImage_af6164f58c07bd2a48ab0b91fe9006cae}{write\+\_\+pixel}} (std\+::ofstream \&ofs, size\+\_\+t i, size\+\_\+t j) const =0
+\begin{DoxyCompactList}\small\item\em Writes a single pixel to the output stream. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classImage_a9d29978ec53fa2f3e3e282b58a2b617c}{paste\+\_\+into}} (\mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}img\+\_\+dest, size\+\_\+t pos\+\_\+x, size\+\_\+t pos\+\_\+y)=0
+\begin{DoxyCompactList}\small\item\em Pastes this image into another image at the given position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classImage_a7096da2078bcfb53ba7f0bd1747dc150}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_ad2aa95097e6c23fe96a80767850e149f}{set\+\_\+filename}} (const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em Sets the filename of the image. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classImage_ae6f8969057892a39ea453cb5a825f123}{get\+\_\+filename}} () const
+\begin{DoxyCompactList}\small\item\em Gets the filename of the image. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classImage_a39e18142b0a77e422eec6522ba13fefd}{get\+\_\+width}} () const
+\begin{DoxyCompactList}\small\item\em Gets the width of the image. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classImage_a041f9799ce5bd0cbe84de81d390bc36a}{get\+\_\+height}} () const
+\begin{DoxyCompactList}\small\item\em Gets the height of the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} \mbox{\hyperlink{classImage_a528a54553453c2d6def8ae302bbbfd85}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Gets the type of the image. \end{DoxyCompactList}\item 
+\Hypertarget{classImage_ac12bacfcfa4247af6e4ff8918fe84df0}\label{classImage_ac12bacfcfa4247af6e4ff8918fe84df0} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Image} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classImage_a02d208054d2b77fa0f5452d1acbbe8d6}\label{classImage_a02d208054d2b77fa0f5452d1acbbe8d6} 
+std\+::string {\bfseries filename}
+\item 
+\Hypertarget{classImage_ae9cb9e1475f90ee290589d3aa953198d}\label{classImage_ae9cb9e1475f90ee290589d3aa953198d} 
+size\+\_\+t {\bfseries width}
+\item 
+\Hypertarget{classImage_a7329dca60d30b4b4965bfbd3892d7031}\label{classImage_a7329dca60d30b4b4965bfbd3892d7031} 
+size\+\_\+t {\bfseries height}
+\item 
+\Hypertarget{classImage_ac49149fd9c679a879f1836d341c5fcd8}\label{classImage_ac49149fd9c679a879f1836d341c5fcd8} 
+\mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} {\bfseries type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for image representations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classImage_a81e88caba6ef6c0ed639bf1f25e9d441}\label{classImage_a81e88caba6ef6c0ed639bf1f25e9d441} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Constructs an image from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file to load. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classImage_a7096da2078bcfb53ba7f0bd1747dc150}\label{classImage_a7096da2078bcfb53ba7f0bd1747dc150} 
+\index{Image@{Image}!clone@{clone}}
+\index{clone@{clone}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} Image\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a deep copy of this image. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the cloned image. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPBM_a7ffd75a70690a0e72e23bcdd267d444d}{PBM}}, \mbox{\hyperlink{classPGM_aeea047b7a5ea6e150ccc2918f76ddc20}{PGM}}, and \mbox{\hyperlink{classPPM_adb7213ef419980979fd255bf21a59ce2}{PPM}}.
+
+\Hypertarget{classImage_ab34648fa4940cbb716afeb317d68c1d7}\label{classImage_ab34648fa4940cbb716afeb317d68c1d7} 
+\index{Image@{Image}!flip@{flip}}
+\index{flip@{flip}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{flip()}{flip()}}
+{\footnotesize\ttfamily virtual void Image\+::flip (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Flips the image in the given direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction to flip ("{}horizontal"{} or "{}vertical"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classImageBase_a6faf9416e384d23751799e2ee4e74058}{Image\+Base$<$ T $>$}}, \mbox{\hyperlink{classImageBase_a6faf9416e384d23751799e2ee4e74058}{Image\+Base$<$ bool $>$}}, \mbox{\hyperlink{classImageBase_a6faf9416e384d23751799e2ee4e74058}{Image\+Base$<$ RGB $>$}}, and \mbox{\hyperlink{classImageBase_a6faf9416e384d23751799e2ee4e74058}{Image\+Base$<$ uint8\+\_\+t $>$}}.
+
+\Hypertarget{classImage_ae6f8969057892a39ea453cb5a825f123}\label{classImage_ae6f8969057892a39ea453cb5a825f123} 
+\index{Image@{Image}!get\_filename@{get\_filename}}
+\index{get\_filename@{get\_filename}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{get\_filename()}{get\_filename()}}
+{\footnotesize\ttfamily std\+::string Image\+::get\+\_\+filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the filename of the image. 
+
+\begin{DoxyReturn}{Returns}
+The image filename. 
+\end{DoxyReturn}
+\Hypertarget{classImage_a041f9799ce5bd0cbe84de81d390bc36a}\label{classImage_a041f9799ce5bd0cbe84de81d390bc36a} 
+\index{Image@{Image}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily size\+\_\+t Image\+::get\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the height of the image. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classImage}{Image} height in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classImage_a528a54553453c2d6def8ae302bbbfd85}\label{classImage_a528a54553453c2d6def8ae302bbbfd85} 
+\index{Image@{Image}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} Image\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the type of the image. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classImage}{Image} type (\doxylink{classPPM}{PPM}, \doxylink{classPGM}{PGM}, \doxylink{classPBM}{PBM}). 
+\end{DoxyReturn}
+\Hypertarget{classImage_a39e18142b0a77e422eec6522ba13fefd}\label{classImage_a39e18142b0a77e422eec6522ba13fefd} 
+\index{Image@{Image}!get\_width@{get\_width}}
+\index{get\_width@{get\_width}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{get\_width()}{get\_width()}}
+{\footnotesize\ttfamily size\+\_\+t Image\+::get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the width of the image. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classImage}{Image} width in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classImage_af6d40be234c94a5d3d562c8475aedd6f}\label{classImage_af6d40be234c94a5d3d562c8475aedd6f} 
+\index{Image@{Image}!grayscale@{grayscale}}
+\index{grayscale@{grayscale}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{grayscale()}{grayscale()}}
+{\footnotesize\ttfamily virtual void Image\+::grayscale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Converts the image to grayscale. 
+
+
+
+Implemented in \mbox{\hyperlink{classPBM_a4a0f9d9499644e05a0ce7a70c44496f2}{PBM}}, \mbox{\hyperlink{classPGM_adc0a21c5950b9e93d637363d31a035ea}{PGM}}, and \mbox{\hyperlink{classPPM_acf6d8d92fc6613eb8e7de9880aa89254}{PPM}}.
+
+\Hypertarget{classImage_a5c123189b0ed2d31e8a80e05696a8412}\label{classImage_a5c123189b0ed2d31e8a80e05696a8412} 
+\index{Image@{Image}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{monochrome()}{monochrome()}}
+{\footnotesize\ttfamily virtual void Image\+::monochrome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Converts the image to monochrome. 
+
+
+
+Implemented in \mbox{\hyperlink{classPBM_accf03cdb6b41d2fb3903a89f1ab6fde1}{PBM}}, \mbox{\hyperlink{classPGM_a931e661d520986a2ce34dcba1f022b7a}{PGM}}, and \mbox{\hyperlink{classPPM_ad7fbeba817b458d4701df2207405c820}{PPM}}.
+
+\Hypertarget{classImage_aff53edc2799e9be84ebe3c565c4f0697}\label{classImage_aff53edc2799e9be84ebe3c565c4f0697} 
+\index{Image@{Image}!negative@{negative}}
+\index{negative@{negative}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{negative()}{negative()}}
+{\footnotesize\ttfamily virtual void Image\+::negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Inverts the colors of the image. 
+
+
+
+Implemented in \mbox{\hyperlink{classPBM_ab5534b55c0ace2ace5ba8187955330d7}{PBM}}, \mbox{\hyperlink{classPGM_aea2063efae37af0d231df613611f05e8}{PGM}}, and \mbox{\hyperlink{classPPM_a37e8dd7c21a85eb4e289df44a4f38779}{PPM}}.
+
+\Hypertarget{classImage_a9d29978ec53fa2f3e3e282b58a2b617c}\label{classImage_a9d29978ec53fa2f3e3e282b58a2b617c} 
+\index{Image@{Image}!paste\_into@{paste\_into}}
+\index{paste\_into@{paste\_into}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{paste\_into()}{paste\_into()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} Image\+::paste\+\_\+into (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}}]{img\+\_\+dest,  }\item[{size\+\_\+t}]{pos\+\_\+x,  }\item[{size\+\_\+t}]{pos\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pastes this image into another image at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+dest} & Destination image. \\
+\hline
+{\em pos\+\_\+x} & X-\/coordinate of paste position. \\
+\hline
+{\em pos\+\_\+y} & Y-\/coordinate of paste position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the updated destination image. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPBM_a218cee279652b5e9787d2164674c4145}{PBM}}, \mbox{\hyperlink{classPGM_ae0f6fc3f018f8e2611a2cc93aa82f4c6}{PGM}}, and \mbox{\hyperlink{classPPM_aa16b15c55e69aabef1878f4c5bcdd9c8}{PPM}}.
+
+\Hypertarget{classImage_a253a3246bd1b2698c1e157973c1d483f}\label{classImage_a253a3246bd1b2698c1e157973c1d483f} 
+\index{Image@{Image}!rotate@{rotate}}
+\index{rotate@{rotate}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily virtual void Image\+::rotate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Rotates the image in the given direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction to rotate ("{}left"{} or "{}right"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classImageBase_a725b5127ed1e9e7144486d3c1a348251}{Image\+Base$<$ T $>$}}, \mbox{\hyperlink{classImageBase_a725b5127ed1e9e7144486d3c1a348251}{Image\+Base$<$ bool $>$}}, \mbox{\hyperlink{classImageBase_a725b5127ed1e9e7144486d3c1a348251}{Image\+Base$<$ RGB $>$}}, and \mbox{\hyperlink{classImageBase_a725b5127ed1e9e7144486d3c1a348251}{Image\+Base$<$ uint8\+\_\+t $>$}}.
+
+\Hypertarget{classImage_ad2aa95097e6c23fe96a80767850e149f}\label{classImage_ad2aa95097e6c23fe96a80767850e149f} 
+\index{Image@{Image}!set\_filename@{set\_filename}}
+\index{set\_filename@{set\_filename}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{set\_filename()}{set\_filename()}}
+{\footnotesize\ttfamily void Image\+::set\+\_\+filename (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Sets the filename of the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Filename to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classImage_af46a8f0f8bf5c5ca02a48550474b5ba3}\label{classImage_af46a8f0f8bf5c5ca02a48550474b5ba3} 
+\index{Image@{Image}!write\_file@{write\_file}}
+\index{write\_file@{write\_file}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{write\_file()}{write\_file()}}
+{\footnotesize\ttfamily virtual void Image\+::write\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ofs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Writes the image data to the provided output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ofs} & Output file stream. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classPBM_afbb95cb522ce5c0b250982af463551f3}{PBM}}, \mbox{\hyperlink{classPGM_a7a09934338df5331abe210ba612d72c8}{PGM}}, and \mbox{\hyperlink{classPPM_acef022ac55e67bde4292d9c770a54731}{PPM}}.
+
+\Hypertarget{classImage_af6164f58c07bd2a48ab0b91fe9006cae}\label{classImage_af6164f58c07bd2a48ab0b91fe9006cae} 
+\index{Image@{Image}!write\_pixel@{write\_pixel}}
+\index{write\_pixel@{write\_pixel}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{write\_pixel()}{write\_pixel()}}
+{\footnotesize\ttfamily virtual void Image\+::write\+\_\+pixel (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ofs,  }\item[{size\+\_\+t}]{i,  }\item[{size\+\_\+t}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Writes a single pixel to the output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ofs} & Output file stream. \\
+\hline
+{\em i} & Row index. \\
+\hline
+{\em j} & Column index. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classPBM_a8219dfdfa49f4ae23a5d494971a95901}{PBM}}, \mbox{\hyperlink{classPGM_a2b4b166c9a7fd7bbd8020c24e4c26699}{PGM}}, and \mbox{\hyperlink{classPPM_af4e90bfd8f63752ef317cf903c84acde}{PPM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/images/Image.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/images/Image.\+cpp\end{DoxyCompactItemize}

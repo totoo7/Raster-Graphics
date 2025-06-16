@@ -1,0 +1,52 @@
+\doxysection{Command\+Factory Class Reference}
+\hypertarget{classCommandFactory}{}\label{classCommandFactory}\index{CommandFactory@{CommandFactory}}
+
+
+A static factory class for creating \doxylink{classCommand}{Command} objects based on input strings.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Factory.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommandFactory_a9de7f6c0dd172681557da9a765e451bf}{create}} (const std\+::string \&cmd, const std\+::vector$<$ std\+::string $>$ \&args, \mbox{\hyperlink{classSessionManager}{Session\+Manager}} \texorpdfstring{$\ast$}{*}session\+\_\+manager)
+\begin{DoxyCompactList}\small\item\em Creates a command object based on the provided command string and arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A static factory class for creating \doxylink{classCommand}{Command} objects based on input strings. 
+
+This class maps user input to concrete \doxylink{classCommand}{Command} objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCommandFactory_a9de7f6c0dd172681557da9a765e451bf}\label{classCommandFactory_a9de7f6c0dd172681557da9a765e451bf} 
+\index{CommandFactory@{CommandFactory}!create@{create}}
+\index{create@{create}!CommandFactory@{CommandFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} Command\+Factory\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cmd,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{args,  }\item[{\mbox{\hyperlink{classSessionManager}{Session\+Manager}} \texorpdfstring{$\ast$}{*}}]{session\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a command object based on the provided command string and arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The command name (e.\+g., "{}load"{}, "{}save"{}, "{}undo"{}, etc.). \\
+\hline
+{\em args} & A vector of additional arguments relevant to the command. \\
+\hline
+{\em session\+\_\+manager} & A pointer to the current \doxylink{classSessionManager}{Session\+Manager} to associate with the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created \doxylink{classCommand}{Command} object. Caller is responsible for its lifetime. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/controllers/Command\+Factory.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/controllers/Command\+Factory.\+cpp\end{DoxyCompactItemize}

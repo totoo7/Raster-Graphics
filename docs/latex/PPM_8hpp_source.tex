@@ -1,0 +1,48 @@
+\doxysection{PPM.\+hpp}
+\hypertarget{PPM_8hpp_source}{}\label{PPM_8hpp_source}\index{/home/totoo/Documents/Raster-\/Graphics/include/services/images/PPM.hpp@{/home/totoo/Documents/Raster-\/Graphics/include/services/images/PPM.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PPM\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PPM\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ImageBase.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structRGB}{RGB}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structRGB_afbb25f9ed818b8149ffd04c5640d8c7a}{red}};\ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structRGB_a165f9a144b000655025edaacae2cae6b}{green}};\ }
+\DoxyCodeLine{00014\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structRGB_aa40a251e4fd9dfe9fb1c9b55585405cf}{blue}};\ \ }
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPPM}{PPM}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classImageBase}{ImageBase}}<RGB>\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPPM_ae40de965c0caec47873044ec891bc515}{PPM}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPPM_ae40de965c0caec47873044ec891bc515}{PPM}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPPM_ae40de965c0caec47873044ec891bc515}{PPM}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPPM}{PPM}}\&\ rhs);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPPM_acf6d8d92fc6613eb8e7de9880aa89254}{grayscale}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPPM_ad7fbeba817b458d4701df2207405c820}{monochrome}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPPM_a37e8dd7c21a85eb4e289df44a4f38779}{negative}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPPM_af4e90bfd8f63752ef317cf903c84acde}{write\_pixel}}(std::ofstream\&\ ofs,\ \textcolor{keywordtype}{size\_t}\ i,\ \textcolor{keywordtype}{size\_t}\ j)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classImage}{Image}}*\ \mbox{\hyperlink{classPPM_aa16b15c55e69aabef1878f4c5bcdd9c8}{paste\_into}}(\mbox{\hyperlink{classImage}{Image}}*\ img\_dest,\ \textcolor{keywordtype}{size\_t}\ pos\_x,\ \textcolor{keywordtype}{size\_t}\ pos\_y)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPPM_acef022ac55e67bde4292d9c770a54731}{write\_file}}(std::ofstream\&\ ofs)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classImage}{Image}}*\ \mbox{\hyperlink{classPPM_adb7213ef419980979fd255bf21a59ce2}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structRGB}{RGB}}\ \mbox{\hyperlink{classPPM_acd90e647f71ead002d6d4e70f5da57b1}{read\_value}}(std::ifstream\&\ is)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPPM_a48d61d1f41f0dfe42839b544076f2daa}{\string~PPM}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ uint8\_t\ max\_val;}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,321 @@
+\doxysection{PPM Class Reference}
+\hypertarget{classPPM}{}\label{classPPM}\index{PPM@{PPM}}
+
+
+Class representing a \doxylink{classPPM}{PPM} (Portable Pixmap) image.  
+
+
+
+
+{\ttfamily \#include $<$PPM.\+hpp$>$}
+
+
+
+Inheritance diagram for PPM\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classPPM__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for PPM\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classPPM__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classPPM_ae40de965c0caec47873044ec891bc515}\label{classPPM_ae40de965c0caec47873044ec891bc515} 
+{\bfseries PPM} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPPM_ada118c725a1b103ac52d5eab43e7040a}{PPM}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classPPM}{PPM} image by loading from a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPPM_a388a9db861465e5a5fb5f0521beb4faf}{PPM}} (const \mbox{\hyperlink{classPPM}{PPM}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPPM_acf6d8d92fc6613eb8e7de9880aa89254}{grayscale}} () override
+\begin{DoxyCompactList}\small\item\em Converts the image to grayscale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPPM_ad7fbeba817b458d4701df2207405c820}{monochrome}} () override
+\begin{DoxyCompactList}\small\item\em Converts the image to monochrome. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPPM_a37e8dd7c21a85eb4e289df44a4f38779}{negative}} () override
+\begin{DoxyCompactList}\small\item\em Applies negative transformation to the image pixels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPPM_af4e90bfd8f63752ef317cf903c84acde}{write\+\_\+pixel}} (std\+::ofstream \&ofs, size\+\_\+t i, size\+\_\+t j) const override
+\begin{DoxyCompactList}\small\item\em Writes a single pixel to an output file stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPPM_aa16b15c55e69aabef1878f4c5bcdd9c8}{paste\+\_\+into}} (\mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}img\+\_\+dest, size\+\_\+t pos\+\_\+x, size\+\_\+t pos\+\_\+y) override
+\begin{DoxyCompactList}\small\item\em Pastes this image into another image at given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPPM_acef022ac55e67bde4292d9c770a54731}{write\+\_\+file}} (std\+::ofstream \&ofs) const override
+\begin{DoxyCompactList}\small\item\em Writes the \doxylink{classPPM}{PPM} image to an output file stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPPM_adb7213ef419980979fd255bf21a59ce2}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structRGB}{RGB}} \mbox{\hyperlink{classPPM_acd90e647f71ead002d6d4e70f5da57b1}{read\+\_\+value}} (std\+::ifstream \&is) const override
+\begin{DoxyCompactList}\small\item\em Reads a pixel value from an input file stream. \end{DoxyCompactList}\item 
+\Hypertarget{classPPM_a48d61d1f41f0dfe42839b544076f2daa}\label{classPPM_a48d61d1f41f0dfe42839b544076f2daa} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+PPM} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classImageBase}{Image\+Base$<$ RGB $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Image\+Base} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImageBase_a2e63030cd531d0db4794d9a0986658bd}{Image\+Base}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructs the image from a given filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImageBase_a725b5127ed1e9e7144486d3c1a348251}{rotate}} (const std\+::string \&direction) override
+\begin{DoxyCompactList}\small\item\em Rotates the image 90 degrees in the specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImageBase_a6faf9416e384d23751799e2ee4e74058}{flip}} (const std\+::string \&direction) override
+\begin{DoxyCompactList}\small\item\em Flips the image in the specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImageBase_a0af78816fe2ae0780218f635547340ee}{write\+\_\+pixels}} (std\+::ofstream \&ofs) const
+\begin{DoxyCompactList}\small\item\em Writes all pixel data to the output stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImageBase_ae2dc6e396bc8652161bb91462109ead3}{read\+\_\+pixels}} (std\+::ifstream \&ifs)
+\begin{DoxyCompactList}\small\item\em Reads all pixel data from the input stream. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Image\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Image} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a81e88caba6ef6c0ed639bf1f25e9d441}{Image}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructs an image from a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_ad2aa95097e6c23fe96a80767850e149f}{set\+\_\+filename}} (const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em Sets the filename of the image. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classImage_ae6f8969057892a39ea453cb5a825f123}{get\+\_\+filename}} () const
+\begin{DoxyCompactList}\small\item\em Gets the filename of the image. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classImage_a39e18142b0a77e422eec6522ba13fefd}{get\+\_\+width}} () const
+\begin{DoxyCompactList}\small\item\em Gets the width of the image. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classImage_a041f9799ce5bd0cbe84de81d390bc36a}{get\+\_\+height}} () const
+\begin{DoxyCompactList}\small\item\em Gets the height of the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} \mbox{\hyperlink{classImage_a528a54553453c2d6def8ae302bbbfd85}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Gets the type of the image. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Image} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classImage_a97ec78f98a999ad234053ab07c958ef5}\label{classImage_a97ec78f98a999ad234053ab07c958ef5} 
+enum class \mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} \{ {\bfseries PPM}
+, {\bfseries PGM}
+, {\bfseries PBM}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for supported image formats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classImageBase}{Image\+Base$<$ RGB $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structRGB}{RGB}} $>$ $>$ \mbox{\hyperlink{classImageBase_af9da1259d556b721d16136618f0dd2ed}{paste\+\_\+pixels}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structRGB}{RGB}} $>$ $>$ \&dest, const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structRGB}{RGB}} $>$ $>$ \&src, size\+\_\+t pos\+\_\+y, size\+\_\+t pos\+\_\+x)
+\begin{DoxyCompactList}\small\item\em Pastes one pixel matrix into another at the specified position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classImageBase}{Image\+Base$<$ RGB $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structRGB}{RGB}} $>$ $>$ {\bfseries pixels}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries filename}
+\item 
+size\+\_\+t {\bfseries width}
+\item 
+size\+\_\+t {\bfseries height}
+\item 
+\mbox{\hyperlink{classImage_a97ec78f98a999ad234053ab07c958ef5}{Type}} {\bfseries type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a \doxylink{classPPM}{PPM} (Portable Pixmap) image. 
+
+Inherits from \doxylink{classImageBase}{Image\+Base} specialized with \doxylink{structRGB}{RGB} struct to represent color pixels. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPPM_ada118c725a1b103ac52d5eab43e7040a}\label{classPPM_ada118c725a1b103ac52d5eab43e7040a} 
+\index{PPM@{PPM}!PPM@{PPM}}
+\index{PPM@{PPM}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{PPM()}{PPM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily PPM\+::\+PPM (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classPPM}{PPM} image by loading from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the \doxylink{classPPM}{PPM} file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classPPM_a388a9db861465e5a5fb5f0521beb4faf}\label{classPPM_a388a9db861465e5a5fb5f0521beb4faf} 
+\index{PPM@{PPM}!PPM@{PPM}}
+\index{PPM@{PPM}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{PPM()}{PPM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily PPM\+::\+PPM (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPPM}{PPM}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \doxylink{classPPM}{PPM} object to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPPM_adb7213ef419980979fd255bf21a59ce2}\label{classPPM_adb7213ef419980979fd255bf21a59ce2} 
+\index{PPM@{PPM}!clone@{clone}}
+\index{clone@{clone}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} PPM\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a deep copy of the image. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the cloned \doxylink{classImage}{Image} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classImage_a7096da2078bcfb53ba7f0bd1747dc150}{Image}}.
+
+\Hypertarget{classPPM_acf6d8d92fc6613eb8e7de9880aa89254}\label{classPPM_acf6d8d92fc6613eb8e7de9880aa89254} 
+\index{PPM@{PPM}!grayscale@{grayscale}}
+\index{grayscale@{grayscale}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{grayscale()}{grayscale()}}
+{\footnotesize\ttfamily void PPM\+::grayscale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the image to grayscale. 
+
+
+
+Implements \mbox{\hyperlink{classImage_af6d40be234c94a5d3d562c8475aedd6f}{Image}}.
+
+\Hypertarget{classPPM_ad7fbeba817b458d4701df2207405c820}\label{classPPM_ad7fbeba817b458d4701df2207405c820} 
+\index{PPM@{PPM}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{monochrome()}{monochrome()}}
+{\footnotesize\ttfamily void PPM\+::monochrome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the image to monochrome. 
+
+
+
+Implements \mbox{\hyperlink{classImage_a5c123189b0ed2d31e8a80e05696a8412}{Image}}.
+
+\Hypertarget{classPPM_a37e8dd7c21a85eb4e289df44a4f38779}\label{classPPM_a37e8dd7c21a85eb4e289df44a4f38779} 
+\index{PPM@{PPM}!negative@{negative}}
+\index{negative@{negative}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{negative()}{negative()}}
+{\footnotesize\ttfamily void PPM\+::negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies negative transformation to the image pixels. 
+
+
+
+Implements \mbox{\hyperlink{classImage_aff53edc2799e9be84ebe3c565c4f0697}{Image}}.
+
+\Hypertarget{classPPM_aa16b15c55e69aabef1878f4c5bcdd9c8}\label{classPPM_aa16b15c55e69aabef1878f4c5bcdd9c8} 
+\index{PPM@{PPM}!paste\_into@{paste\_into}}
+\index{paste\_into@{paste\_into}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{paste\_into()}{paste\_into()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} PPM\+::paste\+\_\+into (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}}]{img\+\_\+dest,  }\item[{size\+\_\+t}]{pos\+\_\+x,  }\item[{size\+\_\+t}]{pos\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pastes this image into another image at given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+dest} & Destination image pointer. \\
+\hline
+{\em pos\+\_\+x} & X position to paste at. \\
+\hline
+{\em pos\+\_\+y} & Y position to paste at. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the resulting image. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classImage_a9d29978ec53fa2f3e3e282b58a2b617c}{Image}}.
+
+\Hypertarget{classPPM_acd90e647f71ead002d6d4e70f5da57b1}\label{classPPM_acd90e647f71ead002d6d4e70f5da57b1} 
+\index{PPM@{PPM}!read\_value@{read\_value}}
+\index{read\_value@{read\_value}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{read\_value()}{read\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRGB}{RGB}} PPM\+::read\+\_\+value (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{is }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads a pixel value from an input file stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Input file stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The read pixel value as \doxylink{structRGB}{RGB} struct. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classImageBase_af1c547dc6dfadc94021d1a5f02c47c7b}{Image\+Base$<$ RGB $>$}}.
+
+\Hypertarget{classPPM_acef022ac55e67bde4292d9c770a54731}\label{classPPM_acef022ac55e67bde4292d9c770a54731} 
+\index{PPM@{PPM}!write\_file@{write\_file}}
+\index{write\_file@{write\_file}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{write\_file()}{write\_file()}}
+{\footnotesize\ttfamily void PPM\+::write\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ofs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes the \doxylink{classPPM}{PPM} image to an output file stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ofs} & Output file stream to write to. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classImage_af46a8f0f8bf5c5ca02a48550474b5ba3}{Image}}.
+
+\Hypertarget{classPPM_af4e90bfd8f63752ef317cf903c84acde}\label{classPPM_af4e90bfd8f63752ef317cf903c84acde} 
+\index{PPM@{PPM}!write\_pixel@{write\_pixel}}
+\index{write\_pixel@{write\_pixel}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{write\_pixel()}{write\_pixel()}}
+{\footnotesize\ttfamily void PPM\+::write\+\_\+pixel (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ofs,  }\item[{size\+\_\+t}]{i,  }\item[{size\+\_\+t}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes a single pixel to an output file stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ofs} & Output file stream. \\
+\hline
+{\em i} & Row index. \\
+\hline
+{\em j} & Column index. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classImage_af6164f58c07bd2a48ab0b91fe9006cae}{Image}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/images/PPM.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/images/PPM.\+cpp\end{DoxyCompactItemize}

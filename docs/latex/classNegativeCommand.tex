@@ -1,0 +1,219 @@
+\doxysection{Negative\+Command Class Reference}
+\hypertarget{classNegativeCommand}{}\label{classNegativeCommand}\index{NegativeCommand@{NegativeCommand}}
+
+
+\doxylink{classCommand}{Command} to apply negative effect on images within a session.  
+
+
+
+
+{\ttfamily \#include $<$Negative\+Command.\+hpp$>$}
+
+
+
+Inheritance diagram for Negative\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classNegativeCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Negative\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classNegativeCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNegativeCommand_a4373621a694c523ca7059562f74681d6}{Negative\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classNegativeCommand}{Negative\+Command} for the given session. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNegativeCommand_a24f5ed3b5460f9ebf2cf1770f0e4cd42}{Negative\+Command}} (const \mbox{\hyperlink{classNegativeCommand}{Negative\+Command}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classNegativeCommand_a33bc24c32ca2e28ee9fcebde51ba4a38}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the negative effect. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classNegativeCommand_a82d06546e26651a152c458cd5b5a6ad4}{is\+\_\+undoable}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates this command can be undone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classNegativeCommand_ac20b487069fe9a01a417e3c26103fd08}{clone}} () override
+\begin{DoxyCompactList}\small\item\em Creates a copy of this command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNegativeCommand_ab72d5f864ac955debaf42a8bae2f556a}{undo}} () override
+\begin{DoxyCompactList}\small\item\em Undoes the negative operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNegativeCommand_acde8ddcbf2b5765a2b99a4cbe3f6c4b3}{redo}} () override
+\begin{DoxyCompactList}\small\item\em Redoes the negative operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSnapshotCommand}{Snapshot\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Snapshot\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSnapshotCommand_af9af265dcc6b89e653c350ae45fda867}{Snapshot\+Command}} (const \mbox{\hyperlink{classSnapshotCommand}{Snapshot\+Command}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSnapshotCommand_a92ab49f1eb7de0bed5e3a578560bccd3}{take\+\_\+snapshot}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Takes a snapshot of the current session state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSnapshotCommand_affcd8aa6d6e562e1a6d74aff1e7d40d1}{restore\+\_\+snapshot}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Restores the session to the previously saved snapshot. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Snapshot\+Command} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{needs\+\_\+session}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classNegativeCommand_a663a45dbb73749ba55b4f88bec32080f}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the required number of arguments for this command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSnapshotCommand}{Snapshot\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries snapshots}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classCommand}{Command} to apply negative effect on images within a session. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNegativeCommand_a4373621a694c523ca7059562f74681d6}\label{classNegativeCommand_a4373621a694c523ca7059562f74681d6} 
+\index{NegativeCommand@{NegativeCommand}!NegativeCommand@{NegativeCommand}}
+\index{NegativeCommand@{NegativeCommand}!NegativeCommand@{NegativeCommand}}
+\doxysubsubsection{\texorpdfstring{NegativeCommand()}{NegativeCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Negative\+Command\+::\+Negative\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const}]{session }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classNegativeCommand}{Negative\+Command} for the given session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Pointer to the current session. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNegativeCommand_a24f5ed3b5460f9ebf2cf1770f0e4cd42}\label{classNegativeCommand_a24f5ed3b5460f9ebf2cf1770f0e4cd42} 
+\index{NegativeCommand@{NegativeCommand}!NegativeCommand@{NegativeCommand}}
+\index{NegativeCommand@{NegativeCommand}!NegativeCommand@{NegativeCommand}}
+\doxysubsubsection{\texorpdfstring{NegativeCommand()}{NegativeCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Negative\+Command\+::\+Negative\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNegativeCommand}{Negative\+Command}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Reference to another \doxylink{classNegativeCommand}{Negative\+Command}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNegativeCommand_a663a45dbb73749ba55b4f88bec32080f}\label{classNegativeCommand_a663a45dbb73749ba55b4f88bec32080f} 
+\index{NegativeCommand@{NegativeCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!NegativeCommand@{NegativeCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily static size\+\_\+t Negative\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the required number of arguments for this command. 
+
+\begin{DoxyReturn}{Returns}
+Always returns 0. 
+\end{DoxyReturn}
+\Hypertarget{classNegativeCommand_ac20b487069fe9a01a417e3c26103fd08}\label{classNegativeCommand_ac20b487069fe9a01a417e3c26103fd08} 
+\index{NegativeCommand@{NegativeCommand}!clone@{clone}}
+\index{clone@{clone}!NegativeCommand@{NegativeCommand}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} Negative\+Command\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a copy of this command. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the cloned command. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{Command}}.
+
+\Hypertarget{classNegativeCommand_a33bc24c32ca2e28ee9fcebde51ba4a38}\label{classNegativeCommand_a33bc24c32ca2e28ee9fcebde51ba4a38} 
+\index{NegativeCommand@{NegativeCommand}!execute@{execute}}
+\index{execute@{execute}!NegativeCommand@{NegativeCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::string Negative\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the negative effect. 
+
+\begin{DoxyReturn}{Returns}
+Result message. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
+
+\Hypertarget{classNegativeCommand_a82d06546e26651a152c458cd5b5a6ad4}\label{classNegativeCommand_a82d06546e26651a152c458cd5b5a6ad4} 
+\index{NegativeCommand@{NegativeCommand}!is\_undoable@{is\_undoable}}
+\index{is\_undoable@{is\_undoable}!NegativeCommand@{NegativeCommand}}
+\doxysubsubsection{\texorpdfstring{is\_undoable()}{is\_undoable()}}
+{\footnotesize\ttfamily bool Negative\+Command\+::is\+\_\+undoable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates this command can be undone. 
+
+\begin{DoxyReturn}{Returns}
+True. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{Command}}.
+
+\Hypertarget{classNegativeCommand_acde8ddcbf2b5765a2b99a4cbe3f6c4b3}\label{classNegativeCommand_acde8ddcbf2b5765a2b99a4cbe3f6c4b3} 
+\index{NegativeCommand@{NegativeCommand}!redo@{redo}}
+\index{redo@{redo}!NegativeCommand@{NegativeCommand}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily void Negative\+Command\+::redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Redoes the negative operation. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{Command}}.
+
+\Hypertarget{classNegativeCommand_ab72d5f864ac955debaf42a8bae2f556a}\label{classNegativeCommand_ab72d5f864ac955debaf42a8bae2f556a} 
+\index{NegativeCommand@{NegativeCommand}!undo@{undo}}
+\index{undo@{undo}!NegativeCommand@{NegativeCommand}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void Negative\+Command\+::undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Undoes the negative operation. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/Negative\+Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/Negative\+Command.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,135 @@
+\doxysection{Snapshot\+Command Class Reference}
+\hypertarget{classSnapshotCommand}{}\label{classSnapshotCommand}\index{SnapshotCommand@{SnapshotCommand}}
+
+
+Base class for commands that need to take and restore image snapshots.  
+
+
+
+
+{\ttfamily \#include $<$Snapshot\+Command.\+hpp$>$}
+
+
+
+Inheritance diagram for Snapshot\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSnapshotCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Snapshot\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classSnapshotCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSnapshotCommand_ac846bdb883459caee6c186a87164539b}\label{classSnapshotCommand_ac846bdb883459caee6c186a87164539b} 
+{\bfseries Snapshot\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSnapshotCommand_af9af265dcc6b89e653c350ae45fda867}{Snapshot\+Command}} (const \mbox{\hyperlink{classSnapshotCommand}{Snapshot\+Command}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSnapshotCommand_a92ab49f1eb7de0bed5e3a578560bccd3}{take\+\_\+snapshot}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Takes a snapshot of the current session state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSnapshotCommand_affcd8aa6d6e562e1a6d74aff1e7d40d1}{restore\+\_\+snapshot}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Restores the session to the previously saved snapshot. \end{DoxyCompactList}\item 
+\Hypertarget{classSnapshotCommand_af0f616b0dbc402ab7504061ca2fa987a}\label{classSnapshotCommand_af0f616b0dbc402ab7504061ca2fa987a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Snapshot\+Command} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{execute}} ()=0
+\begin{DoxyCompactList}\small\item\em Executes the command. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{is\+\_\+undoable}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks if the command supports undo. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{needs\+\_\+session}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the command operation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Redoes the command operation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSnapshotCommand_a63e412ea0b76c3c7d553bb89867a4703}\label{classSnapshotCommand_a63e412ea0b76c3c7d553bb89867a4703} 
+std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries snapshots}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for commands that need to take and restore image snapshots. 
+
+Provides functionality for storing and restoring the state of images in a session to support undo/redo operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSnapshotCommand_af9af265dcc6b89e653c350ae45fda867}\label{classSnapshotCommand_af9af265dcc6b89e653c350ae45fda867} 
+\index{SnapshotCommand@{SnapshotCommand}!SnapshotCommand@{SnapshotCommand}}
+\index{SnapshotCommand@{SnapshotCommand}!SnapshotCommand@{SnapshotCommand}}
+\doxysubsubsection{\texorpdfstring{SnapshotCommand()}{SnapshotCommand()}}
+{\footnotesize\ttfamily Snapshot\+Command\+::\+Snapshot\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSnapshotCommand}{Snapshot\+Command}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \doxylink{classSnapshotCommand}{Snapshot\+Command} to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSnapshotCommand_affcd8aa6d6e562e1a6d74aff1e7d40d1}\label{classSnapshotCommand_affcd8aa6d6e562e1a6d74aff1e7d40d1} 
+\index{SnapshotCommand@{SnapshotCommand}!restore\_snapshot@{restore\_snapshot}}
+\index{restore\_snapshot@{restore\_snapshot}!SnapshotCommand@{SnapshotCommand}}
+\doxysubsubsection{\texorpdfstring{restore\_snapshot()}{restore\_snapshot()}}
+{\footnotesize\ttfamily void Snapshot\+Command\+::restore\+\_\+snapshot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const}]{session }\end{DoxyParamCaption})}
+
+
+
+Restores the session to the previously saved snapshot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Pointer to the session to restore. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSnapshotCommand_a92ab49f1eb7de0bed5e3a578560bccd3}\label{classSnapshotCommand_a92ab49f1eb7de0bed5e3a578560bccd3} 
+\index{SnapshotCommand@{SnapshotCommand}!take\_snapshot@{take\_snapshot}}
+\index{take\_snapshot@{take\_snapshot}!SnapshotCommand@{SnapshotCommand}}
+\doxysubsubsection{\texorpdfstring{take\_snapshot()}{take\_snapshot()}}
+{\footnotesize\ttfamily void Snapshot\+Command\+::take\+\_\+snapshot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const}]{session }\end{DoxyParamCaption})}
+
+
+
+Takes a snapshot of the current session state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Pointer to the session whose images will be saved. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/Snapshot\+Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/Snapshot\+Command.\+cpp\end{DoxyCompactItemize}

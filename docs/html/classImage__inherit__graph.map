@@ -1,0 +1,17 @@
+<map id="Image" name="Image">
+<area shape="rect" id="Node000001" title="Abstract base class for image representations." alt="" coords="331,5,393,31"/>
+<area shape="rect" id="Node000002" href="$classImageBase.html" title=" " alt="" coords="5,79,159,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="318,33,128,81,127,76,317,28"/>
+<area shape="rect" id="Node000004" href="$classImageBase.html" title=" " alt="" coords="183,79,354,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="338,41,286,81,282,76,335,37"/>
+<area shape="rect" id="Node000006" href="$classImageBase.html" title=" " alt="" coords="379,79,532,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="389,37,442,76,438,81,386,41"/>
+<area shape="rect" id="Node000008" href="$classImageBase.html" title="A templated abstract class that implements common image functionality." alt="" coords="557,79,690,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="407,29,582,76,581,81,406,34"/>
+<area shape="rect" id="Node000003" href="$classPBM.html" title="Class representing a PBM (Portable Bitmap) image." alt="" coords="57,152,107,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,118,85,152,79,152,79,118"/>
+<area shape="rect" id="Node000005" href="$classPGM.html" title="Class representing a PGM (Portable Graymap) image." alt="" coords="243,152,295,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="271,118,271,152,266,152,266,118"/>
+<area shape="rect" id="Node000007" href="$classPPM.html" title="Class representing a PPM (Portable Pixmap) image." alt="" coords="430,152,481,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="458,118,458,152,453,152,453,118"/>
+</map>

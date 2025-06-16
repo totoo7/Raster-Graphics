@@ -1,0 +1,30 @@
+\doxysection{Snapshot\+Command.\+hpp}
+\hypertarget{SnapshotCommand_8hpp_source}{}\label{SnapshotCommand_8hpp_source}\index{/home/totoo/Documents/Raster-\/Graphics/include/services/commands/SnapshotCommand.hpp@{/home/totoo/Documents/Raster-\/Graphics/include/services/commands/SnapshotCommand.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SNAPSHOT\_COMMAND\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SNAPSHOT\_COMMAND\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Command.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Image.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Session.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSnapshotCommand}{SnapshotCommand}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCommand}{Command}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSnapshotCommand_ac846bdb883459caee6c186a87164539b}{SnapshotCommand}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSnapshotCommand_ac846bdb883459caee6c186a87164539b}{SnapshotCommand}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classSnapshotCommand}{SnapshotCommand}}\&\ rhs);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSnapshotCommand_a92ab49f1eb7de0bed5e3a578560bccd3}{take\_snapshot}}(\mbox{\hyperlink{classSession}{Session}}*\ \textcolor{keyword}{const}\ session);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSnapshotCommand_affcd8aa6d6e562e1a6d74aff1e7d40d1}{restore\_snapshot}}(\mbox{\hyperlink{classSession}{Session}}*\ \textcolor{keyword}{const}\ session);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSnapshotCommand_af0f616b0dbc402ab7504061ca2fa987a}{\string~SnapshotCommand}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::vector<Image*>\ snapshots;}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{Monochrome\+Command.\+hpp}
+\hypertarget{MonochromeCommand_8hpp_source}{}\label{MonochromeCommand_8hpp_source}\index{/home/totoo/Documents/Raster-\/Graphics/include/services/commands/MonochromeCommand.hpp@{/home/totoo/Documents/Raster-\/Graphics/include/services/commands/MonochromeCommand.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MONOCHROME\_COMMAND}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MONOCHROME\_COMMAND}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Command.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}SnapshotCommand.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Session.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMonochromeCommand}{MonochromeCommand}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSnapshotCommand}{SnapshotCommand}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMonochromeCommand}{MonochromeCommand}}(\mbox{\hyperlink{classSession}{Session}}*\ \textcolor{keyword}{const}\ session);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMonochromeCommand}{MonochromeCommand}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMonochromeCommand}{MonochromeCommand}}\&\ rhs);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classMonochromeCommand_a43eee5e66e9dc97c5a77a7a5a6f63887}{args\_count}}()\ \{\ \textcolor{keywordflow}{return}\ args;\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classMonochromeCommand_a4b2cdb1695098aab96e6c6107dad3d82}{execute}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMonochromeCommand_ae281fe1254ed1250a2126f1ca7247030}{is\_undoable}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCommand}{Command}}*\ \mbox{\hyperlink{classMonochromeCommand_a55aafe9b41c0e3c9b4c8915d14c0a9bf}{clone}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMonochromeCommand}{MonochromeCommand}}(*\textcolor{keyword}{this});\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMonochromeCommand_a9aa897febedd7d07aa2fe54310adfec6}{undo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMonochromeCommand_a65f1f7860b7579bb82e09a08fd35c3e9}{redo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession}{Session}}*\ \textcolor{keyword}{const}\ session;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args\ =\ 0;}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

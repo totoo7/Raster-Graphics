@@ -1,0 +1,54 @@
+\doxysection{Session.\+hpp}
+\hypertarget{Session_8hpp_source}{}\label{Session_8hpp_source}\index{/home/totoo/Documents/Raster-\/Graphics/include/controllers/Session.hpp@{/home/totoo/Documents/Raster-\/Graphics/include/controllers/Session.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SESSION\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SESSION\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Image.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Command.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSession}{Session}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession_ad92ef09b872c9227e38a6efdd4d8a837}{Session}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession_ad92ef09b872c9227e38a6efdd4d8a837}{Session}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classSession}{Session}}\&\ rhs);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession}{Session}}\&\ \mbox{\hyperlink{classSession_a5f2322a401b8c4e15e28969efb88a3b4}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classSession}{Session}}\&\ rhs);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSession_a25ce8b8b2ac132247d96c1f0139185f8}{get\_id}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_ae3913e2907348df1cb663c0c24b18eee}{add\_image}}(\mbox{\hyperlink{classImage}{Image}}*\ image);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_ae3567e9c05000708c1818d56247af14a}{rotate}}(\textcolor{keyword}{const}\ std::string\&\ direction);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_a0c9130f773184d3182f4708d5704f766}{flip}}(\textcolor{keyword}{const}\ std::string\&\ direction);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_ac67a3368cb52723057ef983e398f2036}{monochrome}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_a5e1c7db6e205de1568decfed4a6b9835}{negative}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_a8bcfe9cffe0521df615077f30ab8c01e}{grayscale}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ save();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_a928d2e5602b9ebbce8dd4522ef920f7a}{saveAs}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ files);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}{undo}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_ab615c2ae32f73fa42496233146da6f19}{redo}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{\string~Session}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ std::vector<Image*>\ images;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ std::vector<Command*>\ history;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ std::vector<Command*>\ redos;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ current\_id;}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00105\ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

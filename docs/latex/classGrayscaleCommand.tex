@@ -1,0 +1,219 @@
+\doxysection{Grayscale\+Command Class Reference}
+\hypertarget{classGrayscaleCommand}{}\label{classGrayscaleCommand}\index{GrayscaleCommand@{GrayscaleCommand}}
+
+
+\doxylink{classCommand}{Command} to convert all session images to grayscale.  
+
+
+
+
+{\ttfamily \#include $<$Grayscale\+Command.\+hpp$>$}
+
+
+
+Inheritance diagram for Grayscale\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classGrayscaleCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Grayscale\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classGrayscaleCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGrayscaleCommand_a9e8b6a2c7b607c6b372651115ee0a897}{Grayscale\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classGrayscaleCommand}{Grayscale\+Command} for the given session. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGrayscaleCommand_a4ca3a6c3f6ca38f72530cfb3ca3eec35}{Grayscale\+Command}} (const \mbox{\hyperlink{classGrayscaleCommand}{Grayscale\+Command}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGrayscaleCommand_a98288d34e35b955a3a043fdbd3415331}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the grayscale operation on all session images. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGrayscaleCommand_a43f2cc6e7833c23e3939eb90a19eb539}{is\+\_\+undoable}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates whether this command supports undo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGrayscaleCommand_aeb88b0000b30d84e9d6599d16b571b9b}{clone}} () override
+\begin{DoxyCompactList}\small\item\em Creates a copy of this command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGrayscaleCommand_ae0bf08bdba8c08be93ef71a85d100001}{undo}} () override
+\begin{DoxyCompactList}\small\item\em Reverts the grayscale operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGrayscaleCommand_a731eec5f12b2893e039e84516cac5e39}{redo}} () override
+\begin{DoxyCompactList}\small\item\em Reapplies the grayscale operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSnapshotCommand}{Snapshot\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Snapshot\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSnapshotCommand_af9af265dcc6b89e653c350ae45fda867}{Snapshot\+Command}} (const \mbox{\hyperlink{classSnapshotCommand}{Snapshot\+Command}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSnapshotCommand_a92ab49f1eb7de0bed5e3a578560bccd3}{take\+\_\+snapshot}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Takes a snapshot of the current session state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSnapshotCommand_affcd8aa6d6e562e1a6d74aff1e7d40d1}{restore\+\_\+snapshot}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
+\begin{DoxyCompactList}\small\item\em Restores the session to the previously saved snapshot. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Snapshot\+Command} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{needs\+\_\+session}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classGrayscaleCommand_ae5d13e705e2385e28fb7fc3f991a9e15}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the expected number of arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSnapshotCommand}{Snapshot\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries snapshots}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classCommand}{Command} to convert all session images to grayscale. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGrayscaleCommand_a9e8b6a2c7b607c6b372651115ee0a897}\label{classGrayscaleCommand_a9e8b6a2c7b607c6b372651115ee0a897} 
+\index{GrayscaleCommand@{GrayscaleCommand}!GrayscaleCommand@{GrayscaleCommand}}
+\index{GrayscaleCommand@{GrayscaleCommand}!GrayscaleCommand@{GrayscaleCommand}}
+\doxysubsubsection{\texorpdfstring{GrayscaleCommand()}{GrayscaleCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Grayscale\+Command\+::\+Grayscale\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const}]{session }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classGrayscaleCommand}{Grayscale\+Command} for the given session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & The session to apply the grayscale transformation to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGrayscaleCommand_a4ca3a6c3f6ca38f72530cfb3ca3eec35}\label{classGrayscaleCommand_a4ca3a6c3f6ca38f72530cfb3ca3eec35} 
+\index{GrayscaleCommand@{GrayscaleCommand}!GrayscaleCommand@{GrayscaleCommand}}
+\index{GrayscaleCommand@{GrayscaleCommand}!GrayscaleCommand@{GrayscaleCommand}}
+\doxysubsubsection{\texorpdfstring{GrayscaleCommand()}{GrayscaleCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Grayscale\+Command\+::\+Grayscale\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGrayscaleCommand}{Grayscale\+Command}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The command to copy. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGrayscaleCommand_ae5d13e705e2385e28fb7fc3f991a9e15}\label{classGrayscaleCommand_ae5d13e705e2385e28fb7fc3f991a9e15} 
+\index{GrayscaleCommand@{GrayscaleCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!GrayscaleCommand@{GrayscaleCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily static size\+\_\+t Grayscale\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the expected number of arguments. 
+
+\begin{DoxyReturn}{Returns}
+Argument count. 
+\end{DoxyReturn}
+\Hypertarget{classGrayscaleCommand_aeb88b0000b30d84e9d6599d16b571b9b}\label{classGrayscaleCommand_aeb88b0000b30d84e9d6599d16b571b9b} 
+\index{GrayscaleCommand@{GrayscaleCommand}!clone@{clone}}
+\index{clone@{clone}!GrayscaleCommand@{GrayscaleCommand}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} Grayscale\+Command\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a copy of this command. 
+
+\begin{DoxyReturn}{Returns}
+A new clone of the command. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{Command}}.
+
+\Hypertarget{classGrayscaleCommand_a98288d34e35b955a3a043fdbd3415331}\label{classGrayscaleCommand_a98288d34e35b955a3a043fdbd3415331} 
+\index{GrayscaleCommand@{GrayscaleCommand}!execute@{execute}}
+\index{execute@{execute}!GrayscaleCommand@{GrayscaleCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::string Grayscale\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the grayscale operation on all session images. 
+
+\begin{DoxyReturn}{Returns}
+Result message of the operation. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
+
+\Hypertarget{classGrayscaleCommand_a43f2cc6e7833c23e3939eb90a19eb539}\label{classGrayscaleCommand_a43f2cc6e7833c23e3939eb90a19eb539} 
+\index{GrayscaleCommand@{GrayscaleCommand}!is\_undoable@{is\_undoable}}
+\index{is\_undoable@{is\_undoable}!GrayscaleCommand@{GrayscaleCommand}}
+\doxysubsubsection{\texorpdfstring{is\_undoable()}{is\_undoable()}}
+{\footnotesize\ttfamily bool Grayscale\+Command\+::is\+\_\+undoable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates whether this command supports undo. 
+
+\begin{DoxyReturn}{Returns}
+True. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{Command}}.
+
+\Hypertarget{classGrayscaleCommand_a731eec5f12b2893e039e84516cac5e39}\label{classGrayscaleCommand_a731eec5f12b2893e039e84516cac5e39} 
+\index{GrayscaleCommand@{GrayscaleCommand}!redo@{redo}}
+\index{redo@{redo}!GrayscaleCommand@{GrayscaleCommand}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily void Grayscale\+Command\+::redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reapplies the grayscale operation. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{Command}}.
+
+\Hypertarget{classGrayscaleCommand_ae0bf08bdba8c08be93ef71a85d100001}\label{classGrayscaleCommand_ae0bf08bdba8c08be93ef71a85d100001} 
+\index{GrayscaleCommand@{GrayscaleCommand}!undo@{undo}}
+\index{undo@{undo}!GrayscaleCommand@{GrayscaleCommand}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void Grayscale\+Command\+::undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reverts the grayscale operation. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/Grayscale\+Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/Grayscale\+Command.\+cpp\end{DoxyCompactItemize}

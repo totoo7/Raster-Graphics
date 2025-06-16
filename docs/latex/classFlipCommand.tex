@@ -1,0 +1,185 @@
+\doxysection{Flip\+Command Class Reference}
+\hypertarget{classFlipCommand}{}\label{classFlipCommand}\index{FlipCommand@{FlipCommand}}
+
+
+\doxylink{classCommand}{Command} to flip all images in the session.  
+
+
+
+
+{\ttfamily \#include $<$Flip\+Command.\+hpp$>$}
+
+
+
+Inheritance diagram for Flip\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classFlipCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flip\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classFlipCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFlipCommand_a310227d032d7c013cee2a11aae68ce6e}{Flip\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session, const std\+::string \&direction)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classFlipCommand}{Flip\+Command}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFlipCommand_a2218df5ed819ce4d04a7c470a275a8a7}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the flip command on the session images. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFlipCommand_af38760418149f0edb484abe2cb4e15c5}{clone}} () override
+\begin{DoxyCompactList}\small\item\em Creates a copy of the command. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFlipCommand_afe2636136d83216d0372f7a375df5714}{is\+\_\+undoable}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates whether the command supports undo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlipCommand_aecff0f96935e97342b4fdc1c3ee08148}{undo}} () override
+\begin{DoxyCompactList}\small\item\em Undoes the flip operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlipCommand_ad6849ba2f959f77a48a2426e294a34f9}{redo}} () override
+\begin{DoxyCompactList}\small\item\em Redoes the flip operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{needs\+\_\+session}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classFlipCommand_a22d38b48e02e6cd732e4110a027fb12b}{get\+\_\+args}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classCommand}{Command} to flip all images in the session. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFlipCommand_a310227d032d7c013cee2a11aae68ce6e}\label{classFlipCommand_a310227d032d7c013cee2a11aae68ce6e} 
+\index{FlipCommand@{FlipCommand}!FlipCommand@{FlipCommand}}
+\index{FlipCommand@{FlipCommand}!FlipCommand@{FlipCommand}}
+\doxysubsubsection{\texorpdfstring{FlipCommand()}{FlipCommand()}}
+{\footnotesize\ttfamily Flip\+Command\+::\+Flip\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const}]{session,  }\item[{const std\+::string \&}]{direction }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classFlipCommand}{Flip\+Command}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & The session on which to operate. \\
+\hline
+{\em direction} & The direction to flip (e.\+g., "{}top"{} or "{}left"{}). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFlipCommand_af38760418149f0edb484abe2cb4e15c5}\label{classFlipCommand_af38760418149f0edb484abe2cb4e15c5} 
+\index{FlipCommand@{FlipCommand}!clone@{clone}}
+\index{clone@{clone}!FlipCommand@{FlipCommand}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} Flip\+Command\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a copy of the command. 
+
+\begin{DoxyReturn}{Returns}
+A clone of this command. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{Command}}.
+
+\Hypertarget{classFlipCommand_a2218df5ed819ce4d04a7c470a275a8a7}\label{classFlipCommand_a2218df5ed819ce4d04a7c470a275a8a7} 
+\index{FlipCommand@{FlipCommand}!execute@{execute}}
+\index{execute@{execute}!FlipCommand@{FlipCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::string Flip\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the flip command on the session images. 
+
+\begin{DoxyReturn}{Returns}
+Result message of the operation. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
+
+\Hypertarget{classFlipCommand_a22d38b48e02e6cd732e4110a027fb12b}\label{classFlipCommand_a22d38b48e02e6cd732e4110a027fb12b} 
+\index{FlipCommand@{FlipCommand}!get\_args@{get\_args}}
+\index{get\_args@{get\_args}!FlipCommand@{FlipCommand}}
+\doxysubsubsection{\texorpdfstring{get\_args()}{get\_args()}}
+{\footnotesize\ttfamily static size\+\_\+t Flip\+Command\+::get\+\_\+args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the number of arguments required by the command. 
+
+\begin{DoxyReturn}{Returns}
+Number of expected arguments. 
+\end{DoxyReturn}
+\Hypertarget{classFlipCommand_afe2636136d83216d0372f7a375df5714}\label{classFlipCommand_afe2636136d83216d0372f7a375df5714} 
+\index{FlipCommand@{FlipCommand}!is\_undoable@{is\_undoable}}
+\index{is\_undoable@{is\_undoable}!FlipCommand@{FlipCommand}}
+\doxysubsubsection{\texorpdfstring{is\_undoable()}{is\_undoable()}}
+{\footnotesize\ttfamily bool Flip\+Command\+::is\+\_\+undoable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates whether the command supports undo. 
+
+\begin{DoxyReturn}{Returns}
+True. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{Command}}.
+
+\Hypertarget{classFlipCommand_ad6849ba2f959f77a48a2426e294a34f9}\label{classFlipCommand_ad6849ba2f959f77a48a2426e294a34f9} 
+\index{FlipCommand@{FlipCommand}!redo@{redo}}
+\index{redo@{redo}!FlipCommand@{FlipCommand}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily void Flip\+Command\+::redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Redoes the flip operation. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{Command}}.
+
+\Hypertarget{classFlipCommand_aecff0f96935e97342b4fdc1c3ee08148}\label{classFlipCommand_aecff0f96935e97342b4fdc1c3ee08148} 
+\index{FlipCommand@{FlipCommand}!undo@{undo}}
+\index{undo@{undo}!FlipCommand@{FlipCommand}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void Flip\+Command\+::undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Undoes the flip operation. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/Flip\+Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/Flip\+Command.\+cpp\end{DoxyCompactItemize}

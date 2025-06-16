@@ -1,0 +1,58 @@
+\doxysection{Interface Class Reference}
+\hypertarget{classInterface}{}\label{classInterface}\index{Interface@{Interface}}
+
+
+Singleton class that provides the main interface for running the program.  
+
+
+
+
+{\ttfamily \#include $<$Interface.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classInterface_a090a950300a463d91f8f361d3b333906}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the main command-\/processing loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classInterface}{Interface}} \& \mbox{\hyperlink{classInterface_a39599a4780d64942a43a5f38211753e0}{get\+\_\+instance}} ()
+\begin{DoxyCompactList}\small\item\em Returns the single instance of the \doxylink{classInterface}{Interface}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class that provides the main interface for running the program. 
+
+The \doxylink{classInterface}{Interface} class acts as the main control loop of the application. It handles user input, manages commands, and coordinates session operations. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classInterface_a39599a4780d64942a43a5f38211753e0}\label{classInterface_a39599a4780d64942a43a5f38211753e0} 
+\index{Interface@{Interface}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInterface}{Interface}} \& Interface\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the single instance of the \doxylink{classInterface}{Interface}. 
+
+Implements the Singleton design pattern to ensure only one instance exists. \begin{DoxyReturn}{Returns}
+Reference to the single \doxylink{classInterface}{Interface} instance. 
+\end{DoxyReturn}
+\Hypertarget{classInterface_a090a950300a463d91f8f361d3b333906}\label{classInterface_a090a950300a463d91f8f361d3b333906} 
+\index{Interface@{Interface}!run@{run}}
+\index{run@{run}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Interface\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the main command-\/processing loop. 
+
+Handles user input, parses commands, and delegates execution to the appropriate \doxylink{classCommand}{Command} object. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/view/Interface.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/view/Interface.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+\doxysection{Grayscale\+Command.\+hpp}
+\hypertarget{GrayscaleCommand_8hpp_source}{}\label{GrayscaleCommand_8hpp_source}\index{/home/totoo/Documents/Raster-\/Graphics/include/services/commands/GrayscaleCommand.hpp@{/home/totoo/Documents/Raster-\/Graphics/include/services/commands/GrayscaleCommand.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GRAYSCALE\_COMMAND}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GRAYSCALE\_COMMAND}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Command.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Session.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}SnapshotCommand.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGrayscaleCommand}{GrayscaleCommand}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSnapshotCommand}{SnapshotCommand}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGrayscaleCommand}{GrayscaleCommand}}(\mbox{\hyperlink{classSession}{Session}}*\ \textcolor{keyword}{const}\ session);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGrayscaleCommand}{GrayscaleCommand}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGrayscaleCommand}{GrayscaleCommand}}\&\ rhs);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classGrayscaleCommand_ae5d13e705e2385e28fb7fc3f991a9e15}{args\_count}}()\ \{\ \textcolor{keywordflow}{return}\ args;\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGrayscaleCommand_a98288d34e35b955a3a043fdbd3415331}{execute}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGrayscaleCommand_a43f2cc6e7833c23e3939eb90a19eb539}{is\_undoable}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCommand}{Command}}*\ \mbox{\hyperlink{classGrayscaleCommand_aeb88b0000b30d84e9d6599d16b571b9b}{clone}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classGrayscaleCommand}{GrayscaleCommand}}(*\textcolor{keyword}{this});\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGrayscaleCommand_ae0bf08bdba8c08be93ef71a85d100001}{undo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGrayscaleCommand_a731eec5f12b2893e039e84516cac5e39}{redo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession}{Session}}*\ \textcolor{keyword}{const}\ session;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args\ =\ 0;}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

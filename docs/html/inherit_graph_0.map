@@ -1,0 +1,37 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classCommand.html" title="Abstract base class representing a command in the system." alt="" coords="5,327,95,352"/>
+<area shape="rect" id="Node000001" href="$classAddCommand.html" title="Command to add a new image to the current session." alt="" coords="160,5,275,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="49,313,54,257,67,184,79,145,95,107,115,72,141,40,158,28,161,32,144,44,119,75,99,110,84,147,72,185,59,257,54,313"/>
+<area shape="rect" id="Node000002" href="$classExitCommand.html" title="Command to exit the application." alt="" coords="160,55,275,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="51,312,58,265,74,205,100,144,119,115,141,89,158,78,161,82,144,93,123,118,105,146,79,207,64,266,56,313"/>
+<area shape="rect" id="Node000003" href="$classFlipCommand.html" title="Command to flip all images in the session." alt="" coords="161,104,274,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="54,313,64,274,81,228,106,180,141,139,159,127,162,132,144,143,110,183,86,230,69,276,59,314"/>
+<area shape="rect" id="Node000004" href="$classHelpCommand.html" title="Command that displays help information about available commands." alt="" coords="158,153,277,179"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="58,313,89,250,112,217,141,188,161,176,163,181,144,192,116,220,93,253,63,315"/>
+<area shape="rect" id="Node000005" href="$classListCommand.html" title="Command that lists details about the active session and its images." alt="" coords="161,203,273,228"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="66,314,98,275,141,237,164,226,167,230,144,242,102,278,70,317"/>
+<area shape="rect" id="Node000006" href="$classLoadCommand.html" title="Command to load images into the session manager." alt="" coords="157,252,277,277"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="82,317,142,286,172,275,173,280,144,291,85,322"/>
+<area shape="rect" id="Node000007" href="$classPasteCommand.html" title="Command to paste one image into another at a given position." alt="" coords="155,301,279,327"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="108,328,154,321,155,326,109,333"/>
+<area shape="rect" id="Node000008" href="$classRedoCommand.html" title="Command to redo the last undone operation in a session." alt="" coords="156,351,279,376"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="109,345,156,352,156,357,108,350"/>
+<area shape="rect" id="Node000009" href="$classRotateCommand.html" title="Command to rotate all images in the session in a given direction." alt="" coords="151,400,283,425"/>
+<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="87,356,144,385,177,397,175,402,142,390,84,361"/>
+<area shape="rect" id="Node000010" href="$classSaveAsCommand.html" title="Command to save session images to new specified file names." alt="" coords="149,449,286,475"/>
+<area shape="poly" id="edge10_Node000000_Node000010" title=" " alt="" coords="71,362,102,399,144,434,169,447,167,452,141,439,99,403,67,365"/>
+<area shape="rect" id="Node000011" href="$classSaveCommand.html" title="Command to save all images in the current session to the day&#45;hour&#45;minute format." alt="" coords="157,499,278,524"/>
+<area shape="poly" id="edge11_Node000000_Node000011" title=" " alt="" coords="63,364,94,424,117,456,144,484,166,496,163,501,141,488,113,460,89,427,59,366"/>
+<area shape="rect" id="Node000012" href="$classSnapshotCommand.html" title="Base class for commands that need to take and restore image snapshots." alt="" coords="143,548,292,573"/>
+<area shape="poly" id="edge12_Node000000_Node000012" title=" " alt="" coords="59,365,70,403,87,448,111,494,144,533,164,546,161,550,141,537,107,497,82,450,65,404,54,367"/>
+<area shape="rect" id="Node000016" href="$classSwitchCommand.html" title="Command to switch to a different session by ID." alt="" coords="151,597,283,623"/>
+<area shape="poly" id="edge16_Node000000_Node000016" title=" " alt="" coords="56,365,64,411,79,470,106,530,123,558,144,583,163,595,160,599,141,587,119,561,101,533,74,472,59,413,51,366"/>
+<area shape="rect" id="Node000017" href="$classUndoCommand.html" title="Command to undo the last executed undoable command in a session." alt="" coords="156,647,279,672"/>
+<area shape="poly" id="edge17_Node000000_Node000017" title=" " alt="" coords="54,365,59,421,73,493,84,531,100,568,120,603,144,633,160,644,157,649,141,637,115,606,95,570,79,532,67,494,54,422,49,366"/>
+<area shape="rect" id="Node000013" href="$classGrayscaleCommand.html" title="Command to convert all session images to grayscale." alt="" coords="350,499,505,524"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="284,542,372,521,373,527,286,547"/>
+<area shape="rect" id="Node000014" href="$classMonochromeCommand.html" title="Command to apply monochrome effect on images within a session." alt="" coords="340,548,515,573"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="306,558,340,558,340,563,306,563"/>
+<area shape="rect" id="Node000015" href="$classNegativeCommand.html" title="Command to apply negative effect on images within a session." alt="" coords="353,597,501,623"/>
+<area shape="poly" id="edge15_Node000012_Node000015" title=" " alt="" coords="286,574,373,595,372,600,284,579"/>
+</map>

@@ -1,0 +1,135 @@
+\doxysection{Help\+Command Class Reference}
+\hypertarget{classHelpCommand}{}\label{classHelpCommand}\index{HelpCommand@{HelpCommand}}
+
+
+\doxylink{classCommand}{Command} that displays help information about available commands.  
+
+
+
+
+{\ttfamily \#include $<$Help\+Command.\+hpp$>$}
+
+
+
+Inheritance diagram for Help\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classHelpCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Help\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classHelpCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classHelpCommand_ab9ec3fae11daf96d1c17dee4209def68}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the help command, returning a list of supported commands. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHelpCommand_a672a4fd9152aeb2ebb1b8dfc2d9e9928}{is\+\_\+undoable}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates that this command cannot be undone. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHelpCommand_a3f3f7220736897ef1dd2f75b3e31ba73}{needs\+\_\+session}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates that this command does not require an active session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classCommand_aec6daa31b134ef3fbd02bd8fa6a369b2}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the command operation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Redoes the command operation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classHelpCommand_a53802f23bd885bbd2cc8a9115dba12bb}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the expected number of arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classCommand}{Command} that displays help information about available commands. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHelpCommand_a53802f23bd885bbd2cc8a9115dba12bb}\label{classHelpCommand_a53802f23bd885bbd2cc8a9115dba12bb} 
+\index{HelpCommand@{HelpCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!HelpCommand@{HelpCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily static size\+\_\+t Help\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the expected number of arguments. 
+
+\begin{DoxyReturn}{Returns}
+Argument count. 
+\end{DoxyReturn}
+\Hypertarget{classHelpCommand_ab9ec3fae11daf96d1c17dee4209def68}\label{classHelpCommand_ab9ec3fae11daf96d1c17dee4209def68} 
+\index{HelpCommand@{HelpCommand}!execute@{execute}}
+\index{execute@{execute}!HelpCommand@{HelpCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::string Help\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the help command, returning a list of supported commands. 
+
+\begin{DoxyReturn}{Returns}
+Help message as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
+
+\Hypertarget{classHelpCommand_a672a4fd9152aeb2ebb1b8dfc2d9e9928}\label{classHelpCommand_a672a4fd9152aeb2ebb1b8dfc2d9e9928} 
+\index{HelpCommand@{HelpCommand}!is\_undoable@{is\_undoable}}
+\index{is\_undoable@{is\_undoable}!HelpCommand@{HelpCommand}}
+\doxysubsubsection{\texorpdfstring{is\_undoable()}{is\_undoable()}}
+{\footnotesize\ttfamily bool Help\+Command\+::is\+\_\+undoable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates that this command cannot be undone. 
+
+\begin{DoxyReturn}{Returns}
+False. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand_acc0bcb447fc24439ea43d995ad798f7b}{Command}}.
+
+\Hypertarget{classHelpCommand_a3f3f7220736897ef1dd2f75b3e31ba73}\label{classHelpCommand_a3f3f7220736897ef1dd2f75b3e31ba73} 
+\index{HelpCommand@{HelpCommand}!needs\_session@{needs\_session}}
+\index{needs\_session@{needs\_session}!HelpCommand@{HelpCommand}}
+\doxysubsubsection{\texorpdfstring{needs\_session()}{needs\_session()}}
+{\footnotesize\ttfamily bool Help\+Command\+::needs\+\_\+session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates that this command does not require an active session. 
+
+\begin{DoxyReturn}{Returns}
+False. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/include/services/commands/Help\+Command.\+hpp\item 
+/home/totoo/\+Documents/\+Raster-\/\+Graphics/src/services/commands/Help\+Command.\+cpp\end{DoxyCompactItemize}

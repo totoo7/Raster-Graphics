@@ -1,0 +1,11 @@
+<map id="SnapshotCommand" name="SnapshotCommand">
+<area shape="rect" id="Node000001" title="Base class for commands that need to take and restore image snapshots." alt="" coords="197,79,347,104"/>
+<area shape="rect" id="Node000003" href="$classGrayscaleCommand.html" title="Command to convert all session images to grayscale." alt="" coords="5,152,160,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,111,115,154,113,149,228,106"/>
+<area shape="rect" id="Node000004" href="$classMonochromeCommand.html" title="Command to apply monochrome effect on images within a session." alt="" coords="185,152,359,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="275,118,275,152,269,152,269,118"/>
+<area shape="rect" id="Node000005" href="$classNegativeCommand.html" title="Command to apply negative effect on images within a session." alt="" coords="383,152,531,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="315,106,428,149,426,154,313,111"/>
+<area shape="rect" id="Node000002" href="$classCommand.html" title="Abstract base class representing a command in the system." alt="" coords="227,5,317,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,44,275,79,269,79,269,44"/>
+</map>
