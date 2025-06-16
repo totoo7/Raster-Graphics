@@ -23,11 +23,13 @@ void PBM::grayscale() {
 }
 
 void PBM::monochrome() {
-    //TODO
+    return;
 }
 
 void PBM::negative() {
-    //TODO
+    for (size_t i = 0; i < height; ++i)
+		for (size_t j = 0; j < width; ++j)
+			pixels[i][j] = !pixels[i][j];
 }
 
 Image* PBM::paste_into(Image* img_dest, size_t pos_x, size_t pos_y) {
