@@ -9,14 +9,9 @@ PGM::PGM(const std::string& filename) : ImageBase(filename) {
     unsigned temp;
     ifs >> temp;
     max_val = temp;
-    pixels.resize(height, std::vector<uint8_t>(width));
     UTILITIES::skip_comments(ifs);
-    for (size_t i = 0; i < height; i++) {
-        for (size_t j = 0; j < width; j++) {
-            ifs >> temp;
-            pixels[i][j] = temp;
-        }
-    }
+    pixels.resize(height, std::vector<uint8_t>(width));
+    read_pixels(ifs);
     ifs.close();
 }
 
@@ -55,14 +50,19 @@ Image* PGM::paste_into(Image* img_dest, size_t pos_x, size_t pos_y) {
     return res;
 }
 
-void PGM::write_file(std::ofstream& ofs) {
+uint8_t PGM::read_value(std::ifstream& is) const {
+    unsigned temp;
+    is >> temp;
+    return temp;
+}
+
+void PGM::write_pixel(std::ofstream& ofs, size_t i, size_t j) const {
+    ofs << static_cast<unsigned>(pixels[i][j]);
+}
+
+void PGM::write_file(std::ofstream& ofs) const {
     ofs << "P2\n";
     ofs << width << " " << height << "\n";
     ofs << static_cast<unsigned>(max_val) << "\n";
-    for (size_t i = 0; i < height; ++i) {
-        for (size_t j = 0; j < width; ++j) {
-            ofs << static_cast<unsigned>(pixels[i][j]) << ' ';
-        }
-        ofs << '\n'; 
-    }
+    write_pixels(ofs);
 }

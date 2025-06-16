@@ -1,5 +1,6 @@
 #include "ImageFactory.hpp"
-
+#include "PGM.hpp"
+#include "PBM.hpp"
 Image* ImageFactory::create_image(std::string filename) {
     std::string type = "";
 
@@ -9,7 +10,7 @@ Image* ImageFactory::create_image(std::string filename) {
 
 
     if (type == "pbm") {
-        //TODO
+        return new PBM(filename);
     } else if (type == "pgm") {
         return new PGM(filename);
     } else if (type == "ppm") {

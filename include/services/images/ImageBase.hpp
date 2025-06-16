@@ -11,6 +11,9 @@ class ImageBase : public Image {
         ImageBase(const std::string& filename);
         void rotate(const std::string& direction) override;
         void flip(const std::string& direction) override;
+        void write_pixels(std::ofstream& ofs) const;
+        void read_pixels(std::ifstream& ifs);
+        virtual T read_value(std::ifstream& is) const = 0;
         ~ImageBase() = default;
     protected:
         std::vector<std::vector<T>> paste_pixels(const std::vector<std::vector<T>>& dest, const std::vector<std::vector<T>>& src,
@@ -28,6 +31,27 @@ inline ImageBase<T>::ImageBase() : Image() {}
 
 template<typename T>
 inline ImageBase<T>::ImageBase(const std::string& filename) : Image(filename) {}
+
+template<typename T>
+inline void ImageBase<T>::write_pixels(std::ofstream& ofs) const {
+    for (size_t i = 0; i < height; ++i) {
+        for (size_t j = 0; j < width; ++j) {
+            write_pixel(ofs, i, j);
+            ofs << ' ';
+        }
+        ofs << '\n';
+    }
+}
+
+template<typename T>
+inline void ImageBase<T>::read_pixels(std::ifstream& ifs) {
+    pixels.resize(height, std::vector<T>(width));
+    for (size_t i = 0; i < height; ++i) {
+        for (size_t j = 0; j < width; ++j) {
+            pixels[i][j] = read_value(ifs);
+        }
+    }
+}
 
 template<typename T>
 inline void ImageBase<T>::transpose_matrix(std::vector<std::vector<T>>& array) {
@@ -51,6 +75,8 @@ inline void ImageBase<T>::rotate(const std::string& direction) {
         transpose_matrix(pixels);
         reverse_cols(pixels);
     }
+    this->height = pixels.size();
+    this->width = pixels[0].size();
 }
 
 template<typename T>
@@ -60,6 +86,8 @@ inline void ImageBase<T>::flip(const std::string& direction) {
     } else if (direction == "left") {
         reverse_cols(pixels);
     }
+    this->height = pixels.size();
+    this->width = pixels[0].size();
 }
 
 template<typename T>
@@ -73,7 +101,9 @@ template<typename T>
 inline void ImageBase<T>::reverse_cols(std::vector<std::vector<T>>& array) {
     for (size_t i = 0; i < array.size(); ++i) {
         for (size_t j = 0; j < array[i].size() / 2; ++j) {
-            std::swap(array[i][j], array[i][array[i].size() - j - 1]);
+            T temp = array[i][j];
+            array[i][j] = array[i][array[i].size() - j - 1];
+            array[i][array[i].size() - j - 1] = temp;
         }
     } 
 }
@@ -100,7 +130,7 @@ size_t pos_x) {
             result[pos_y + i][pos_x + j] = src[i][j];
         }
     }
-
+    
     return result;
 }
 

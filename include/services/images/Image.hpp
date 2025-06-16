@@ -16,7 +16,8 @@ class Image {
         virtual void negative() = 0;
         virtual void rotate(const std::string& direction) = 0;
         virtual void flip(const std::string& direction) = 0;
-        virtual void write_file(std::ofstream& ofs) = 0;
+        virtual void write_file(std::ofstream& ofs) const = 0;
+        virtual void write_pixel(std::ofstream& ofs, size_t i, size_t j) const = 0;
         virtual Image* paste_into(Image* img_dest, size_t pos_x, size_t pos_y) = 0;
         virtual Image* clone() const = 0;
         void set_filename(const std::string& val);

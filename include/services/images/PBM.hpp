@@ -12,7 +12,9 @@ class PBM : public ImageBase<bool> {
         void monochrome() override;
         void negative() override;
         Image* paste_into(Image* img_dest, size_t pos_x, size_t pos_y) override;
-        void write_file(std::ofstream& ofs) override;
+        void write_file(std::ofstream& ofs) const override;
+        void write_pixel(std::ofstream& ofs, size_t i, size_t j) const override;
+        bool read_value(std::ifstream& is) const override;
         Image* clone() const override;
 };
 

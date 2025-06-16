@@ -6,16 +6,7 @@ PBM::PBM(const std::string& filename) : ImageBase(filename) {
     std::ifstream ifs(filename);
     if (!ifs) throw std::runtime_error("Cannot open file: " + filename);
     UTILITIES::skip_comments(ifs, 2);
-    unsigned temp;
-    ifs >> temp;
-    pixels.resize(height, std::vector<bool>(width));
-    UTILITIES::skip_comments(ifs);
-    for (size_t i = 0; i < height; i++) {
-        for (size_t j = 0; j < width; j++) {
-            ifs >> temp;
-            pixels[i][j] = temp;
-        }
-    }
+    read_pixels(ifs);
     ifs.close();
 }
 
@@ -47,15 +38,18 @@ Image* PBM::paste_into(Image* img_dest, size_t pos_x, size_t pos_y) {
     return res;
 }
 
+bool PBM::read_value(std::ifstream& ifs) const {
+    bool val;
+    ifs >> val;
+    return val;
+}
 
-//! MOVE THIS TO IMAGE BASE
-void PBM::write_file(std::ofstream& ofs) {
+void PBM::write_pixel(std::ofstream& ofs, size_t i, size_t j) const {
+    ofs << static_cast<bool>(pixels[i][j]);
+}
+
+void PBM::write_file(std::ofstream& ofs) const {
     ofs << "P1\n";
     ofs << width << " " << height << "\n";
-    for (size_t i = 0; i < height; ++i) {
-        for (size_t j = 0; j < width; ++j) {
-            ofs << static_cast<bool>(pixels[i][j]) << ' ';
-        }
-        ofs << '\n'; 
-    }
+    write_pixels(ofs);
 }

@@ -2,7 +2,6 @@
 #define IMAGE_FACTORY_HPP
 
 #include "Image.hpp"
-#include "PGM.hpp"
 
 class ImageFactory {
     public:

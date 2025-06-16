@@ -6,6 +6,7 @@ PasteCommand::PasteCommand(Session* const session, const std::vector<std::string
     : session(session), args(args) {}
 
 std::string PasteCommand::execute() {
+    if (args.size() != 5) return "Invalid arguments count.\n";
     Image* img_src = ImageFactory::create_image(args[0]);
     Image* img_dest = ImageFactory::create_image(args[1]);
     if (!img_src || !img_dest) 
