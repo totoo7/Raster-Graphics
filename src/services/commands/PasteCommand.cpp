@@ -36,6 +36,6 @@ std::string PasteCommand::execute() {
 
 Image* PasteCommand::collage(Image* img_src, Image* img_dest, size_t pos_x, size_t pos_y) {
     if (img_src->get_type() != img_dest->get_type()) 
-        throw std::runtime_error("Can't paste incompatible images.\n");
+        throw std::runtime_error("Can't paste incompatible images.");
     return img_src->paste_into(img_dest, pos_x, pos_y);
 }

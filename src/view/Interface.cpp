@@ -1,5 +1,10 @@
 #include "Interface.hpp"
+
+#include <iostream>
 #include "Utilites.hpp"
+#include "ExitCommand.hpp"
+#include "CommandFactory.hpp"
+
 Interface::Interface() : cmd(nullptr) {}
 
 Interface& Interface::get_instance() {

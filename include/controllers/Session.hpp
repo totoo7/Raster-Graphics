@@ -16,6 +16,7 @@ class Session {
         void flip(const std::string& direction);
         void monochrome();
         void negative();
+        void grayscale();
         void save();
         void saveAs(const std::vector<std::string>& files);
         void undo();

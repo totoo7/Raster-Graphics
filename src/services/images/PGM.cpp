@@ -1,5 +1,4 @@
 #include "PGM.hpp"
-#include <iostream>
 #include "Utilites.hpp"
 
 PGM::PGM(const std::string& filename) : ImageBase(filename) {
@@ -10,12 +9,11 @@ PGM::PGM(const std::string& filename) : ImageBase(filename) {
     ifs >> temp;
     max_val = temp;
     UTILITIES::skip_comments(ifs);
-    pixels.resize(height, std::vector<uint8_t>(width));
     read_pixels(ifs);
     ifs.close();
 }
 
-PGM::PGM(const PGM& rhs) : max_val(rhs.max_val) {
+PGM::PGM(const PGM& rhs) : ImageBase(rhs), max_val(rhs.max_val) {
     pixels = rhs.pixels;
 }
 

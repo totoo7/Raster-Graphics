@@ -6,7 +6,6 @@
 
 class Image {
     public:
-        enum class Format { BINARY, ASCII };
         enum class Type { PPM, PGM, PBM };
     public:
         Image();
@@ -25,7 +24,6 @@ class Image {
         size_t get_width() const { return width; };
         size_t get_height() const { return height; };
         Type get_type() const { return type; };
-        Format get_format() const { return format; };
         virtual ~Image() = default;
     private:
         void parse_header(std::ifstream& ifs);
@@ -33,7 +31,6 @@ class Image {
         std::string filename;
         size_t width, height;
         Type type;
-        Format format;
 };
 
 #endif

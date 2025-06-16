@@ -1,8 +1,7 @@
 #ifndef INTERFACE_HPP
 #define INTERFACE_HPP
 
-#include <iostream>
-#include "CommandFactory.hpp"
+#include "Command.hpp"
 #include "SessionManager.hpp"
 
 class Interface {

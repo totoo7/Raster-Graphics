@@ -13,6 +13,7 @@ set(sources
     src/services/commands/ListCommand.cpp
     src/services/commands/NegativeCommand.cpp
     src/services/commands/MonochromeCommand.cpp
+    src/services/commands/GrayscaleCommand.cpp
     src/services/commands/SnapshotCommand.cpp
     src/services/commands/SaveCommand.cpp
     src/services/commands/SaveAsCommand.cpp
@@ -24,6 +25,7 @@ set(sources
     src/services/images/Image.cpp
     src/services/images/PGM.cpp
     src/services/images/PBM.cpp
+    src/services/images/PPM.cpp
     src/services/images/ImageFactory.cpp
     src/controllers/CommandFactory.cpp
     src/controllers/Session.cpp

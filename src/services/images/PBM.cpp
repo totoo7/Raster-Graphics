@@ -1,5 +1,4 @@
 #include "PBM.hpp"
-
 #include "Utilites.hpp"
 
 PBM::PBM(const std::string& filename) : ImageBase(filename) {
@@ -10,7 +9,7 @@ PBM::PBM(const std::string& filename) : ImageBase(filename) {
     ifs.close();
 }
 
-PBM::PBM(const PBM& rhs)  {
+PBM::PBM(const PBM& rhs) : ImageBase(rhs)  {
     pixels = rhs.pixels;
 }
 

@@ -72,9 +72,13 @@ void Session::monochrome() {
 }
 
 void Session::negative() {
-    for (size_t i = 0; i < images.size(); i++) {
+    for (size_t i = 0; i < images.size(); i++) 
 		images[i]->negative();
-	}
+}
+
+void Session::grayscale() {
+    for (size_t i = 0; i < images.size(); i++) 
+		images[i]->grayscale();
 }
 
 void Session::flip(const std::string& direction) {
