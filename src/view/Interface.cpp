@@ -56,8 +56,13 @@ void Interface::run() {
             char answer;
             std::cin >> answer;
             session_manager.change(sessions[i].get_id());
-            if (answer == 'y') 
-                CommandFactory::create("save", {}, &session_manager)->execute();
+            if (answer == 'y') {
+                Command* cmd = CommandFactory::create("save", {}, &session_manager);
+                if (cmd) {
+                    cmd->execute();
+                    delete cmd;
+                }
+            }
         }
     }
 
