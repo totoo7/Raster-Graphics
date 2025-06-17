@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['write_5ffile_0',['write_file',['../classImage.html#af46a8f0f8bf5c5ca02a48550474b5ba3',1,'Image::write_file()'],['../classPBM.html#afbb95cb522ce5c0b250982af463551f3',1,'PBM::write_file()'],['../classPGM.html#a7a09934338df5331abe210ba612d72c8',1,'PGM::write_file()'],['../classPPM.html#acef022ac55e67bde4292d9c770a54731',1,'PPM::write_file()']]],
-  ['write_5fpixel_1',['write_pixel',['../classImage.html#af6164f58c07bd2a48ab0b91fe9006cae',1,'Image::write_pixel()'],['../classPBM.html#a8219dfdfa49f4ae23a5d494971a95901',1,'PBM::write_pixel()'],['../classPGM.html#a2b4b166c9a7fd7bbd8020c24e4c26699',1,'PGM::write_pixel()'],['../classPPM.html#af4e90bfd8f63752ef317cf903c84acde',1,'PPM::write_pixel()']]],
-  ['write_5fpixels_2',['write_pixels',['../classImageBase.html#a0af78816fe2ae0780218f635547340ee',1,'ImageBase']]]
+  ['undo_0',['undo',['../classSession.html#a3775cf47da8f5bdd929816d6d1e2d2c3',1,'Session::undo()'],['../classCommand.html#aec6daa31b134ef3fbd02bd8fa6a369b2',1,'Command::undo()'],['../classFlipCommand.html#aecff0f96935e97342b4fdc1c3ee08148',1,'FlipCommand::undo()'],['../classGrayscaleCommand.html#ae0bf08bdba8c08be93ef71a85d100001',1,'GrayscaleCommand::undo()'],['../classMonochromeCommand.html#a9aa897febedd7d07aa2fe54310adfec6',1,'MonochromeCommand::undo()'],['../classNegativeCommand.html#ab72d5f864ac955debaf42a8bae2f556a',1,'NegativeCommand::undo()'],['../classRotateCommand.html#a05e44cbd944acb4f9ce9ddbb6b142f50',1,'RotateCommand::undo()'],['../classUndoCommand.html#a103d4bef990d45f5a04c842fb792e30f',1,'UndoCommand::undo()']]],
+  ['undocommand_1',['undocommand',['../classUndoCommand.html',1,'UndoCommand'],['../classUndoCommand.html#aa6eced9f817724cad886961b8c95d3de',1,'UndoCommand::UndoCommand()']]]
 ];

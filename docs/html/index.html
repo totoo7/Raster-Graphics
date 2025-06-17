@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C++ Raster-Graphics processor: Main Page</title>
+<title>C++ Raster-Graphics processor: Raster Graphics</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,10 +68,70 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">C++ Raster-Graphics processor Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Raster Graphics </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2home_2totoo_2Documents_2Raster-Graphics_2README"></a> A C++ raster graphics processor supporting common image formats and operations, designed with modularity and extensibility in mind.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md2"></a>
+Overview</h1>
+<p>This project provides a suite of classes and commands to load, manipulate, and save raster images in the following formats:</p>
+<ul>
+<li><b><a class="el" href="classPPM.html" title="Class representing a PPM (Portable Pixmap) image.">PPM</a></b> (Portable Pixmap)</li>
+<li><b><a class="el" href="classPGM.html" title="Class representing a PGM (Portable Graymap) image.">PGM</a></b> (Portable Graymap)</li>
+<li><b><a class="el" href="classPBM.html" title="Class representing a PBM (Portable Bitmap) image.">PBM</a></b> (Portable Bitmap)</li>
+</ul>
+<p>It features core image processing operations such as:</p>
+<ul>
+<li>Grayscale conversion</li>
+<li>Monochrome (black &amp; white) conversion</li>
+<li>Negative (color inversion)</li>
+<li>Rotation (clockwise and counterclockwise)</li>
+<li>Flipping (horizontal and vertical)</li>
+</ul>
+<p>The design is object-oriented, employing:</p>
+<ul>
+<li>Abstract base classes for images and commands</li>
+<li><a class="el" href="classCommand.html" title="Abstract base class representing a command in the system.">Command</a> pattern for applying and undoing operations</li>
+<li><a class="el" href="classSession.html" title="Represents an editing session that can hold and manipulate multiple images.">Session</a> management for handling multiple image editing sessions</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md4"></a>
+Features</h1>
+<ul>
+<li>Load and save <a class="el" href="classPPM.html" title="Class representing a PPM (Portable Pixmap) image.">PPM</a>, <a class="el" href="classPGM.html" title="Class representing a PGM (Portable Graymap) image.">PGM</a>, and <a class="el" href="classPBM.html" title="Class representing a PBM (Portable Bitmap) image.">PBM</a> images</li>
+<li>Perform common image transformations and filters</li>
+<li>Undo/redo support for image commands</li>
+<li><a class="el" href="classCommand.html" title="Abstract base class representing a command in the system.">Command</a> factory for extensible command creation</li>
+<li><a class="el" href="classSession.html" title="Represents an editing session that can hold and manipulate multiple images.">Session</a> management to isolate multiple image workflows</li>
+<li>Doxygen-generated documentation including class diagrams and inheritance graphs</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md6"></a>
+Build and Documentation</h1>
+<ul>
+<li>Use CMake to configure and build the library</li>
+<li>Generate HTML documentation using Doxygen</li>
+<li>Documentation includes detailed API reference and diagrams</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md8"></a>
+Getting Started</h1>
+<ol type="1">
+<li>Clone the repository</li>
+<li>Run <code>cmake -S . -B build</code></li>
+<li>Build the project and docs: <code>cmake --build build --target all doc</code></li>
+<li>Open the documentation at <code>build/html/index.html</code></li>
+</ol>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Tested Environment</h1>
+<hr  />
+<ul>
+<li><b>Operating System:</b> Ubuntu (x86_64-linux-gnu)</li>
+<li><b>Compiler:</b> GCC 13.3.0 </li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

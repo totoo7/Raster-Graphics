@@ -1,0 +1,75 @@
+\chapter{Raster Graphics}
+\hypertarget{index}{}\label{index}\index{Raster Graphics@{Raster Graphics}}
+\label{index_md__2home_2totoo_2Documents_2Raster-Graphics_2README}%
+\Hypertarget{index_md__2home_2totoo_2Documents_2Raster-Graphics_2README}%
+ A C++ raster graphics processor supporting common image formats and operations, designed with modularity and extensibility in mind.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md2}
+This project provides a suite of classes and commands to load, manipulate, and save raster images in the following formats\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{classPPM}{PPM}}} (Portable Pixmap)
+\item {\bfseries{\doxylink{classPGM}{PGM}}} (Portable Graymap)
+\item {\bfseries{\doxylink{classPBM}{PBM}}} (Portable Bitmap)
+\end{DoxyItemize}
+
+It features core image processing operations such as\+:
+
+
+\begin{DoxyItemize}
+\item Grayscale conversion
+\item Monochrome (black \& white) conversion
+\item Negative (color inversion)
+\item Rotation (clockwise and counterclockwise)
+\item Flipping (horizontal and vertical)
+\end{DoxyItemize}
+
+The design is object-\/oriented, employing\+:
+
+
+\begin{DoxyItemize}
+\item Abstract base classes for images and commands
+\item \doxylink{classCommand}{Command} pattern for applying and undoing operations
+\item \doxylink{classSession}{Session} management for handling multiple image editing sessions
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Load and save \doxylink{classPPM}{PPM}, \doxylink{classPGM}{PGM}, and \doxylink{classPBM}{PBM} images
+\item Perform common image transformations and filters
+\item Undo/redo support for image commands
+\item \doxylink{classCommand}{Command} factory for extensible command creation
+\item \doxylink{classSession}{Session} management to isolate multiple image workflows
+\item Doxygen-\/generated documentation including class diagrams and inheritance graphs
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Build and Documentation}{Build and Documentation}}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Use CMake to configure and build the library
+\item Generate HTML documentation using Doxygen
+\item Documentation includes detailed API reference and diagrams
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Getting Started}{Getting Started}}\label{index_autotoc_md8}
+
+\begin{DoxyEnumerate}
+\item Clone the repository
+\item Run {\ttfamily cmake -\/S . -\/B build}
+\item Build the project and docs\+: {\ttfamily cmake -\/-\/build build -\/-\/target all doc}
+\item Open the documentation at {\ttfamily build/html/index.\+html}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md9}{}\doxysection{\texorpdfstring{Tested Environment}{Tested Environment}}\label{index_autotoc_md9}
+\DoxyHorRuler{0}
+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Operating System\+:}} Ubuntu (x86\+\_\+64-\/linux-\/gnu)
+\item {\bfseries{Compiler\+:}} GCC 13.\+3.\+0 
+\end{DoxyItemize}
