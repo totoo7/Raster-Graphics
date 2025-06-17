@@ -17,12 +17,14 @@
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSessionManager_af5c912d49293ecde558c3f9219d44e7d}{change}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
 \DoxyCodeLine{00041\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSessionManager_aaa001d17557f897038ed33d1a36e82e1}{\string~SessionManager}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession}{Session}}*\ active\_session;}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::vector<Session>\ sessions;}
-\DoxyCodeLine{00049\ \};}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::vector<Session>\&\ \mbox{\hyperlink{classSessionManager_aff991f41caaccfb56876d599c907c305}{get\_sessions}}()\ \{\ \textcolor{keywordflow}{return}\ sessions;\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSessionManager_aaa001d17557f897038ed33d1a36e82e1}{\string~SessionManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession}{Session}}*\ active\_session;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::vector<Session>\ sessions;}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

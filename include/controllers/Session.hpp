@@ -100,6 +100,7 @@ class Session {
         std::vector<Command*> history;
         std::vector<Command*> redos;
         static int current_id;
+        bool has_unsaved_changes;
     private:
         int id;
 };

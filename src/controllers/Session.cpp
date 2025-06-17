@@ -3,9 +3,9 @@
 
 int Session::current_id = 0;
 
-Session::Session() : id(Session::current_id++) {}
+Session::Session() : id(Session::current_id++), has_unsaved_changes(false) {}
 
-Session::Session(const Session& rhs) {
+Session::Session(const Session& rhs) : has_unsaved_changes(rhs.has_unsaved_changes) {
     for (size_t i = 0; i < rhs.images.size(); i++) {
         images.push_back(rhs.images[i]->clone());
     }
@@ -50,6 +50,7 @@ void Session::save() {
         images[i]->write_file(ofs);
         ofs.close();
     }
+    has_unsaved_changes = false;
 }
 void Session::saveAs(const std::vector<std::string>& files) {
     for(size_t i = 0; i < files.size(); i++) {
@@ -58,33 +59,38 @@ void Session::saveAs(const std::vector<std::string>& files) {
         images[i]->write_file(ofs);
         ofs.close();
     }
+    has_unsaved_changes = false;
 }
 
 void Session::rotate(const std::string& direction) {
-    for (size_t i = 0; i < images.size(); i++) {
+    for (size_t i = 0; i < images.size(); i++)
         images[i]->rotate(direction);
-    }
+    
+    has_unsaved_changes = true;
 }
 
 void Session::monochrome() {
     for (size_t i = 0; i < images.size(); i++)
         images[i]->monochrome();
+    has_unsaved_changes = true;
 }
 
 void Session::negative() {
     for (size_t i = 0; i < images.size(); i++) 
 		images[i]->negative();
+    has_unsaved_changes = true;
 }
 
 void Session::grayscale() {
     for (size_t i = 0; i < images.size(); i++) 
 		images[i]->grayscale();
+    has_unsaved_changes = true;
 }
 
 void Session::flip(const std::string& direction) {
-    for (size_t i = 0; i < images.size(); i++) {
+    for (size_t i = 0; i < images.size(); i++)
         images[i]->flip(direction);
-    }
+    has_unsaved_changes = true;
 }
 
 const int Session::get_id() const {

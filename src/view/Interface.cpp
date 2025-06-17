@@ -46,9 +46,21 @@ void Interface::run() {
             std::cout << "Error: " << e.what() << std::endl;
             delete cmd;
             cmd = nullptr;
-        } 
+        }
     } while (dynamic_cast<ExitCommand*>(cmd) == nullptr);
-    
+
+    std::vector<Session> sessions = session_manager.get_sessions();
+    for (size_t i = 0; i < sessions.size(); i++) {
+        if (sessions[i].has_unsaved_changes) {
+            std::cout << "Session with ID: " << sessions[i].get_id() << " has unsaved work. Save it now (y/n)?\n";
+            char answer;
+            std::cin >> answer;
+            session_manager.change(sessions[i].get_id());
+            if (answer == 'y') 
+                CommandFactory::create("save", {}, &session_manager)->execute();
+        }
+    }
+
     delete cmd;
     cmd = nullptr;
 }

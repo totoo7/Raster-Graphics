@@ -40,6 +40,11 @@ class SessionManager {
         void change(const int id);
 
         /**
+         * @brief Getter for sessions vector
+         */
+        std::vector<Session>& get_sessions() { return sessions; }
+
+        /**
          * @brief Default destructor.
          */
         ~SessionManager() = default;
