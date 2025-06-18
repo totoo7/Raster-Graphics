@@ -1,5 +1,7 @@
 #include "GrayscaleCommand.hpp"
 
+const size_t GrayscaleCommand::args = 0;
+
 GrayscaleCommand::GrayscaleCommand(Session* const session) : session(session) {}
 
 GrayscaleCommand::GrayscaleCommand(const GrayscaleCommand& rhs) : 

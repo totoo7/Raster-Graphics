@@ -18,9 +18,9 @@ class PasteCommand : public Command {
 
 		/**
 		 * @brief Returns the number of required arguments for this command.
-		 * @return Always returns 4.
+		 * @return Always returns 5.
 		 */
-		static size_t get_args() { return args_count; };
+		const size_t args_count() const override { return args; };
 
 		/**
 		 * @brief Executes the paste operation.
@@ -45,8 +45,8 @@ class PasteCommand : public Command {
 		Image* collage(Image* img_src, Image* img_dest, size_t pos_x, size_t pos_y);
 	private:
 		Session* const session;
-		std::vector<std::string> args;
-		static const size_t args_count = 4;
+		std::vector<std::string> arguments;
+		static const size_t args;
 };
 
 #endif

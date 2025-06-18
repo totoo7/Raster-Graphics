@@ -26,7 +26,7 @@ class GrayscaleCommand : public SnapshotCommand {
 		 * @brief Returns the expected number of arguments.
 		 * @return Argument count.
 		 */
-		static size_t args_count() { return args; };
+		const size_t args_count() const override { return args; };
 
 		/**
 		 * @brief Executes the grayscale operation on all session images.
@@ -57,7 +57,7 @@ class GrayscaleCommand : public SnapshotCommand {
 		void redo() override;
 	private:
 		Session* const session;
-		static const size_t args = 0;
+		static const size_t args;
 };
 
 #endif

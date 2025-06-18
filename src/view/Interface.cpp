@@ -37,6 +37,9 @@ void Interface::run() {
             if (cmd->needs_session() && session_manager.get_active() == nullptr)
                 throw std::runtime_error("This command needs active session.");
 
+            if (cmd->args_count() != -1 && (cmd->args_count() != args.size())) {
+                throw std::invalid_argument("Invalid argument count. Expected " + std::to_string(cmd->args_count()) + ".");
+            }  
             std::cout << cmd->execute();
             if (cmd->is_undoable()) {
                 Interface::get_instance().session_manager.get_active()->history.push_back(cmd->clone()); //!

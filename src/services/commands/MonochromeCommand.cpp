@@ -1,5 +1,7 @@
 #include "MonochromeCommand.hpp"
 
+const size_t MonochromeCommand::args = 0;
+
 MonochromeCommand::MonochromeCommand(Session* const session) : session(session) {}
 
 MonochromeCommand::MonochromeCommand(const MonochromeCommand& rhs) : 

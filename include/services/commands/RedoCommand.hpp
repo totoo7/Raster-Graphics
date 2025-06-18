@@ -19,7 +19,7 @@ class RedoCommand : public Command {
          * @brief Returns the number of required arguments for this command.
          * @return Always returns 0.
          */
-        static size_t get_args() { return args; };
+        const size_t args_count() const override { return args; };
 
         /**
          * @brief Executes the redo operation.
@@ -34,7 +34,7 @@ class RedoCommand : public Command {
         bool is_undoable() const override { return false; };
     private:
         Session* const session;
-        static const size_t args = 0;
+        static const size_t args;
 };
 
 #endif

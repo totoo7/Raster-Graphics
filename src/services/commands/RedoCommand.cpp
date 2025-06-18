@@ -1,5 +1,7 @@
 #include "RedoCommand.hpp"
 
+const size_t RedoCommand::args = 0;
+
 RedoCommand::RedoCommand(Session* const session)
 	: session(session) {}
 

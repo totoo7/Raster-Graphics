@@ -1,5 +1,7 @@
 #include "HelpCommand.hpp"
 
+const size_t HelpCommand::args = 0;
+
 std::string HelpCommand::execute() {
     std::string out;
     out += "-- All commands --\n";

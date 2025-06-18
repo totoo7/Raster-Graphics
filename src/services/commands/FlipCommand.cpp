@@ -1,5 +1,7 @@
 #include "FlipCommand.hpp"
 
+const size_t FlipCommand::args = 1;
+
 FlipCommand::FlipCommand(Session* const session, const std::string& direction)
 	: session(session), direction(direction) {
 }

@@ -1,10 +1,21 @@
 #include "SaveAsCommand.hpp"
 
 SaveAsCommand::SaveAsCommand(Session* const session, const std::vector<std::string>& files) : 
-    session(session), files(files) {}
+    session(session), files(files) {
+}
 
+
+#include <iostream>
 std::string SaveAsCommand::execute() {
+    if (files.size() != session->images.size()) {
+        throw std::invalid_argument("Session contains " + std::to_string(session->images.size()) +
+            " image(s), but " + std::to_string(files.size()) +
+            " filename(s) were provided.");
+    }
     session->saveAs(files);
+    for (size_t i = 0; i < files.size(); i++) {
+        std::cout << files[i] << std::endl;
+    }
     std::string res = "Files ";
     for (size_t i = 0; i < files.size(); i++) {
         res += files[i];

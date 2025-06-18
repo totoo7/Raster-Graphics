@@ -1,5 +1,7 @@
 #include "ListCommand.hpp"
 
+const size_t ListCommand::args = 0;
+
 ListCommand::ListCommand(Session* const session) : session(session) {}
 
 std::string ListCommand::execute() {

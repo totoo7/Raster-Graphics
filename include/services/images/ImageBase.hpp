@@ -142,6 +142,8 @@ inline void ImageBase<T>::rotate(const std::string& direction) {
     } else if (direction == "right") {
         transpose_matrix(pixels);
         reverse_cols(pixels);
+    } else {
+        throw std::invalid_argument("Rotate expects <left | right> argument");
     }
     this->height = pixels.size();
     this->width = pixels[0].size();
@@ -153,6 +155,8 @@ inline void ImageBase<T>::flip(const std::string& direction) {
         reverse_rows(pixels);
     } else if (direction == "left") {
         reverse_cols(pixels);
+    } else {
+        throw std::runtime_error("Flip expects <top | left> argument.");
     }
     this->height = pixels.size();
     this->width = pixels[0].size();

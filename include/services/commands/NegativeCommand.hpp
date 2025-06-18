@@ -26,7 +26,7 @@ class NegativeCommand : public SnapshotCommand {
 		 * @brief Returns the required number of arguments for this command.
 		 * @return Always returns 0.
 		 */
-		static size_t args_count() { return args; };
+		const size_t args_count() const override { return args; };
 
 		/**
 		 * @brief Executes the negative effect.
@@ -57,7 +57,7 @@ class NegativeCommand : public SnapshotCommand {
 		void redo() override;
 	private:
 		Session* const session;
-		static const size_t args = 0;
+		static const size_t args;
 };
 
 #endif

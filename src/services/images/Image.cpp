@@ -22,7 +22,7 @@ void Image::parse_header(std::ifstream& ifs) {
     } else if (magic_number == "P3") {
         type = Type::PPM;
     } else {
-        throw std::invalid_argument("Uknown netpbm file type.");
+        throw std::invalid_argument("Unknown netpbm file type.");
     }
     UTILITIES::skip_comments(ifs);
     ifs >> width >> height;

@@ -15,13 +15,11 @@ public:
 	 * @param files Vector of filenames to save the images as.
 	 */
 	SaveAsCommand(Session* const session, const std::vector<std::string>& files);
-
 	/**
 	 * @brief Returns the number of required arguments.
 	 * @return Always returns 0.
 	 */
-	static size_t args_count() { return args; };
-
+	const size_t args_count() const override { return -1; };
 	/**
 	 * @brief Executes the save-as operation.
 	 * @return Result message.
@@ -36,7 +34,6 @@ public:
 private:
 	Session* const session;
     std::vector<std::string> files;
-	static const size_t args = 0;
 };
 
 #endif

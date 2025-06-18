@@ -18,7 +18,7 @@ class ExitCommand : public Command {
 		 * @brief Returns the number of arguments expected by the command.
 		 * @return Expected argument count.
 		 */
-        static size_t args_count() { return args; };
+        const size_t args_count() const override { return args; };
 
 		/**
 		 * @brief Indicates that the command does not require a session.
@@ -32,7 +32,7 @@ class ExitCommand : public Command {
 		 */
         bool is_undoable() const override { return false; };
     private:
-        static const size_t args = 0;
+        static const size_t args;
 };
 
 #endif

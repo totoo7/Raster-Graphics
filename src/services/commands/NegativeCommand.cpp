@@ -1,5 +1,7 @@
 #include "NegativeCommand.hpp"
 
+const size_t NegativeCommand::args = 0;
+
 NegativeCommand::NegativeCommand(Session* const session) : session(session) {}
 
 NegativeCommand::NegativeCommand(const NegativeCommand& rhs) : 

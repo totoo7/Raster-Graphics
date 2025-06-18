@@ -20,7 +20,7 @@ class AddCommand : public Command {
 		 * @brief Returns the number of arguments expected by the command.
 		 * @return Expected argument count.
 		 */
-        static size_t args_count() { return args; };
+        const size_t args_count() const override { return args; };
 
 		/**
 		 * @brief Executes the add command.
@@ -36,7 +36,7 @@ class AddCommand : public Command {
     private:
         Session* const session;
         std::string file;
-        static const size_t args = 0;
+        static const size_t args;
 };
 
 #endif

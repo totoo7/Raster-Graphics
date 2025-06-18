@@ -20,7 +20,7 @@ class LoadCommand : public Command {
          * @brief Returns the expected number of arguments for this command.
          * @return Argument count (always 0).
          */
-        static size_t args_count() { return args; };
+        const size_t args_count() const override { return -1; };
 
         /**
          * @brief Executes the load command.
@@ -42,7 +42,6 @@ class LoadCommand : public Command {
     private:
         SessionManager* const session_manager;
         std::vector<std::string> files;
-        static const size_t args = 0;
 };
 
 #endif

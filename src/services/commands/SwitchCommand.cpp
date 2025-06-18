@@ -1,5 +1,8 @@
 #include "SwitchCommand.hpp"
 
+const size_t SwitchCommand::args = 1;
+
+
 SwitchCommand::SwitchCommand(SessionManager* const session_manager, size_t id) : 
     session_manager(session_manager), id(id) {}
 

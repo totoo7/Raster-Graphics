@@ -2,19 +2,21 @@
 #include "ImageFactory.hpp"
 #include <iostream>
 
+const size_t PasteCommand::args = 5;
+
 PasteCommand::PasteCommand(Session* const session, const std::vector<std::string>& args) 
-    : session(session), args(args) {}
+    : session(session), arguments(args) {}
 
 std::string PasteCommand::execute() {
-    if (args.size() != 5) return "Invalid arguments count.\n";
-    Image* img_src = ImageFactory::create_image(args[0]);
-    Image* img_dest = ImageFactory::create_image(args[1]);
+    if (arguments.size() != 5) return "Invalid arguments count.\n";
+    Image* img_src = ImageFactory::create_image(arguments[0]);
+    Image* img_dest = ImageFactory::create_image(arguments[1]);
     if (!img_src || !img_dest) 
         throw std::runtime_error("Paste image creation failed.");
     
-    size_t pos_x = std::stoi(args[2]);
-    size_t pos_y = std::stoi(args[3]);
-    std::string filename = args[4];
+    size_t pos_x = std::stoi(arguments[2]);
+    size_t pos_y = std::stoi(arguments[3]);
+    std::string filename = arguments[4];
 
     Image* res = collage(img_src, img_dest, pos_x, pos_y);
     

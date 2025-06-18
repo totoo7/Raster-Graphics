@@ -20,7 +20,7 @@ class RotateCommand : public Command {
 		 * @brief Returns the number of required arguments.
 		 * @return Always returns 1.
 		 */
-		static size_t get_args() { return args; };
+		const size_t args_count() const override { return args; };
 
 		/**
 		 * @brief Executes the rotate operation.
@@ -52,7 +52,7 @@ class RotateCommand : public Command {
 	private:
 		Session* const session;
 		std::string direction;
-		static const size_t args = 1;
+		static const size_t args;
 };
 
 #endif

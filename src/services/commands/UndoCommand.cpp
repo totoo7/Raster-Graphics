@@ -1,5 +1,7 @@
 #include "UndoCommand.hpp"
 
+const size_t UndoCommand::args = 0;
+
 UndoCommand::UndoCommand(Session* const session)
 	: session(session) {}
 

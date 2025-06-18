@@ -49,14 +49,12 @@ class Command {
 		 * @brief Gets the number of arguments required by the command.
 		 * @return Number of arguments.
 		 */
-        static size_t args_count();
+        virtual const size_t args_count() const { return 0; };
 
 		/**
 		 * @brief Virtual destructor.
 		 */
         virtual ~Command() = default;
-    private:
-        static const size_t args = 0;
 };
 
 #endif

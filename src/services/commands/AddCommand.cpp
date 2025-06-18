@@ -2,6 +2,8 @@
 #include "ImageFactory.hpp"
 #include <fstream>
 
+const size_t AddCommand::args = 1;
+
 AddCommand::AddCommand(Session* const session, const std::string& val) : session(session), file(val) {}
 
 std::string AddCommand::execute() {

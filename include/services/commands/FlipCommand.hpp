@@ -20,7 +20,7 @@ class FlipCommand : public Command {
 		 * @brief Returns the number of arguments required by the command.
 		 * @return Number of expected arguments.
 		 */
-		static size_t get_args() { return args; };
+		const size_t args_count() const override { return args; };
 
 		/**
 		 * @brief Executes the flip command on the session images.
@@ -52,7 +52,7 @@ class FlipCommand : public Command {
 	private:
 		Session* const session;
 		std::string direction;
-		static const size_t args = 1;
+		static const size_t args;
 };
 
 #endif

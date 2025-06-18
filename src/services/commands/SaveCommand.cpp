@@ -1,5 +1,7 @@
 #include "SaveCommand.hpp"
 
+const size_t SaveCommand::args = 0;
+
 SaveCommand::SaveCommand(Session* const session) : session(session) {}
 
 std::string SaveCommand::execute() {

@@ -18,7 +18,7 @@ class HelpCommand : public Command {
          * @brief Returns the expected number of arguments.
          * @return Argument count.
          */
-        static size_t args_count() { return args; };
+        const size_t args_count() const override { return args; };
 
         /**
          * @brief Indicates that this command cannot be undone.
@@ -32,7 +32,7 @@ class HelpCommand : public Command {
          */
         bool needs_session() const override { return false; };
     private:
-        static const size_t args = 0;
+        static const size_t args;
 };
 
 #endif

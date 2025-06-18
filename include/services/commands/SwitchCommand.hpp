@@ -20,7 +20,7 @@ class SwitchCommand : public Command {
          * @brief Returns the number of required arguments.
          * @return Always returns 0.
          */
-        static size_t args_count() { return args; };
+        const size_t args_count() const override { return args; };
 
         /**
          * @brief Executes the session switch operation.
@@ -36,7 +36,7 @@ class SwitchCommand : public Command {
     private:
         SessionManager* const session_manager;
         size_t id;
-        static const size_t args = 0;
+        static const size_t args;
 };
 
 #endif
