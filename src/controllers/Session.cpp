@@ -53,7 +53,6 @@ void Session::save() {
     has_unsaved_changes = false;
 }
 
-#include <iostream>
 void Session::saveAs(const std::vector<std::string>& files) {
     for(size_t i = 0; i < files.size(); i++) {
         std::ofstream ofs(files[i]);

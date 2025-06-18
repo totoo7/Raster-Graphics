@@ -10,7 +10,7 @@ std::string HelpCommand::execute() {
     out += "> add <file> :- Adds a new image to the active session.\n";
     out += "> switch <session_id> :- Switches to the session with the given ID.\n";
     out += "> save :- Saves all images in the current session to their original filenames.\n";
-    out += "> saveas <file1> <file2> ... <name1> <name2> ... :- Saves all images in the session to the given files.\n";
+    out += "> saveas <name1> <name2> ... :- Saves all images in the session to the given names.\n";
     out += "> grayscale :- Converts all images in the session to grayscale.\n";
     out += "> monochrome :- Converts all images in the session to monochrome.\n";
     out += "> negative :- Applies a negative filter to all images in the session.\n";

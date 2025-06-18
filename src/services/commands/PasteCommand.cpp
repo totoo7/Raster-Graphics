@@ -1,6 +1,5 @@
 #include "PasteCommand.hpp"
 #include "ImageFactory.hpp"
-#include <iostream>
 
 const size_t PasteCommand::args = 5;
 
