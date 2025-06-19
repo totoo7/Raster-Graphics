@@ -121,4 +121,7 @@ Session::~Session() {
     for (Command* cmd : history) {
         delete cmd;
     }
+    for (Command* redo : redos) {
+        delete redo;
+    }
 }
