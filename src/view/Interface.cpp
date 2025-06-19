@@ -42,8 +42,8 @@ void Interface::run() {
             }  
             std::cout << cmd->execute();
             if (cmd->is_undoable()) {
-                Interface::get_instance().session_manager.get_active()->history.push_back(cmd->clone()); //!
-                Interface::get_instance().session_manager.get_active()->redos.clear();
+                Interface::get_instance().session_manager.get_active()->get_history().push_back(cmd->clone()); //!
+                Interface::get_instance().session_manager.get_active()->get_redos().clear();
             }
         } catch (const std::exception& e) {
             std::cout << "Error: " << e.what() << std::endl;
@@ -54,7 +54,7 @@ void Interface::run() {
 
     std::vector<Session> sessions = session_manager.get_sessions();
     for (size_t i = 0; i < sessions.size(); i++) {
-        if (sessions[i].has_unsaved_changes) {
+        if (sessions[i].get_has_unsaved_changes()) {
             std::cout << "Session with ID: " << sessions[i].get_id() << " has unsaved work. Save it now (y/n)?\n";
             char answer;
             std::cin >> answer;

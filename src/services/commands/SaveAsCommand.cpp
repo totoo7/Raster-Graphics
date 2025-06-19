@@ -5,8 +5,8 @@ SaveAsCommand::SaveAsCommand(Session* const session, const std::vector<std::stri
 }
 
 std::string SaveAsCommand::execute() {
-    if (files.size() != session->images.size()) {
-        throw std::invalid_argument("Session contains " + std::to_string(session->images.size()) +
+    if (files.size() != session->get_images().size()) {
+        throw std::invalid_argument("Session contains " + std::to_string(session->get_images().size()) +
             " image(s), but " + std::to_string(files.size()) +
             " filename(s) were provided.");
     }

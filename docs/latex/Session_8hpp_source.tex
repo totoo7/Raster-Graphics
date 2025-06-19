@@ -39,17 +39,24 @@
 \DoxyCodeLine{00088\ }
 \DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSession_ab615c2ae32f73fa42496233146da6f19}{redo}}();}
 \DoxyCodeLine{00093\ }
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{\string~Session}}();}
-\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ std::vector<Image*>\ images;}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ std::vector<Command*>\ history;}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ std::vector<Command*>\ redos;}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ current\_id;}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_unsaved\_changes;}
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
-\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ std::vector<Image*>\&\ \mbox{\hyperlink{classSession_a7e4ed19f44c169ad9727cf2c9246ebc6}{get\_images}}()\ \{\ \textcolor{keywordflow}{return}\ images;\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ std::vector<Command*>\&\ \mbox{\hyperlink{classSession_abe0887acc6c0d331830f4345d099bd73}{get\_history}}()\ \{\ \textcolor{keywordflow}{return}\ history;\ \}}
 \DoxyCodeLine{00107\ }
-\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ std::vector<Command*>\&\ \mbox{\hyperlink{classSession_a3478b39128c6d75cb7d88a96f2be3a56}{get\_redos}}()\ \{\ \textcolor{keywordflow}{return}\ redos;\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSession_aec388f752cb0a9cf4834bda568324d8e}{get\_has\_unsaved\_changes}}()\ \{\ \textcolor{keywordflow}{return}\ has\_unsaved\_changes;\ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{\string~Session}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ std::vector<Image*>\ images;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ std::vector<Command*>\ history;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ std::vector<Command*>\ redos;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ current\_id;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_unsaved\_changes;}
+\DoxyCodeLine{00134\ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

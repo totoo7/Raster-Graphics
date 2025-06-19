@@ -71,8 +71,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classSession-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Session Class Reference</div></div>
 </div><!--header-->
@@ -133,31 +131,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>redo</b> ()</td></tr>
 <tr class="memdesc:ab615c2ae32f73fa42496233146da6f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redoes the last undone command in the session. <br /></td></tr>
 <tr class="separator:ab615c2ae32f73fa42496233146da6f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4ed19f44c169ad9727cf2c9246ebc6" id="r_a7e4ed19f44c169ad9727cf2c9246ebc6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classImage.html">Image</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a7e4ed19f44c169ad9727cf2c9246ebc6">get_images</a> ()</td></tr>
+<tr class="memdesc:a7e4ed19f44c169ad9727cf2c9246ebc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the images object.  <br /></td></tr>
+<tr class="separator:a7e4ed19f44c169ad9727cf2c9246ebc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0887acc6c0d331830f4345d099bd73" id="r_abe0887acc6c0d331830f4345d099bd73"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCommand.html">Command</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#abe0887acc6c0d331830f4345d099bd73">get_history</a> ()</td></tr>
+<tr class="memdesc:abe0887acc6c0d331830f4345d099bd73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the history object.  <br /></td></tr>
+<tr class="separator:abe0887acc6c0d331830f4345d099bd73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3478b39128c6d75cb7d88a96f2be3a56" id="r_a3478b39128c6d75cb7d88a96f2be3a56"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCommand.html">Command</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a3478b39128c6d75cb7d88a96f2be3a56">get_redos</a> ()</td></tr>
+<tr class="memdesc:a3478b39128c6d75cb7d88a96f2be3a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the redos object.  <br /></td></tr>
+<tr class="separator:a3478b39128c6d75cb7d88a96f2be3a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec388f752cb0a9cf4834bda568324d8e" id="r_aec388f752cb0a9cf4834bda568324d8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#aec388f752cb0a9cf4834bda568324d8e">get_has_unsaved_changes</a> ()</td></tr>
+<tr class="memdesc:aec388f752cb0a9cf4834bda568324d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the has unsaved changes object.  <br /></td></tr>
+<tr class="separator:aec388f752cb0a9cf4834bda568324d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8753bb9dee966b7d39abc9b7237cd665" id="r_a8753bb9dee966b7d39abc9b7237cd665"><td class="memItemLeft" align="right" valign="top"><a id="a8753bb9dee966b7d39abc9b7237cd665" name="a8753bb9dee966b7d39abc9b7237cd665"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Session</b> ()</td></tr>
 <tr class="memdesc:a8753bb9dee966b7d39abc9b7237cd665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Frees memory associated with images and commands. <br /></td></tr>
 <tr class="separator:a8753bb9dee966b7d39abc9b7237cd665"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:af48f022788b488ee01e66ffb60ee3b3a" id="r_af48f022788b488ee01e66ffb60ee3b3a"><td class="memItemLeft" align="right" valign="top"><a id="af48f022788b488ee01e66ffb60ee3b3a" name="af48f022788b488ee01e66ffb60ee3b3a"></a>
-std::vector&lt; <a class="el" href="classImage.html">Image</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>images</b></td></tr>
-<tr class="separator:af48f022788b488ee01e66ffb60ee3b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4ee9966341c51d2195e8bfa5a63798a" id="r_aa4ee9966341c51d2195e8bfa5a63798a"><td class="memItemLeft" align="right" valign="top"><a id="aa4ee9966341c51d2195e8bfa5a63798a" name="aa4ee9966341c51d2195e8bfa5a63798a"></a>
-std::vector&lt; <a class="el" href="classCommand.html">Command</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>history</b></td></tr>
-<tr class="separator:aa4ee9966341c51d2195e8bfa5a63798a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa454ea7220c4fd370e0081793e93f3b5" id="r_aa454ea7220c4fd370e0081793e93f3b5"><td class="memItemLeft" align="right" valign="top"><a id="aa454ea7220c4fd370e0081793e93f3b5" name="aa454ea7220c4fd370e0081793e93f3b5"></a>
-std::vector&lt; <a class="el" href="classCommand.html">Command</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>redos</b></td></tr>
-<tr class="separator:aa454ea7220c4fd370e0081793e93f3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36f99afe063c195ea2aa9d0b7f333e61" id="r_a36f99afe063c195ea2aa9d0b7f333e61"><td class="memItemLeft" align="right" valign="top"><a id="a36f99afe063c195ea2aa9d0b7f333e61" name="a36f99afe063c195ea2aa9d0b7f333e61"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_unsaved_changes</b></td></tr>
-<tr class="separator:a36f99afe063c195ea2aa9d0b7f333e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:abab537a4fcc269fe916d1a7982dac3d4" id="r_abab537a4fcc269fe916d1a7982dac3d4"><td class="memItemLeft" align="right" valign="top"><a id="abab537a4fcc269fe916d1a7982dac3d4" name="abab537a4fcc269fe916d1a7982dac3d4"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>current_id</b> = 0</td></tr>
-<tr class="separator:abab537a4fcc269fe916d1a7982dac3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an editing session that can hold and manipulate multiple images. </p>
@@ -242,6 +231,64 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>current_id</b> 
 
 </div>
 </div>
+<a id="aec388f752cb0a9cf4834bda568324d8e" name="aec388f752cb0a9cf4834bda568324d8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec388f752cb0a9cf4834bda568324d8e">&#9670;&#160;</a></span>get_has_unsaved_changes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Session::get_has_unsaved_changes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the has unsaved changes object. </p>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="abe0887acc6c0d331830f4345d099bd73" name="abe0887acc6c0d331830f4345d099bd73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0887acc6c0d331830f4345d099bd73">&#9670;&#160;</a></span>get_history()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classCommand.html">Command</a> * &gt; &amp; Session::get_history </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the history object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;Command*&gt;&amp; </dd></dl>
+
+</div>
+</div>
 <a id="a25ce8b8b2ac132247d96c1f0139185f8" name="a25ce8b8b2ac132247d96c1f0139185f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25ce8b8b2ac132247d96c1f0139185f8">&#9670;&#160;</a></span>get_id()</h2>
 
@@ -259,6 +306,62 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>current_id</b> 
 
 <p>Gets the ID of the session. </p>
 <dl class="section return"><dt>Returns</dt><dd>The unique ID of the session. </dd></dl>
+
+</div>
+</div>
+<a id="a7e4ed19f44c169ad9727cf2c9246ebc6" name="a7e4ed19f44c169ad9727cf2c9246ebc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4ed19f44c169ad9727cf2c9246ebc6">&#9670;&#160;</a></span>get_images()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classImage.html">Image</a> * &gt; &amp; Session::get_images </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the images object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;Image*&gt;&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a3478b39128c6d75cb7d88a96f2be3a56" name="a3478b39128c6d75cb7d88a96f2be3a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3478b39128c6d75cb7d88a96f2be3a56">&#9670;&#160;</a></span>get_redos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classCommand.html">Command</a> * &gt; &amp; Session::get_redos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the redos object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;Command*&gt;&amp; </dd></dl>
 
 </div>
 </div>

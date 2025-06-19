@@ -7,17 +7,17 @@ SnapshotCommand::SnapshotCommand(const SnapshotCommand& rhs) {
 }
 
 void SnapshotCommand::take_snapshot(Session* const session) {
-    for (Image* img : session->images) 
+    for (Image* img : session->get_images()) 
 		snapshots.push_back(img->clone());
 }
 
 void SnapshotCommand::restore_snapshot(Session* const session) {
-    for (Image* img : session->images) {
+    for (Image* img : session->get_images()) {
 		delete img;
 	}
-	session->images.clear();
+	session->get_images().clear();
 	for (Image* img : snapshots) {
-		session->images.push_back(img->clone());
+		session->get_images().push_back(img->clone());
 	}
 }
 

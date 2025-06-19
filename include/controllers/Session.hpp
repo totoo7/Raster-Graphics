@@ -92,17 +92,45 @@ class Session {
         void redo();
 
         /**
+         * @brief Get the images object
+         * 
+         * @return std::vector<Image*>& 
+         */
+        std::vector<Image*>& get_images() { return images; }
+
+        /**
+         * @brief Get the history object
+         * 
+         * @return std::vector<Command*>& 
+         */
+        std::vector<Command*>& get_history() { return history; }
+
+        /**
+         * @brief Get the redos object
+         * 
+         * @return std::vector<Command*>& 
+         */
+        std::vector<Command*>& get_redos() { return redos; }
+
+        /**
+         * @brief Get the has unsaved changes object
+         * 
+         * @return true 
+         * @return false 
+         */
+        bool get_has_unsaved_changes() { return has_unsaved_changes; }
+
+        /**
          * @brief Destructor. Frees memory associated with images and commands.
          */
         ~Session();
-    public:
+    private:
         std::vector<Image*> images;
         std::vector<Command*> history;
         std::vector<Command*> redos;
+        int id;
         static int current_id;
         bool has_unsaved_changes;
-    private:
-        int id;
 };
 
 #endif

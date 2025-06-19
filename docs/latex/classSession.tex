@@ -47,30 +47,17 @@ void {\bfseries undo} ()
 \Hypertarget{classSession_ab615c2ae32f73fa42496233146da6f19}\label{classSession_ab615c2ae32f73fa42496233146da6f19} 
 void {\bfseries redo} ()
 \begin{DoxyCompactList}\small\item\em Redoes the last undone command in the session. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{classSession_a7e4ed19f44c169ad9727cf2c9246ebc6}{get\+\_\+images}} ()
+\begin{DoxyCompactList}\small\item\em Get the images object. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{classSession_abe0887acc6c0d331830f4345d099bd73}{get\+\_\+history}} ()
+\begin{DoxyCompactList}\small\item\em Get the history object. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{classSession_a3478b39128c6d75cb7d88a96f2be3a56}{get\+\_\+redos}} ()
+\begin{DoxyCompactList}\small\item\em Get the redos object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSession_aec388f752cb0a9cf4834bda568324d8e}{get\+\_\+has\+\_\+unsaved\+\_\+changes}} ()
+\begin{DoxyCompactList}\small\item\em Get the has unsaved changes object. \end{DoxyCompactList}\item 
 \Hypertarget{classSession_a8753bb9dee966b7d39abc9b7237cd665}\label{classSession_a8753bb9dee966b7d39abc9b7237cd665} 
 {\bfseries \texorpdfstring{$\sim$}{\string~}\+Session} ()
 \begin{DoxyCompactList}\small\item\em Destructor. Frees memory associated with images and commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{classSession_af48f022788b488ee01e66ffb60ee3b3a}\label{classSession_af48f022788b488ee01e66ffb60ee3b3a} 
-std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries images}
-\item 
-\Hypertarget{classSession_aa4ee9966341c51d2195e8bfa5a63798a}\label{classSession_aa4ee9966341c51d2195e8bfa5a63798a} 
-std\+::vector$<$ \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries history}
-\item 
-\Hypertarget{classSession_aa454ea7220c4fd370e0081793e93f3b5}\label{classSession_aa454ea7220c4fd370e0081793e93f3b5} 
-std\+::vector$<$ \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries redos}
-\item 
-\Hypertarget{classSession_a36f99afe063c195ea2aa9d0b7f333e61}\label{classSession_a36f99afe063c195ea2aa9d0b7f333e61} 
-bool {\bfseries has\+\_\+unsaved\+\_\+changes}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{classSession_abab537a4fcc269fe916d1a7982dac3d4}\label{classSession_abab537a4fcc269fe916d1a7982dac3d4} 
-static int {\bfseries current\+\_\+id} = 0
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -127,6 +114,34 @@ Flips all images in the session in the specified direction.
 {\em direction} & Either "{}horizontal"{} or "{}vertical"{}. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classSession_aec388f752cb0a9cf4834bda568324d8e}\label{classSession_aec388f752cb0a9cf4834bda568324d8e} 
+\index{Session@{Session}!get\_has\_unsaved\_changes@{get\_has\_unsaved\_changes}}
+\index{get\_has\_unsaved\_changes@{get\_has\_unsaved\_changes}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{get\_has\_unsaved\_changes()}{get\_has\_unsaved\_changes()}}
+{\footnotesize\ttfamily bool Session\+::get\+\_\+has\+\_\+unsaved\+\_\+changes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the has unsaved changes object. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\Hypertarget{classSession_abe0887acc6c0d331830f4345d099bd73}\label{classSession_abe0887acc6c0d331830f4345d099bd73} 
+\index{Session@{Session}!get\_history@{get\_history}}
+\index{get\_history@{get\_history}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{get\_history()}{get\_history()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} $>$ \& Session\+::get\+\_\+history (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the history object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Command\texorpdfstring{$\ast$}{*}$>$\& 
+\end{DoxyReturn}
 \Hypertarget{classSession_a25ce8b8b2ac132247d96c1f0139185f8}\label{classSession_a25ce8b8b2ac132247d96c1f0139185f8} 
 \index{Session@{Session}!get\_id@{get\_id}}
 \index{get\_id@{get\_id}!Session@{Session}}
@@ -139,6 +154,32 @@ Gets the ID of the session.
 
 \begin{DoxyReturn}{Returns}
 The unique ID of the session. 
+\end{DoxyReturn}
+\Hypertarget{classSession_a7e4ed19f44c169ad9727cf2c9246ebc6}\label{classSession_a7e4ed19f44c169ad9727cf2c9246ebc6} 
+\index{Session@{Session}!get\_images@{get\_images}}
+\index{get\_images@{get\_images}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{get\_images()}{get\_images()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ \& Session\+::get\+\_\+images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the images object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Image\texorpdfstring{$\ast$}{*}$>$\& 
+\end{DoxyReturn}
+\Hypertarget{classSession_a3478b39128c6d75cb7d88a96f2be3a56}\label{classSession_a3478b39128c6d75cb7d88a96f2be3a56} 
+\index{Session@{Session}!get\_redos@{get\_redos}}
+\index{get\_redos@{get\_redos}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{get\_redos()}{get\_redos()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} $>$ \& Session\+::get\+\_\+redos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the redos object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Command\texorpdfstring{$\ast$}{*}$>$\& 
 \end{DoxyReturn}
 \Hypertarget{classSession_a5f2322a401b8c4e15e28969efb88a3b4}\label{classSession_a5f2322a401b8c4e15e28969efb88a3b4} 
 \index{Session@{Session}!operator=@{operator=}}
