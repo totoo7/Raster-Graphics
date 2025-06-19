@@ -32,6 +32,8 @@ Collaboration diagram for Rotate\+Command\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classRotateCommand_ac7b2e9995ba56b1b79f5d0edf5446f19}{Rotate\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session, const std\+::string \&direction)
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRotateCommand}{Rotate\+Command}. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{classRotateCommand_a09b35764289c0a763c7e8e9c1748ffc2}{args\+\_\+count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of required arguments. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classRotateCommand_aececefaec2365410bc641ec57186c00a}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the rotate operation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classRotateCommand_aa35dfe0d9bacddf2d72eed6601fab405}{is\+\_\+undoable}} () const override
@@ -49,16 +51,6 @@ virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{ne
 \begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classRotateCommand_a6c51dc99765cdf310f14ffb51ca79d2c}{get\+\_\+args}} ()
-\begin{DoxyCompactList}\small\item\em Returns the number of required arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -85,6 +77,23 @@ Constructs a \doxylink{classRotateCommand}{Rotate\+Command}.
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classRotateCommand_a09b35764289c0a763c7e8e9c1748ffc2}\label{classRotateCommand_a09b35764289c0a763c7e8e9c1748ffc2} 
+\index{RotateCommand@{RotateCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!RotateCommand@{RotateCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily const size\+\_\+t Rotate\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of required arguments. 
+
+\begin{DoxyReturn}{Returns}
+Always returns 1. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{Command}}.
+
 \Hypertarget{classRotateCommand_a39ff90e3727f4d248da13110f6efb941}\label{classRotateCommand_a39ff90e3727f4d248da13110f6efb941} 
 \index{RotateCommand@{RotateCommand}!clone@{clone}}
 \index{clone@{clone}!RotateCommand@{RotateCommand}}
@@ -119,19 +128,6 @@ Result message.
 
 Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
 
-\Hypertarget{classRotateCommand_a6c51dc99765cdf310f14ffb51ca79d2c}\label{classRotateCommand_a6c51dc99765cdf310f14ffb51ca79d2c} 
-\index{RotateCommand@{RotateCommand}!get\_args@{get\_args}}
-\index{get\_args@{get\_args}!RotateCommand@{RotateCommand}}
-\doxysubsubsection{\texorpdfstring{get\_args()}{get\_args()}}
-{\footnotesize\ttfamily static size\+\_\+t Rotate\+Command\+::get\+\_\+args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
-
-
-
-Returns the number of required arguments. 
-
-\begin{DoxyReturn}{Returns}
-Always returns 1. 
-\end{DoxyReturn}
 \Hypertarget{classRotateCommand_aa35dfe0d9bacddf2d72eed6601fab405}\label{classRotateCommand_aa35dfe0d9bacddf2d72eed6601fab405} 
 \index{RotateCommand@{RotateCommand}!is\_undoable@{is\_undoable}}
 \index{is\_undoable@{is\_undoable}!RotateCommand@{RotateCommand}}

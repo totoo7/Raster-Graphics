@@ -71,7 +71,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classRedoCommand-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">RedoCommand Class Reference</div></div>
 </div><!--header-->
@@ -107,6 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a94166242d08cdc6e582cca1783c3251a" id="r_a94166242d08cdc6e582cca1783c3251a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRedoCommand.html#a94166242d08cdc6e582cca1783c3251a">RedoCommand</a> (<a class="el" href="classSession.html">Session</a> *const session)</td></tr>
 <tr class="memdesc:a94166242d08cdc6e582cca1783c3251a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classRedoCommand.html" title="Command to redo the last undone operation in a session.">RedoCommand</a> for the given session.  <br /></td></tr>
 <tr class="separator:a94166242d08cdc6e582cca1783c3251a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e8737c73e9362b79808033d188cb67e" id="r_a7e8737c73e9362b79808033d188cb67e"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRedoCommand.html#a7e8737c73e9362b79808033d188cb67e">args_count</a> () const override</td></tr>
+<tr class="memdesc:a7e8737c73e9362b79808033d188cb67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of required arguments for this command.  <br /></td></tr>
+<tr class="separator:a7e8737c73e9362b79808033d188cb67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9fe3599c2af963e429bc1b8cbaa70e0" id="r_ad9fe3599c2af963e429bc1b8cbaa70e0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRedoCommand.html#ad9fe3599c2af963e429bc1b8cbaa70e0">execute</a> () override</td></tr>
 <tr class="memdesc:ad9fe3599c2af963e429bc1b8cbaa70e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the redo operation.  <br /></td></tr>
 <tr class="separator:ad9fe3599c2af963e429bc1b8cbaa70e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,16 +132,6 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Command</b> ()=default</td></tr>
 <tr class="memdesc:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
 <tr class="separator:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a71ac83cc60edfdb937e7ce05524b26ac" id="r_a71ac83cc60edfdb937e7ce05524b26ac"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRedoCommand.html#a71ac83cc60edfdb937e7ce05524b26ac">get_args</a> ()</td></tr>
-<tr class="memdesc:a71ac83cc60edfdb937e7ce05524b26ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of required arguments for this command.  <br /></td></tr>
-<tr class="separator:a71ac83cc60edfdb937e7ce05524b26ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classCommand')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
-<tr class="memitem:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand" id="r_a7a8e8798bfcb43bbf9a362c2d0d10f25"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a7a8e8798bfcb43bbf9a362c2d0d10f25">args_count</a> ()</td></tr>
-<tr class="memdesc:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of arguments required by the command.  <br /></td></tr>
-<tr class="separator:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classCommand.html" title="Abstract base class representing a command in the system.">Command</a> to redo the last undone operation in a session. </p>
@@ -171,6 +163,36 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7e8737c73e9362b79808033d188cb67e" name="a7e8737c73e9362b79808033d188cb67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e8737c73e9362b79808033d188cb67e">&#9670;&#160;</a></span>args_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t RedoCommand::args_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of required arguments for this command. </p>
+<dl class="section return"><dt>Returns</dt><dd>Always returns 0. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classCommand.html#a309f77e32af5523b17b05bda1a037f4d">Command</a>.</p>
+
+</div>
+</div>
 <a id="ad9fe3599c2af963e429bc1b8cbaa70e0" name="ad9fe3599c2af963e429bc1b8cbaa70e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9fe3599c2af963e429bc1b8cbaa70e0">&#9670;&#160;</a></span>execute()</h2>
 
@@ -198,34 +220,6 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Result message. </dd></dl>
 
 <p>Implements <a class="el" href="classCommand.html#a58ac4b40ad0228a0ea1fc97ab3db6ea4">Command</a>.</p>
-
-</div>
-</div>
-<a id="a71ac83cc60edfdb937e7ce05524b26ac" name="a71ac83cc60edfdb937e7ce05524b26ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71ac83cc60edfdb937e7ce05524b26ac">&#9670;&#160;</a></span>get_args()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static size_t RedoCommand::get_args </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the number of required arguments for this command. </p>
-<dl class="section return"><dt>Returns</dt><dd>Always returns 0. </dd></dl>
 
 </div>
 </div>

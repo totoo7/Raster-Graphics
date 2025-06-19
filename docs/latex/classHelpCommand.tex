@@ -32,6 +32,8 @@ Collaboration diagram for Help\+Command\+:\nopagebreak
 \item 
 std\+::string \mbox{\hyperlink{classHelpCommand_ab9ec3fae11daf96d1c17dee4209def68}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the help command, returning a list of supported commands. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{classHelpCommand_a250cc46b4c541972c335bdff759e7252}{args\+\_\+count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the expected number of arguments. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classHelpCommand_a672a4fd9152aeb2ebb1b8dfc2d9e9928}{is\+\_\+undoable}} () const override
 \begin{DoxyCompactList}\small\item\em Indicates that this command cannot be undone. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classHelpCommand_a3f3f7220736897ef1dd2f75b3e31ba73}{needs\+\_\+session}} () const override
@@ -47,27 +49,17 @@ virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbo
 \begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classHelpCommand_a53802f23bd885bbd2cc8a9115dba12bb}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Returns the expected number of arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \doxylink{classCommand}{Command} that displays help information about available commands. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classHelpCommand_a53802f23bd885bbd2cc8a9115dba12bb}\label{classHelpCommand_a53802f23bd885bbd2cc8a9115dba12bb} 
+\Hypertarget{classHelpCommand_a250cc46b4c541972c335bdff759e7252}\label{classHelpCommand_a250cc46b4c541972c335bdff759e7252} 
 \index{HelpCommand@{HelpCommand}!args\_count@{args\_count}}
 \index{args\_count@{args\_count}!HelpCommand@{HelpCommand}}
 \doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
-{\footnotesize\ttfamily static size\+\_\+t Help\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily const size\+\_\+t Help\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -76,6 +68,10 @@ Returns the expected number of arguments.
 \begin{DoxyReturn}{Returns}
 Argument count. 
 \end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{Command}}.
+
 \Hypertarget{classHelpCommand_ab9ec3fae11daf96d1c17dee4209def68}\label{classHelpCommand_ab9ec3fae11daf96d1c17dee4209def68} 
 \index{HelpCommand@{HelpCommand}!execute@{execute}}
 \index{execute@{execute}!HelpCommand@{HelpCommand}}

@@ -32,6 +32,8 @@ Collaboration diagram for Save\+As\+Command\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classSaveAsCommand_a6c8ff65115cd1ca114de72ca3833aad2}{Save\+As\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session, const std\+::vector$<$ std\+::string $>$ \&files)
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classSaveAsCommand}{Save\+As\+Command}. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{classSaveAsCommand_a1af2913e634292fcc99622cfc227d454}{args\+\_\+count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of required arguments. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSaveAsCommand_a92e8368b54aa9030eda25c86642bdcd2}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the save-\/as operation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classSaveAsCommand_a0afe3f4d6c2542590fa4bb1e21bdd4ce}{is\+\_\+undoable}} () const override
@@ -49,16 +51,6 @@ virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbo
 \begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classSaveAsCommand_a106c7130b5d44e0af4bbb91dae29d8a8}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Returns the number of required arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -85,19 +77,23 @@ Constructs a \doxylink{classSaveAsCommand}{Save\+As\+Command}.
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classSaveAsCommand_a106c7130b5d44e0af4bbb91dae29d8a8}\label{classSaveAsCommand_a106c7130b5d44e0af4bbb91dae29d8a8} 
+\Hypertarget{classSaveAsCommand_a1af2913e634292fcc99622cfc227d454}\label{classSaveAsCommand_a1af2913e634292fcc99622cfc227d454} 
 \index{SaveAsCommand@{SaveAsCommand}!args\_count@{args\_count}}
 \index{args\_count@{args\_count}!SaveAsCommand@{SaveAsCommand}}
 \doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
-{\footnotesize\ttfamily static size\+\_\+t Save\+As\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily const size\+\_\+t Save\+As\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 Returns the number of required arguments. 
 
 \begin{DoxyReturn}{Returns}
-Always returns 0. 
+Always returns -\/1. 
 \end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{Command}}.
+
 \Hypertarget{classSaveAsCommand_a92e8368b54aa9030eda25c86642bdcd2}\label{classSaveAsCommand_a92e8368b54aa9030eda25c86642bdcd2} 
 \index{SaveAsCommand@{SaveAsCommand}!execute@{execute}}
 \index{execute@{execute}!SaveAsCommand@{SaveAsCommand}}

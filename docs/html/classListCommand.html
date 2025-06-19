@@ -71,7 +71,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classListCommand-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ListCommand Class Reference</div></div>
 </div><!--header-->
@@ -107,6 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d24f076a90d0dda0523aa6195fb0174" id="r_a8d24f076a90d0dda0523aa6195fb0174"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListCommand.html#a8d24f076a90d0dda0523aa6195fb0174">ListCommand</a> (<a class="el" href="classSession.html">Session</a> *const session)</td></tr>
 <tr class="memdesc:a8d24f076a90d0dda0523aa6195fb0174"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classListCommand.html" title="Command that lists details about the active session and its images.">ListCommand</a> with a pointer to the active session.  <br /></td></tr>
 <tr class="separator:a8d24f076a90d0dda0523aa6195fb0174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e913d942492b184fe4296853b80d81" id="r_ad5e913d942492b184fe4296853b80d81"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListCommand.html#ad5e913d942492b184fe4296853b80d81">args_count</a> () const override</td></tr>
+<tr class="memdesc:ad5e913d942492b184fe4296853b80d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the expected number of arguments for this command.  <br /></td></tr>
+<tr class="separator:ad5e913d942492b184fe4296853b80d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9a0ffbedd4b7ea488120d8e405f2296" id="r_ae9a0ffbedd4b7ea488120d8e405f2296"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListCommand.html#ae9a0ffbedd4b7ea488120d8e405f2296">execute</a> () override</td></tr>
 <tr class="memdesc:ae9a0ffbedd4b7ea488120d8e405f2296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the command, returning information about the session.  <br /></td></tr>
 <tr class="separator:ae9a0ffbedd4b7ea488120d8e405f2296"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,16 +132,6 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Command</b> ()=default</td></tr>
 <tr class="memdesc:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
 <tr class="separator:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a14344523d0bbafb1888cf821daf8c071" id="r_a14344523d0bbafb1888cf821daf8c071"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListCommand.html#a14344523d0bbafb1888cf821daf8c071">args_count</a> ()</td></tr>
-<tr class="memdesc:a14344523d0bbafb1888cf821daf8c071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the expected number of arguments for this command.  <br /></td></tr>
-<tr class="separator:a14344523d0bbafb1888cf821daf8c071"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classCommand')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
-<tr class="memitem:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand" id="r_a7a8e8798bfcb43bbf9a362c2d0d10f25"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a7a8e8798bfcb43bbf9a362c2d0d10f25">args_count</a> ()</td></tr>
-<tr class="memdesc:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of arguments required by the command.  <br /></td></tr>
-<tr class="separator:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classCommand.html" title="Abstract base class representing a command in the system.">Command</a> that lists details about the active session and its images. </p>
@@ -171,8 +163,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a14344523d0bbafb1888cf821daf8c071" name="a14344523d0bbafb1888cf821daf8c071"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14344523d0bbafb1888cf821daf8c071">&#9670;&#160;</a></span>args_count()</h2>
+<a id="ad5e913d942492b184fe4296853b80d81" name="ad5e913d942492b184fe4296853b80d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e913d942492b184fe4296853b80d81">&#9670;&#160;</a></span>args_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,21 +173,23 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static size_t ListCommand::args_count </td>
+          <td class="memname">const size_t ListCommand::args_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Returns the expected number of arguments for this command. </p>
 <dl class="section return"><dt>Returns</dt><dd>Argument count (always 0). </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classCommand.html#a309f77e32af5523b17b05bda1a037f4d">Command</a>.</p>
 
 </div>
 </div>

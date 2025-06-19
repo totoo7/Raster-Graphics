@@ -57,6 +57,8 @@ virtual void \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{re
 \begin{DoxyCompactList}\small\item\em Redoes the command operation. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{clone}} ()
 \begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
+virtual const size\+\_\+t \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{args\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
@@ -65,12 +67,6 @@ virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \Hypertarget{classSnapshotCommand_a63e412ea0b76c3c7d553bb89867a4703}\label{classSnapshotCommand_a63e412ea0b76c3c7d553bb89867a4703} 
 std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries snapshots}
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

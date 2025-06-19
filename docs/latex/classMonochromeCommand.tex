@@ -34,6 +34,8 @@ Collaboration diagram for Monochrome\+Command\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classMonochromeCommand}{Monochrome\+Command} for the given session. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMonochromeCommand_ade131318d7c375916eeb959ac7969bdf}{Monochrome\+Command}} (const \mbox{\hyperlink{classMonochromeCommand}{Monochrome\+Command}} \&rhs)
 \begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{classMonochromeCommand_a7d43145e2a1f3fccbceed532e98e6b30}{args\+\_\+count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the required number of arguments for this command. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classMonochromeCommand_a4b2cdb1695098aab96e6c6107dad3d82}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the monochrome conversion. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classMonochromeCommand_ae281fe1254ed1250a2126f1ca7247030}{is\+\_\+undoable}} () const override
@@ -64,16 +66,6 @@ virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{ne
 \begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classMonochromeCommand_a43eee5e66e9dc97c5a77a7a5a6f63887}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Returns the required number of arguments for this command. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSnapshotCommand}{Snapshot\+Command}}}
 \begin{DoxyCompactItemize}
@@ -119,11 +111,11 @@ Copy constructor.
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classMonochromeCommand_a43eee5e66e9dc97c5a77a7a5a6f63887}\label{classMonochromeCommand_a43eee5e66e9dc97c5a77a7a5a6f63887} 
+\Hypertarget{classMonochromeCommand_a7d43145e2a1f3fccbceed532e98e6b30}\label{classMonochromeCommand_a7d43145e2a1f3fccbceed532e98e6b30} 
 \index{MonochromeCommand@{MonochromeCommand}!args\_count@{args\_count}}
 \index{args\_count@{args\_count}!MonochromeCommand@{MonochromeCommand}}
 \doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
-{\footnotesize\ttfamily static size\+\_\+t Monochrome\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily const size\+\_\+t Monochrome\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -132,6 +124,10 @@ Returns the required number of arguments for this command.
 \begin{DoxyReturn}{Returns}
 Always returns 0. 
 \end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{Command}}.
+
 \Hypertarget{classMonochromeCommand_a55aafe9b41c0e3c9b4c8915d14c0a9bf}\label{classMonochromeCommand_a55aafe9b41c0e3c9b4c8915d14c0a9bf} 
 \index{MonochromeCommand@{MonochromeCommand}!clone@{clone}}
 \index{clone@{clone}!MonochromeCommand@{MonochromeCommand}}

@@ -71,7 +71,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classGrayscaleCommand-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">GrayscaleCommand Class Reference</div></div>
 </div><!--header-->
@@ -114,6 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ca3a6c3f6ca38f72530cfb3ca3eec35" id="r_a4ca3a6c3f6ca38f72530cfb3ca3eec35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrayscaleCommand.html#a4ca3a6c3f6ca38f72530cfb3ca3eec35">GrayscaleCommand</a> (const <a class="el" href="classGrayscaleCommand.html">GrayscaleCommand</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a4ca3a6c3f6ca38f72530cfb3ca3eec35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
 <tr class="separator:a4ca3a6c3f6ca38f72530cfb3ca3eec35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a284d1eab5ec48bd9ba552ce1fb15a669" id="r_a284d1eab5ec48bd9ba552ce1fb15a669"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrayscaleCommand.html#a284d1eab5ec48bd9ba552ce1fb15a669">args_count</a> () const override</td></tr>
+<tr class="memdesc:a284d1eab5ec48bd9ba552ce1fb15a669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the expected number of arguments.  <br /></td></tr>
+<tr class="separator:a284d1eab5ec48bd9ba552ce1fb15a669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98288d34e35b955a3a043fdbd3415331" id="r_a98288d34e35b955a3a043fdbd3415331"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrayscaleCommand.html#a98288d34e35b955a3a043fdbd3415331">execute</a> () override</td></tr>
 <tr class="memdesc:a98288d34e35b955a3a043fdbd3415331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the grayscale operation on all session images.  <br /></td></tr>
 <tr class="separator:a98288d34e35b955a3a043fdbd3415331"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,16 +157,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SnapshotCommand</
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Command</b> ()=default</td></tr>
 <tr class="memdesc:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
 <tr class="separator:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae5d13e705e2385e28fb7fc3f991a9e15" id="r_ae5d13e705e2385e28fb7fc3f991a9e15"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrayscaleCommand.html#ae5d13e705e2385e28fb7fc3f991a9e15">args_count</a> ()</td></tr>
-<tr class="memdesc:ae5d13e705e2385e28fb7fc3f991a9e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the expected number of arguments.  <br /></td></tr>
-<tr class="separator:ae5d13e705e2385e28fb7fc3f991a9e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classCommand')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
-<tr class="memitem:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand" id="r_a7a8e8798bfcb43bbf9a362c2d0d10f25"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a7a8e8798bfcb43bbf9a362c2d0d10f25">args_count</a> ()</td></tr>
-<tr class="memdesc:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of arguments required by the command.  <br /></td></tr>
-<tr class="separator:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -229,8 +221,8 @@ std::vector&lt; <a class="el" href="classImage.html">Image</a> * &gt;&#160;</td>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae5d13e705e2385e28fb7fc3f991a9e15" name="ae5d13e705e2385e28fb7fc3f991a9e15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5d13e705e2385e28fb7fc3f991a9e15">&#9670;&#160;</a></span>args_count()</h2>
+<a id="a284d1eab5ec48bd9ba552ce1fb15a669" name="a284d1eab5ec48bd9ba552ce1fb15a669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a284d1eab5ec48bd9ba552ce1fb15a669">&#9670;&#160;</a></span>args_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,21 +231,23 @@ std::vector&lt; <a class="el" href="classImage.html">Image</a> * &gt;&#160;</td>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static size_t GrayscaleCommand::args_count </td>
+          <td class="memname">const size_t GrayscaleCommand::args_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Returns the expected number of arguments. </p>
 <dl class="section return"><dt>Returns</dt><dd>Argument count. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classCommand.html#a309f77e32af5523b17b05bda1a037f4d">Command</a>.</p>
 
 </div>
 </div>

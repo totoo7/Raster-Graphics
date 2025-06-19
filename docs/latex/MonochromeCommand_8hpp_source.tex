@@ -15,7 +15,7 @@
 \DoxyCodeLine{00018\ }
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMonochromeCommand}{MonochromeCommand}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMonochromeCommand}{MonochromeCommand}}\&\ rhs);}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classMonochromeCommand_a43eee5e66e9dc97c5a77a7a5a6f63887}{args\_count}}()\ \{\ \textcolor{keywordflow}{return}\ args;\ \};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classMonochromeCommand_a7d43145e2a1f3fccbceed532e98e6b30}{args\_count}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ args;\ \};}
 \DoxyCodeLine{00030\ }
 \DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classMonochromeCommand_a4b2cdb1695098aab96e6c6107dad3d82}{execute}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00036\ }
@@ -28,7 +28,7 @@
 \DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMonochromeCommand_a65f1f7860b7579bb82e09a08fd35c3e9}{redo}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession}{Session}}*\ \textcolor{keyword}{const}\ session;}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args\ =\ 0;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args;}
 \DoxyCodeLine{00061\ \};}
 \DoxyCodeLine{00062\ }
 \DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}

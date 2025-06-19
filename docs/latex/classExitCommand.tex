@@ -32,6 +32,8 @@ Collaboration diagram for Exit\+Command\+:\nopagebreak
 \item 
 std\+::string \mbox{\hyperlink{classExitCommand_a93455bdf4f141e84e4039a1b8fefeb0f}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the exit command. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{classExitCommand_a9443d4eb01d3a457502ad100ea445e56}{args\+\_\+count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of arguments expected by the command. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classExitCommand_a63efca51a8c7cf90a610a4e2c28158b1}{needs\+\_\+session}} () const override
 \begin{DoxyCompactList}\small\item\em Indicates that the command does not require a session. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classExitCommand_a2767ec98d538a163ab57fcb18fd5c03d}{is\+\_\+undoable}} () const override
@@ -47,27 +49,17 @@ virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbo
 \begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classExitCommand_ad3c13a875b4898448d4a5f9e77de2a03}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Returns the number of arguments expected by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \doxylink{classCommand}{Command} to exit the application. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classExitCommand_ad3c13a875b4898448d4a5f9e77de2a03}\label{classExitCommand_ad3c13a875b4898448d4a5f9e77de2a03} 
+\Hypertarget{classExitCommand_a9443d4eb01d3a457502ad100ea445e56}\label{classExitCommand_a9443d4eb01d3a457502ad100ea445e56} 
 \index{ExitCommand@{ExitCommand}!args\_count@{args\_count}}
 \index{args\_count@{args\_count}!ExitCommand@{ExitCommand}}
 \doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
-{\footnotesize\ttfamily static size\+\_\+t Exit\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily const size\+\_\+t Exit\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -76,6 +68,10 @@ Returns the number of arguments expected by the command.
 \begin{DoxyReturn}{Returns}
 Expected argument count. 
 \end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{Command}}.
+
 \Hypertarget{classExitCommand_a93455bdf4f141e84e4039a1b8fefeb0f}\label{classExitCommand_a93455bdf4f141e84e4039a1b8fefeb0f} 
 \index{ExitCommand@{ExitCommand}!execute@{execute}}
 \index{execute@{execute}!ExitCommand@{ExitCommand}}

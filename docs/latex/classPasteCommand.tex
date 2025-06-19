@@ -32,6 +32,8 @@ Collaboration diagram for Paste\+Command\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classPasteCommand_a7df9a321e67ebbeb3165c75326972b1f}{Paste\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session, const std\+::vector$<$ std\+::string $>$ \&args)
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classPasteCommand}{Paste\+Command} with the given session and arguments. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{classPasteCommand_a99e54a3e1bb10ced04c26c0c38d657b0}{args\+\_\+count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of required arguments for this command. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classPasteCommand_a81bd64795099a6b5b084007cadb07fce}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the paste operation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classPasteCommand_a6d18e779a7a83a7716576c30f87732aa}{is\+\_\+undoable}} () const override
@@ -49,16 +51,6 @@ virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbo
 \begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classPasteCommand_af0db3110e85a0465101fab35473b9d3f}{get\+\_\+args}} ()
-\begin{DoxyCompactList}\small\item\em Returns the number of required arguments for this command. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -85,6 +77,23 @@ Constructs a \doxylink{classPasteCommand}{Paste\+Command} with the given session
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classPasteCommand_a99e54a3e1bb10ced04c26c0c38d657b0}\label{classPasteCommand_a99e54a3e1bb10ced04c26c0c38d657b0} 
+\index{PasteCommand@{PasteCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!PasteCommand@{PasteCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily const size\+\_\+t Paste\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of required arguments for this command. 
+
+\begin{DoxyReturn}{Returns}
+Always returns 5. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{Command}}.
+
 \Hypertarget{classPasteCommand_a81bd64795099a6b5b084007cadb07fce}\label{classPasteCommand_a81bd64795099a6b5b084007cadb07fce} 
 \index{PasteCommand@{PasteCommand}!execute@{execute}}
 \index{execute@{execute}!PasteCommand@{PasteCommand}}
@@ -102,19 +111,6 @@ Result message.
 
 Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
 
-\Hypertarget{classPasteCommand_af0db3110e85a0465101fab35473b9d3f}\label{classPasteCommand_af0db3110e85a0465101fab35473b9d3f} 
-\index{PasteCommand@{PasteCommand}!get\_args@{get\_args}}
-\index{get\_args@{get\_args}!PasteCommand@{PasteCommand}}
-\doxysubsubsection{\texorpdfstring{get\_args()}{get\_args()}}
-{\footnotesize\ttfamily static size\+\_\+t Paste\+Command\+::get\+\_\+args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
-
-
-
-Returns the number of required arguments for this command. 
-
-\begin{DoxyReturn}{Returns}
-Always returns 4. 
-\end{DoxyReturn}
 \Hypertarget{classPasteCommand_a6d18e779a7a83a7716576c30f87732aa}\label{classPasteCommand_a6d18e779a7a83a7716576c30f87732aa} 
 \index{PasteCommand@{PasteCommand}!is\_undoable@{is\_undoable}}
 \index{is\_undoable@{is\_undoable}!PasteCommand@{PasteCommand}}

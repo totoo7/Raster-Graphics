@@ -33,14 +33,11 @@ virtual void \mbox{\hyperlink{classCommand_a4158ba14940104bd2146181bd72ec077}{re
 \begin{DoxyCompactList}\small\item\em Redoes the command operation. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a7c3832161e07e30e4646cd48d51a88bc}{clone}} ()
 \begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
+virtual const size\+\_\+t \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{args\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\item 
 \Hypertarget{classCommand_aa545a53d35818f9efb936daf3fa16c61}\label{classCommand_aa545a53d35818f9efb936daf3fa16c61} 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -49,11 +46,11 @@ Abstract base class representing a command in the system.
 Defines the interface for all commands, including execution, undo/redo, and cloning behavior. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}\label{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25} 
+\Hypertarget{classCommand_a309f77e32af5523b17b05bda1a037f4d}\label{classCommand_a309f77e32af5523b17b05bda1a037f4d} 
 \index{Command@{Command}!args\_count@{args\_count}}
 \index{args\_count@{args\_count}!Command@{Command}}
 \doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
-{\footnotesize\ttfamily size\+\_\+t Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily virtual const size\+\_\+t Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -62,6 +59,10 @@ Gets the number of arguments required by the command.
 \begin{DoxyReturn}{Returns}
 Number of arguments. 
 \end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classAddCommand_ac1c45d2dc4dffa5686edf3697b61c8d7}{Add\+Command}}, \mbox{\hyperlink{classExitCommand_a9443d4eb01d3a457502ad100ea445e56}{Exit\+Command}}, \mbox{\hyperlink{classFlipCommand_a6d4132c426c584a68caca599234baa32}{Flip\+Command}}, \mbox{\hyperlink{classGrayscaleCommand_a284d1eab5ec48bd9ba552ce1fb15a669}{Grayscale\+Command}}, \mbox{\hyperlink{classHelpCommand_a250cc46b4c541972c335bdff759e7252}{Help\+Command}}, \mbox{\hyperlink{classListCommand_ad5e913d942492b184fe4296853b80d81}{List\+Command}}, \mbox{\hyperlink{classLoadCommand_a3ab71fa61906bc9807051a8da4271a99}{Load\+Command}}, \mbox{\hyperlink{classMonochromeCommand_a7d43145e2a1f3fccbceed532e98e6b30}{Monochrome\+Command}}, \mbox{\hyperlink{classNegativeCommand_ae8a5e99ef1446362dcabbfb099d62509}{Negative\+Command}}, \mbox{\hyperlink{classPasteCommand_a99e54a3e1bb10ced04c26c0c38d657b0}{Paste\+Command}}, \mbox{\hyperlink{classRedoCommand_a7e8737c73e9362b79808033d188cb67e}{Redo\+Command}}, \mbox{\hyperlink{classRotateCommand_a09b35764289c0a763c7e8e9c1748ffc2}{Rotate\+Command}}, \mbox{\hyperlink{classSaveAsCommand_a1af2913e634292fcc99622cfc227d454}{Save\+As\+Command}}, \mbox{\hyperlink{classSaveCommand_a7020c7d590282c5d3fae4a02e641ef80}{Save\+Command}}, \mbox{\hyperlink{classSwitchCommand_ac58576cbadffb7b45e85887529f2ccb4}{Switch\+Command}}, and \mbox{\hyperlink{classUndoCommand_ab7e55fbf7cb8df5572d042a9153275fe}{Undo\+Command}}.
+
 \Hypertarget{classCommand_a7c3832161e07e30e4646cd48d51a88bc}\label{classCommand_a7c3832161e07e30e4646cd48d51a88bc} 
 \index{Command@{Command}!clone@{clone}}
 \index{clone@{clone}!Command@{Command}}

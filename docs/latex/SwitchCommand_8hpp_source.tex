@@ -12,7 +12,7 @@
 \DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSwitchCommand}{SwitchCommand}}(\mbox{\hyperlink{classSessionManager}{SessionManager}}*\ \textcolor{keyword}{const}\ session\_manager,\ \textcolor{keywordtype}{size\_t}\ \textcolor{keywordtype}{id});}
 \DoxyCodeLine{00018\ }
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classSwitchCommand_ad9fa5c192f396ae19dde902cccedd824}{args\_count}}()\ \{\ \textcolor{keywordflow}{return}\ args;\ \};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classSwitchCommand_ac58576cbadffb7b45e85887529f2ccb4}{args\_count}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ args;\ \};}
 \DoxyCodeLine{00024\ }
 \DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classSwitchCommand_a1dc100851a9aa73b1f2e3d4cdf76a20e}{execute}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00030\ }
@@ -20,7 +20,7 @@
 \DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSessionManager}{SessionManager}}*\ \textcolor{keyword}{const}\ session\_manager;}
 \DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ id;}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args;}
 \DoxyCodeLine{00040\ \};}
 \DoxyCodeLine{00041\ }
 \DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}

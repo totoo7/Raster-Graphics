@@ -32,6 +32,8 @@ Collaboration diagram for Redo\+Command\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classRedoCommand_a94166242d08cdc6e582cca1783c3251a}{Redo\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session)
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRedoCommand}{Redo\+Command} for the given session. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{classRedoCommand_a7e8737c73e9362b79808033d188cb67e}{args\+\_\+count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of required arguments for this command. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classRedoCommand_ad9fe3599c2af963e429bc1b8cbaa70e0}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the redo operation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classRedoCommand_a6c172320c2aa9a9fb248a8bfb9d3ab57}{is\+\_\+undoable}} () const override
@@ -49,16 +51,6 @@ virtual \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbo
 \begin{DoxyCompactList}\small\item\em Clones the command. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classRedoCommand_a71ac83cc60edfdb937e7ce05524b26ac}{get\+\_\+args}} ()
-\begin{DoxyCompactList}\small\item\em Returns the number of required arguments for this command. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -83,6 +75,23 @@ Constructs a \doxylink{classRedoCommand}{Redo\+Command} for the given session.
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classRedoCommand_a7e8737c73e9362b79808033d188cb67e}\label{classRedoCommand_a7e8737c73e9362b79808033d188cb67e} 
+\index{RedoCommand@{RedoCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!RedoCommand@{RedoCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily const size\+\_\+t Redo\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of required arguments for this command. 
+
+\begin{DoxyReturn}{Returns}
+Always returns 0. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{Command}}.
+
 \Hypertarget{classRedoCommand_ad9fe3599c2af963e429bc1b8cbaa70e0}\label{classRedoCommand_ad9fe3599c2af963e429bc1b8cbaa70e0} 
 \index{RedoCommand@{RedoCommand}!execute@{execute}}
 \index{execute@{execute}!RedoCommand@{RedoCommand}}
@@ -100,19 +109,6 @@ Result message.
 
 Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
 
-\Hypertarget{classRedoCommand_a71ac83cc60edfdb937e7ce05524b26ac}\label{classRedoCommand_a71ac83cc60edfdb937e7ce05524b26ac} 
-\index{RedoCommand@{RedoCommand}!get\_args@{get\_args}}
-\index{get\_args@{get\_args}!RedoCommand@{RedoCommand}}
-\doxysubsubsection{\texorpdfstring{get\_args()}{get\_args()}}
-{\footnotesize\ttfamily static size\+\_\+t Redo\+Command\+::get\+\_\+args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
-
-
-
-Returns the number of required arguments for this command. 
-
-\begin{DoxyReturn}{Returns}
-Always returns 0. 
-\end{DoxyReturn}
 \Hypertarget{classRedoCommand_a6c172320c2aa9a9fb248a8bfb9d3ab57}\label{classRedoCommand_a6c172320c2aa9a9fb248a8bfb9d3ab57} 
 \index{RedoCommand@{RedoCommand}!is\_undoable@{is\_undoable}}
 \index{is\_undoable@{is\_undoable}!RedoCommand@{RedoCommand}}

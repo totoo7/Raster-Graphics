@@ -71,7 +71,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classUndoCommand-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">UndoCommand Class Reference</div></div>
 </div><!--header-->
@@ -107,6 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6eced9f817724cad886961b8c95d3de" id="r_aa6eced9f817724cad886961b8c95d3de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUndoCommand.html#aa6eced9f817724cad886961b8c95d3de">UndoCommand</a> (<a class="el" href="classSession.html">Session</a> *const session)</td></tr>
 <tr class="memdesc:aa6eced9f817724cad886961b8c95d3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="classUndoCommand.html" title="Command to undo the last executed undoable command in a session.">UndoCommand</a> for the given session.  <br /></td></tr>
 <tr class="separator:aa6eced9f817724cad886961b8c95d3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7e55fbf7cb8df5572d042a9153275fe" id="r_ab7e55fbf7cb8df5572d042a9153275fe"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUndoCommand.html#ab7e55fbf7cb8df5572d042a9153275fe">args_count</a> () const override</td></tr>
+<tr class="memdesc:ab7e55fbf7cb8df5572d042a9153275fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of required arguments.  <br /></td></tr>
+<tr class="separator:ab7e55fbf7cb8df5572d042a9153275fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c07b4771921a9e0ee7608e7a0d8fefa" id="r_a6c07b4771921a9e0ee7608e7a0d8fefa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUndoCommand.html#a6c07b4771921a9e0ee7608e7a0d8fefa">execute</a> () override</td></tr>
 <tr class="memdesc:a6c07b4771921a9e0ee7608e7a0d8fefa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the undo operation.  <br /></td></tr>
 <tr class="separator:a6c07b4771921a9e0ee7608e7a0d8fefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,16 +132,6 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Command</b> ()=default</td></tr>
 <tr class="memdesc:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
 <tr class="separator:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c3a3cbb91b3f4473fdb4a0b8ce88d83" id="r_a3c3a3cbb91b3f4473fdb4a0b8ce88d83"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUndoCommand.html#a3c3a3cbb91b3f4473fdb4a0b8ce88d83">get_args</a> ()</td></tr>
-<tr class="memdesc:a3c3a3cbb91b3f4473fdb4a0b8ce88d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of required arguments.  <br /></td></tr>
-<tr class="separator:a3c3a3cbb91b3f4473fdb4a0b8ce88d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classCommand')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
-<tr class="memitem:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand" id="r_a7a8e8798bfcb43bbf9a362c2d0d10f25"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a7a8e8798bfcb43bbf9a362c2d0d10f25">args_count</a> ()</td></tr>
-<tr class="memdesc:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of arguments required by the command.  <br /></td></tr>
-<tr class="separator:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classCommand.html" title="Abstract base class representing a command in the system.">Command</a> to undo the last executed undoable command in a session. </p>
@@ -171,6 +163,36 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab7e55fbf7cb8df5572d042a9153275fe" name="ab7e55fbf7cb8df5572d042a9153275fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7e55fbf7cb8df5572d042a9153275fe">&#9670;&#160;</a></span>args_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t UndoCommand::args_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of required arguments. </p>
+<dl class="section return"><dt>Returns</dt><dd>Always returns 0. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classCommand.html#a309f77e32af5523b17b05bda1a037f4d">Command</a>.</p>
+
+</div>
+</div>
 <a id="a6c07b4771921a9e0ee7608e7a0d8fefa" name="a6c07b4771921a9e0ee7608e7a0d8fefa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c07b4771921a9e0ee7608e7a0d8fefa">&#9670;&#160;</a></span>execute()</h2>
 
@@ -198,34 +220,6 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Result message. </dd></dl>
 
 <p>Implements <a class="el" href="classCommand.html#a58ac4b40ad0228a0ea1fc97ab3db6ea4">Command</a>.</p>
-
-</div>
-</div>
-<a id="a3c3a3cbb91b3f4473fdb4a0b8ce88d83" name="a3c3a3cbb91b3f4473fdb4a0b8ce88d83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c3a3cbb91b3f4473fdb4a0b8ce88d83">&#9670;&#160;</a></span>get_args()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static size_t UndoCommand::get_args </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the number of required arguments. </p>
-<dl class="section return"><dt>Returns</dt><dd>Always returns 0. </dd></dl>
 
 </div>
 </div>

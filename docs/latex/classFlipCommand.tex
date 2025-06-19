@@ -32,6 +32,8 @@ Collaboration diagram for Flip\+Command\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classFlipCommand_a310227d032d7c013cee2a11aae68ce6e}{Flip\+Command}} (\mbox{\hyperlink{classSession}{Session}} \texorpdfstring{$\ast$}{*}const session, const std\+::string \&direction)
 \begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classFlipCommand}{Flip\+Command}. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{classFlipCommand_a6d4132c426c584a68caca599234baa32}{args\+\_\+count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of arguments required by the command. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classFlipCommand_a2218df5ed819ce4d04a7c470a275a8a7}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the flip command on the session images. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classCommand}{Command}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFlipCommand_af38760418149f0edb484abe2cb4e15c5}{clone}} () override
@@ -49,16 +51,6 @@ virtual bool \mbox{\hyperlink{classCommand_ae23b0750288217051b61408eb609a35d}{ne
 \begin{DoxyCompactList}\small\item\em Checks if the command requires an active session. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classFlipCommand_a22d38b48e02e6cd732e4110a027fb12b}{get\+\_\+args}} ()
-\begin{DoxyCompactList}\small\item\em Returns the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
-\begin{DoxyCompactItemize}
-\item 
-static size\+\_\+t \mbox{\hyperlink{classCommand_a7a8e8798bfcb43bbf9a362c2d0d10f25}{args\+\_\+count}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of arguments required by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -85,6 +77,23 @@ Constructs a new \doxylink{classFlipCommand}{Flip\+Command}.
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classFlipCommand_a6d4132c426c584a68caca599234baa32}\label{classFlipCommand_a6d4132c426c584a68caca599234baa32} 
+\index{FlipCommand@{FlipCommand}!args\_count@{args\_count}}
+\index{args\_count@{args\_count}!FlipCommand@{FlipCommand}}
+\doxysubsubsection{\texorpdfstring{args\_count()}{args\_count()}}
+{\footnotesize\ttfamily const size\+\_\+t Flip\+Command\+::args\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of arguments required by the command. 
+
+\begin{DoxyReturn}{Returns}
+Number of expected arguments. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCommand_a309f77e32af5523b17b05bda1a037f4d}{Command}}.
+
 \Hypertarget{classFlipCommand_af38760418149f0edb484abe2cb4e15c5}\label{classFlipCommand_af38760418149f0edb484abe2cb4e15c5} 
 \index{FlipCommand@{FlipCommand}!clone@{clone}}
 \index{clone@{clone}!FlipCommand@{FlipCommand}}
@@ -119,19 +128,6 @@ Result message of the operation.
 
 Implements \mbox{\hyperlink{classCommand_a58ac4b40ad0228a0ea1fc97ab3db6ea4}{Command}}.
 
-\Hypertarget{classFlipCommand_a22d38b48e02e6cd732e4110a027fb12b}\label{classFlipCommand_a22d38b48e02e6cd732e4110a027fb12b} 
-\index{FlipCommand@{FlipCommand}!get\_args@{get\_args}}
-\index{get\_args@{get\_args}!FlipCommand@{FlipCommand}}
-\doxysubsubsection{\texorpdfstring{get\_args()}{get\_args()}}
-{\footnotesize\ttfamily static size\+\_\+t Flip\+Command\+::get\+\_\+args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
-
-
-
-Returns the number of arguments required by the command. 
-
-\begin{DoxyReturn}{Returns}
-Number of expected arguments. 
-\end{DoxyReturn}
 \Hypertarget{classFlipCommand_afe2636136d83216d0372f7a375df5714}\label{classFlipCommand_afe2636136d83216d0372f7a375df5714} 
 \index{FlipCommand@{FlipCommand}!is\_undoable@{is\_undoable}}
 \index{is\_undoable@{is\_undoable}!FlipCommand@{FlipCommand}}

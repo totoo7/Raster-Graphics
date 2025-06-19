@@ -4,7 +4,6 @@ SaveAsCommand::SaveAsCommand(Session* const session, const std::vector<std::stri
     session(session), files(files) {
 }
 
-
 std::string SaveAsCommand::execute() {
     if (files.size() != session->images.size()) {
         throw std::invalid_argument("Session contains " + std::to_string(session->images.size()) +

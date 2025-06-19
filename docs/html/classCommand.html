@@ -71,7 +71,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classCommand-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Command Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -144,23 +143,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c3832161e07e30e4646cd48d51a88bc" id="r_a7c3832161e07e30e4646cd48d51a88bc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classCommand.html">Command</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a7c3832161e07e30e4646cd48d51a88bc">clone</a> ()</td></tr>
 <tr class="memdesc:a7c3832161e07e30e4646cd48d51a88bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones the command.  <br /></td></tr>
 <tr class="separator:a7c3832161e07e30e4646cd48d51a88bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309f77e32af5523b17b05bda1a037f4d" id="r_a309f77e32af5523b17b05bda1a037f4d"><td class="memItemLeft" align="right" valign="top">virtual const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a309f77e32af5523b17b05bda1a037f4d">args_count</a> () const</td></tr>
+<tr class="memdesc:a309f77e32af5523b17b05bda1a037f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of arguments required by the command.  <br /></td></tr>
+<tr class="separator:a309f77e32af5523b17b05bda1a037f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa545a53d35818f9efb936daf3fa16c61" id="r_aa545a53d35818f9efb936daf3fa16c61"><td class="memItemLeft" align="right" valign="top"><a id="aa545a53d35818f9efb936daf3fa16c61" name="aa545a53d35818f9efb936daf3fa16c61"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Command</b> ()=default</td></tr>
 <tr class="memdesc:aa545a53d35818f9efb936daf3fa16c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
 <tr class="separator:aa545a53d35818f9efb936daf3fa16c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a7a8e8798bfcb43bbf9a362c2d0d10f25" id="r_a7a8e8798bfcb43bbf9a362c2d0d10f25"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a7a8e8798bfcb43bbf9a362c2d0d10f25">args_count</a> ()</td></tr>
-<tr class="memdesc:a7a8e8798bfcb43bbf9a362c2d0d10f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of arguments required by the command.  <br /></td></tr>
-<tr class="separator:a7a8e8798bfcb43bbf9a362c2d0d10f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class representing a command in the system. </p>
 <p>Defines the interface for all commands, including execution, undo/redo, and cloning behavior. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7a8e8798bfcb43bbf9a362c2d0d10f25" name="a7a8e8798bfcb43bbf9a362c2d0d10f25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a8e8798bfcb43bbf9a362c2d0d10f25">&#9670;&#160;</a></span>args_count()</h2>
+<a id="a309f77e32af5523b17b05bda1a037f4d" name="a309f77e32af5523b17b05bda1a037f4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a309f77e32af5523b17b05bda1a037f4d">&#9670;&#160;</a></span>args_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,21 +165,23 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t Command::args_count </td>
+          <td class="memname">virtual const size_t Command::args_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Gets the number of arguments required by the command. </p>
 <dl class="section return"><dt>Returns</dt><dd>Number of arguments. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classAddCommand.html#ac1c45d2dc4dffa5686edf3697b61c8d7">AddCommand</a>, <a class="el" href="classExitCommand.html#a9443d4eb01d3a457502ad100ea445e56">ExitCommand</a>, <a class="el" href="classFlipCommand.html#a6d4132c426c584a68caca599234baa32">FlipCommand</a>, <a class="el" href="classGrayscaleCommand.html#a284d1eab5ec48bd9ba552ce1fb15a669">GrayscaleCommand</a>, <a class="el" href="classHelpCommand.html#a250cc46b4c541972c335bdff759e7252">HelpCommand</a>, <a class="el" href="classListCommand.html#ad5e913d942492b184fe4296853b80d81">ListCommand</a>, <a class="el" href="classLoadCommand.html#a3ab71fa61906bc9807051a8da4271a99">LoadCommand</a>, <a class="el" href="classMonochromeCommand.html#a7d43145e2a1f3fccbceed532e98e6b30">MonochromeCommand</a>, <a class="el" href="classNegativeCommand.html#ae8a5e99ef1446362dcabbfb099d62509">NegativeCommand</a>, <a class="el" href="classPasteCommand.html#a99e54a3e1bb10ced04c26c0c38d657b0">PasteCommand</a>, <a class="el" href="classRedoCommand.html#a7e8737c73e9362b79808033d188cb67e">RedoCommand</a>, <a class="el" href="classRotateCommand.html#a09b35764289c0a763c7e8e9c1748ffc2">RotateCommand</a>, <a class="el" href="classSaveAsCommand.html#a1af2913e634292fcc99622cfc227d454">SaveAsCommand</a>, <a class="el" href="classSaveCommand.html#a7020c7d590282c5d3fae4a02e641ef80">SaveCommand</a>, <a class="el" href="classSwitchCommand.html#ac58576cbadffb7b45e85887529f2ccb4">SwitchCommand</a>, and <a class="el" href="classUndoCommand.html#ab7e55fbf7cb8df5572d042a9153275fe">UndoCommand</a>.</p>
 
 </div>
 </div>

@@ -11,13 +11,13 @@
 \DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classHelpCommand_ab9ec3fae11daf96d1c17dee4209def68}{execute}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00016\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHelpCommand_a53802f23bd885bbd2cc8a9115dba12bb}{args\_count}}()\ \{\ \textcolor{keywordflow}{return}\ args;\ \};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHelpCommand_a250cc46b4c541972c335bdff759e7252}{args\_count}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ args;\ \};}
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHelpCommand_a672a4fd9152aeb2ebb1b8dfc2d9e9928}{is\_undoable}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHelpCommand_a3f3f7220736897ef1dd2f75b3e31ba73}{needs\_session}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
 \DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args;}
 \DoxyCodeLine{00036\ \};}
 \DoxyCodeLine{00037\ }
 \DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}

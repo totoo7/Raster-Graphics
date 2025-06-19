@@ -71,7 +71,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classSwitchCommand-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SwitchCommand Class Reference</div></div>
 </div><!--header-->
@@ -107,6 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73ea370a7c510eb5182ecac97d08c2c9" id="r_a73ea370a7c510eb5182ecac97d08c2c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSwitchCommand.html#a73ea370a7c510eb5182ecac97d08c2c9">SwitchCommand</a> (<a class="el" href="classSessionManager.html">SessionManager</a> *const session_manager, size_t id)</td></tr>
 <tr class="memdesc:a73ea370a7c510eb5182ecac97d08c2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classSwitchCommand.html" title="Command to switch to a different session by ID.">SwitchCommand</a> with a session manager and session ID.  <br /></td></tr>
 <tr class="separator:a73ea370a7c510eb5182ecac97d08c2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58576cbadffb7b45e85887529f2ccb4" id="r_ac58576cbadffb7b45e85887529f2ccb4"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSwitchCommand.html#ac58576cbadffb7b45e85887529f2ccb4">args_count</a> () const override</td></tr>
+<tr class="memdesc:ac58576cbadffb7b45e85887529f2ccb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of required arguments.  <br /></td></tr>
+<tr class="separator:ac58576cbadffb7b45e85887529f2ccb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dc100851a9aa73b1f2e3d4cdf76a20e" id="r_a1dc100851a9aa73b1f2e3d4cdf76a20e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSwitchCommand.html#a1dc100851a9aa73b1f2e3d4cdf76a20e">execute</a> () override</td></tr>
 <tr class="memdesc:a1dc100851a9aa73b1f2e3d4cdf76a20e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the session switch operation.  <br /></td></tr>
 <tr class="separator:a1dc100851a9aa73b1f2e3d4cdf76a20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,16 +132,6 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Command</b> ()=default</td></tr>
 <tr class="memdesc:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
 <tr class="separator:aa545a53d35818f9efb936daf3fa16c61 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9fa5c192f396ae19dde902cccedd824" id="r_ad9fa5c192f396ae19dde902cccedd824"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSwitchCommand.html#ad9fa5c192f396ae19dde902cccedd824">args_count</a> ()</td></tr>
-<tr class="memdesc:ad9fa5c192f396ae19dde902cccedd824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of required arguments.  <br /></td></tr>
-<tr class="separator:ad9fa5c192f396ae19dde902cccedd824"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classCommand')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
-<tr class="memitem:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand" id="r_a7a8e8798bfcb43bbf9a362c2d0d10f25"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a7a8e8798bfcb43bbf9a362c2d0d10f25">args_count</a> ()</td></tr>
-<tr class="memdesc:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of arguments required by the command.  <br /></td></tr>
-<tr class="separator:a7a8e8798bfcb43bbf9a362c2d0d10f25 inherit pub_static_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classCommand.html" title="Abstract base class representing a command in the system.">Command</a> to switch to a different session by ID. </p>
@@ -182,8 +174,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad9fa5c192f396ae19dde902cccedd824" name="ad9fa5c192f396ae19dde902cccedd824"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9fa5c192f396ae19dde902cccedd824">&#9670;&#160;</a></span>args_count()</h2>
+<a id="ac58576cbadffb7b45e85887529f2ccb4" name="ac58576cbadffb7b45e85887529f2ccb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58576cbadffb7b45e85887529f2ccb4">&#9670;&#160;</a></span>args_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,21 +184,23 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static size_t SwitchCommand::args_count </td>
+          <td class="memname">const size_t SwitchCommand::args_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Returns the number of required arguments. </p>
 <dl class="section return"><dt>Returns</dt><dd>Always returns 0. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classCommand.html#a309f77e32af5523b17b05bda1a037f4d">Command</a>.</p>
 
 </div>
 </div>

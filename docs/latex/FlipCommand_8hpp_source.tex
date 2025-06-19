@@ -12,7 +12,7 @@
 \DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFlipCommand}{FlipCommand}}(\mbox{\hyperlink{classSession}{Session}}*\ \textcolor{keyword}{const}\ session,\ \textcolor{keyword}{const}\ std::string\&\ direction);}
 \DoxyCodeLine{00018\ }
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classFlipCommand_a22d38b48e02e6cd732e4110a027fb12b}{get\_args}}()\ \{\ \textcolor{keywordflow}{return}\ args;\ \};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classFlipCommand_a6d4132c426c584a68caca599234baa32}{args\_count}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ args;\ \};}
 \DoxyCodeLine{00024\ }
 \DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classFlipCommand_a2218df5ed819ce4d04a7c470a275a8a7}{execute}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00030\ }
@@ -26,7 +26,7 @@
 \DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSession}{Session}}*\ \textcolor{keyword}{const}\ session;}
 \DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::string\ direction;}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args\ =\ 1;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ args;}
 \DoxyCodeLine{00056\ \};}
 \DoxyCodeLine{00057\ }
 \DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}

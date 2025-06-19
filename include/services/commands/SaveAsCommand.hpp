@@ -17,7 +17,7 @@ public:
 	SaveAsCommand(Session* const session, const std::vector<std::string>& files);
 	/**
 	 * @brief Returns the number of required arguments.
-	 * @return Always returns 0.
+	 * @return Always returns -1.
 	 */
 	const size_t args_count() const override { return -1; };
 	/**
