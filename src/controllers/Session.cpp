@@ -54,7 +54,7 @@ void Session::save() {
     has_unsaved_changes = false;
 }
 
-void Session::saveAs(const std::vector<std::string>& files) {
+void Session::save_as(const std::vector<std::string>& files) {
     for(size_t i = 0; i < files.size(); i++) {
         if (images[i]->type_str() != UTILITIES::get_extension(files[i])) 
             throw std::invalid_argument("Mismatch in extensions.");

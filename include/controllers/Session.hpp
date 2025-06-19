@@ -79,7 +79,7 @@ class Session {
          * @brief Saves all images to specified filenames.
          * @param files A vector of output filenames.
          */
-        void saveAs(const std::vector<std::string>& files);
+        void save_as(const std::vector<std::string>& files);
 
         /**
          * @brief Undoes the last command applied to the session.

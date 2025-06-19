@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['saveas_0',['saveAs',['../classSession.html#a928d2e5602b9ebbce8dd4522ef920f7a',1,'Session']]],
+  ['save_5fas_0',['save_as',['../classSession.html#a82403f4bd3612d735329daf90a9fd337',1,'Session']]],
   ['saveascommand_1',['SaveAsCommand',['../classSaveAsCommand.html#a6c8ff65115cd1ca114de72ca3833aad2',1,'SaveAsCommand']]],
   ['savecommand_2',['SaveCommand',['../classSaveCommand.html#a52d1d4928ee3de9a82bf3dcf41ce98fe',1,'SaveCommand']]],
   ['session_3',['session',['../classSession.html#ad92ef09b872c9227e38a6efdd4d8a837',1,'Session::Session()'],['../classSession.html#ae52a4029d06af24d544947a16f3bb780',1,'Session::Session(const Session &amp;rhs)']]],

@@ -10,7 +10,7 @@ std::string SaveAsCommand::execute() {
             " image(s), but " + std::to_string(files.size()) +
             " filename(s) were provided.");
     }
-    session->saveAs(files);
+    session->save_as(files);
     std::string res = "Files ";
     for (size_t i = 0; i < files.size(); i++) {
         res += files[i];
