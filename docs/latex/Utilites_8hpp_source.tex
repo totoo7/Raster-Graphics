@@ -11,34 +11,41 @@
 \DoxyCodeLine{00007\ }
 \DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }UTILITIES\ \{}
 \DoxyCodeLine{00009\ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{inline}\ std::vector<std::string>\ split(\textcolor{keyword}{const}\ std::string\ \&value,\ \textcolor{keywordtype}{char}\ delimeter\ =\ \textcolor{charliteral}{'\ '})}
-\DoxyCodeLine{00017\ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::vector<std::string>\ tokens;}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ start\ =\ 0,\ end\ =\ 0;}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((end\ =\ value.find(delimeter,\ start))\ !=\ std::string::npos)}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ tokens.push\_back(value.substr(start,\ end\ -\/\ start));}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ start\ =\ end\ +\ 1;}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ tokens.push\_back(value.substr(start));}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tokens;}
-\DoxyCodeLine{00027\ \ \ \ \ \}}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ skip\_comments(std::istream\&\ is,\ \textcolor{keywordtype}{int}\ skip\_lines\ =\ 0)\ \{}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::string\ line;}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ lines\_skipped\ =\ 0;}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (lines\_skipped\ <\ skip\_lines\ \&\&\ std::getline(is,\ line))\ \{}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!line.empty()\ \&\&\ line[0]\ ==\ \textcolor{charliteral}{'\#'})\ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ ++lines\_skipped;}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (is\ >>\ std::ws\ \&\&\ is.peek()\ ==\ \textcolor{charliteral}{'\#'})\ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(is,\ line);}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00045\ \ \ \ \ \}}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \};}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ get\_extension(\textcolor{keyword}{const}\ std::string\&\ filename)\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos\ =\ filename.rfind(\textcolor{charliteral}{'.'});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos\ ==\ std::string::npos)\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::string\ ext\ =\ filename.substr(pos\ +\ 1);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ext;}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{inline}\ std::vector<std::string>\ split(\textcolor{keyword}{const}\ std::string\ \&value,\ \textcolor{keywordtype}{char}\ delimeter\ =\ \textcolor{charliteral}{'\ '})}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::vector<std::string>\ tokens;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ start\ =\ 0,\ end\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((end\ =\ value.find(delimeter,\ start))\ !=\ std::string::npos)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ tokens.push\_back(value.substr(start,\ end\ -\/\ start));}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ start\ =\ end\ +\ 1;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ tokens.push\_back(value.substr(start));}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tokens;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ skip\_comments(std::istream\&\ is,\ \textcolor{keywordtype}{int}\ skip\_lines\ =\ 0)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ lines\_skipped\ =\ 0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (lines\_skipped\ <\ skip\_lines\ \&\&\ std::getline(is,\ line))\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!line.empty()\ \&\&\ line[0]\ ==\ \textcolor{charliteral}{'\#'})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ ++lines\_skipped;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (is\ >>\ std::ws\ \&\&\ is.peek()\ ==\ \textcolor{charliteral}{'\#'})\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(is,\ line);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -8,6 +8,18 @@
 namespace UTILITIES {
 
 	/**
+	 * @brief Gets the extension of a filename
+	 * @param filename The string which contains the filename.
+	 * @return The extension as a string.
+	 */
+	inline std::string get_extension(const std::string& filename) {
+		size_t pos = filename.rfind('.');
+		if (pos == std::string::npos) return "";
+		std::string ext = filename.substr(pos + 1);
+		return ext;
+	}
+
+	/**
 	 * @brief Splits a string into tokens based on a delimiter.
 	 * @param value The string to split.
 	 * @param delimeter The delimiter character to split by (default is space).

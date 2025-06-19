@@ -1,4 +1,5 @@
 #include "Session.hpp"
+#include "Utilites.hpp"
 #include <ctime>
 
 int Session::current_id = 0;
@@ -55,6 +56,9 @@ void Session::save() {
 
 void Session::saveAs(const std::vector<std::string>& files) {
     for(size_t i = 0; i < files.size(); i++) {
+        if (images[i]->type_str() != UTILITIES::get_extension(files[i])) 
+            throw std::invalid_argument("Mismatch in extensions.");
+        
         std::ofstream ofs(files[i]);
         if (!ofs) throw std::runtime_error("Save failed for \"" + files[i] + "\"");
         images[i]->write_file(ofs);

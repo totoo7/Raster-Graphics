@@ -123,20 +123,23 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classImage.html#a041f9799ce5bd0cbe84de81d390bc36a">  108</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="classImage.html#a041f9799ce5bd0cbe84de81d390bc36a">get_height</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> height; };</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classImage.html#a528a54553453c2d6def8ae302bbbfd85">  114</a></span>        <a class="code hl_enumeration" href="classImage.html#a97ec78f98a999ad234053ab07c958ef5">Type</a> <a class="code hl_function" href="classImage.html#a528a54553453c2d6def8ae302bbbfd85">get_type</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> type; };</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classImage.html#ac12bacfcfa4247af6e4ff8918fe84df0">  119</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classImage.html#ac12bacfcfa4247af6e4ff8918fe84df0">~Image</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordtype">void</span> parse_header(std::ifstream&amp; ifs);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        std::string filename;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordtype">size_t</span> width, height;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <a class="code hl_enumeration" href="classImage.html#a97ec78f98a999ad234053ab07c958ef5">Type</a> type;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        std::string <a class="code hl_function" href="classImage.html#a0bda691aeacd02b164497e70a3ca7f18">type_str</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classImage.html#ac12bacfcfa4247af6e4ff8918fe84df0">  125</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classImage.html#ac12bacfcfa4247af6e4ff8918fe84df0">~Image</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordtype">void</span> parse_header(std::ifstream&amp; ifs);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        std::string filename;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordtype">size_t</span> width, height;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_enumeration" href="classImage.html#a97ec78f98a999ad234053ab07c958ef5">Type</a> type;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>};</div>
 </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassImage_html"><div class="ttname"><a href="classImage.html">Image</a></div><div class="ttdoc">Abstract base class for image representations.</div><div class="ttdef"><b>Definition</b> Image.hpp:11</div></div>
 <div class="ttc" id="aclassImage_html_a041f9799ce5bd0cbe84de81d390bc36a"><div class="ttname"><a href="classImage.html#a041f9799ce5bd0cbe84de81d390bc36a">Image::get_height</a></div><div class="ttdeci">size_t get_height() const</div><div class="ttdoc">Gets the height of the image.</div><div class="ttdef"><b>Definition</b> Image.hpp:108</div></div>
+<div class="ttc" id="aclassImage_html_a0bda691aeacd02b164497e70a3ca7f18"><div class="ttname"><a href="classImage.html#a0bda691aeacd02b164497e70a3ca7f18">Image::type_str</a></div><div class="ttdeci">std::string type_str()</div><div class="ttdoc">Converts the type to a string.</div><div class="ttdef"><b>Definition</b> Image.cpp:35</div></div>
 <div class="ttc" id="aclassImage_html_a253a3246bd1b2698c1e157973c1d483f"><div class="ttname"><a href="classImage.html#a253a3246bd1b2698c1e157973c1d483f">Image::rotate</a></div><div class="ttdeci">virtual void rotate(const std::string &amp;direction)=0</div><div class="ttdoc">Rotates the image in the given direction.</div></div>
 <div class="ttc" id="aclassImage_html_a39e18142b0a77e422eec6522ba13fefd"><div class="ttname"><a href="classImage.html#a39e18142b0a77e422eec6522ba13fefd">Image::get_width</a></div><div class="ttdeci">size_t get_width() const</div><div class="ttdoc">Gets the width of the image.</div><div class="ttdef"><b>Definition</b> Image.hpp:102</div></div>
 <div class="ttc" id="aclassImage_html_a528a54553453c2d6def8ae302bbbfd85"><div class="ttname"><a href="classImage.html#a528a54553453c2d6def8ae302bbbfd85">Image::get_type</a></div><div class="ttdeci">Type get_type() const</div><div class="ttdoc">Gets the type of the image.</div><div class="ttdef"><b>Definition</b> Image.hpp:114</div></div>

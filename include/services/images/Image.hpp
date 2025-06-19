@@ -112,6 +112,12 @@ class Image {
          * @return Image type (PPM, PGM, PBM).
          */
         Type get_type() const { return type; };
+        
+        /**
+         * @brief Converts the type to a string.
+         * @return std::string 
+         */
+        std::string type_str();
 
         /**
          * @brief Virtual destructor.

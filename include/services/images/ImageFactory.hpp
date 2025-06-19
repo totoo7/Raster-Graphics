@@ -14,7 +14,7 @@ class ImageFactory {
          * @param filename The filename to create the image from.
          * @return Pointer to a newly created Image object, or nullptr if unsupported.
          */
-        static Image* create_image(std::string filename);
+        static Image* create_image(const std::string& filename);
     private:
          /**
          * @brief Deleted constructor to prevent instantiation of the factory.

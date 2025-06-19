@@ -31,3 +31,14 @@ void Image::parse_header(std::ifstream& ifs) {
 void Image::set_filename(const std::string& filename) {
     this->filename = filename;
 }
+
+std::string Image::type_str() {
+    if (type == Type::PBM) {
+        return "pbm";
+    } else if (type == Type::PGM) {
+        return "pgm";
+    } else if (type == Type::PPM) {
+        return "ppm";
+    }
+    return "";
+}

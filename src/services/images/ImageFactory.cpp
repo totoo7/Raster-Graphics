@@ -2,13 +2,11 @@
 #include "PGM.hpp"
 #include "PBM.hpp"
 #include "PPM.hpp"
-Image* ImageFactory::create_image(std::string filename) {
-    std::string type = "";
+#include "Utilites.hpp"
 
-    type.push_back(filename[filename.size() - 3]);
-    type.push_back(filename[filename.size() - 2]);
-    type.push_back(filename[filename.size() - 1]);
-
+Image* ImageFactory::create_image(const std::string& filename) {
+    
+    std::string type = UTILITIES::get_extension(filename);
 
     if (type == "pbm") {
         return new PBM(filename);
