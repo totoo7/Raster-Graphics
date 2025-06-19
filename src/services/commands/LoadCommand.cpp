@@ -6,8 +6,9 @@ LoadCommand::LoadCommand(SessionManager* const session_manager, const std::vecto
     session_manager(session_manager), files(args) {}
 
 std::string LoadCommand::execute() {
+    if (files.size() == 0) 
+        throw std::invalid_argument("Load command expects arguments.");
 	std::vector<Image*> loaded_images;
-
     for (size_t i = 0; i < files.size(); ++i) {
         std::ifstream ifs(files[i]);
         if (!ifs)
