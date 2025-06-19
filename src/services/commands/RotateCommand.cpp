@@ -1,6 +1,6 @@
 #include "RotateCommand.hpp"
 
-const size_t RotateCommand::args = 0;
+const size_t RotateCommand::args = 1;
 
 RotateCommand::RotateCommand(Session* const session, const std::string& direction)
 	: session(session), direction(direction) {
