@@ -51,7 +51,7 @@ The design is object-oriented, employing:
 
 1. Clone the repository
 2. Run `cmake -S . -B build`
-3. Build the project and docs: `cmake --build build --target all doc`
+3. Build the project: `cmake --build build`
 4. Open the documentation at `build/html/index.html`
 
 ## Tested Environment
