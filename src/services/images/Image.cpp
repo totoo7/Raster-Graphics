@@ -4,7 +4,7 @@
 Image::Image() : width(0), height(0) {}
 
 Image::Image(const std::string& filename) : filename(filename) {
-    std::ifstream ifs(filename, std::ios::binary);
+    std::ifstream ifs(filename);
     if (!ifs) throw std::runtime_error("Cannot open file: " + filename);
     parse_header(ifs);
     ifs.close();
