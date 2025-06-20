@@ -52,7 +52,7 @@ void Interface::run() {
         }
     } while (dynamic_cast<ExitCommand*>(cmd) == nullptr);
 
-    std::vector<Session> sessions = session_manager.get_sessions();
+    std::vector<Session>& sessions = session_manager.get_sessions();
     for (size_t i = 0; i < sessions.size(); i++) {
         if (sessions[i].get_has_unsaved_changes()) {
             std::cout << "Session with ID: " << sessions[i].get_id() << " has unsaved work. Save it now (y/n)?\n";
